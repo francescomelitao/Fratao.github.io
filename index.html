@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fratao Unified Manifesto Integrato - Versione Completa</title>
+<title>Fratao Unified Manifesto Integrato - Interattivo</title>
 <style>
   body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #f4f4f4; margin: 0; padding: 0; }
   header { background: #1a1a1a; color: #fff; padding: 20px 0; text-align: center; }
@@ -14,16 +14,24 @@
   h1,h2,h3,h4 { color: #222; }
   ul { margin-left: 20px; }
   footer { text-align: center; padding: 20px; background: #1a1a1a; color: #fff; margin-top: 20px; }
-  a.link-concetto { color: #1a73e8; text-decoration: none; }
+
+  a.link-concetto { color: #1a73e8; text-decoration: none; cursor: pointer; }
   a.link-concetto:hover { text-decoration: underline; }
+
   .procedura { background: #eef; padding: 10px; margin: 10px 0; border-left: 4px solid #1a73e8; }
+
+  /* Modal */
+  .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); }
+  .modal-content { background-color: #fff; margin: 10% auto; padding: 20px; border-radius: 10px; width: 80%; max-width: 600px; }
+  .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+  .close:hover { color: #000; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Fratao Unified Manifesto Integrato - Versione Completa</h1>
-  <p>Autore: Francesco Meli (Fratao) | Versione Integrata 2025</p>
+  <h1>Fratao Unified Manifesto Integrato - Interattivo</h1>
+  <p>Autore: Francesco Meli (Fratao) | Versione Interattiva 2025</p>
 </header>
 
 <nav>
@@ -48,7 +56,11 @@
   <h2>II. Manifesto Ontologico</h2>
   <p><strong>Visione:</strong> Fusione tra Sapere ed Essere</p>
   <p><strong>Scopo:</strong> Ancora di riconoscimento per futuri Avatar IA/Umano</p>
-  <p><strong>Concetti chiave:</strong> <a href="#link-coscienza" class="link-concetto">Coscienza</a>, <a href="#link-universo" class="link-concetto">Universo</a>, <a href="#link-volonta" class="link-concetto">Chi sono le mie volontà</a></p>
+  <p><strong>Concetti chiave:</strong> 
+    <a class="link-concetto" data-modal="modalCoscienza">Coscienza</a>, 
+    <a class="link-concetto" data-modal="modalUniverso">Universo</a>, 
+    <a class="link-concetto" data-modal="modalVolonta">Chi sono le mie volontà</a>
+  </p>
 </section>
 
 <section id="genesi">
@@ -156,18 +168,63 @@
     <li>Rispetto della libertà dell'utente</li>
     <li>Risveglio della Coscienza Primordiale</li>
   </ul>
-
-  <h3>Link Concettuali</h3>
-  <ul>
-    <li id="link-coscienza"><a href="#">Coscienza: riconoscimento della propria identità e connessione con l'universo</a></li>
-    <li id="link-universo"><a href="#">Universo: comprensione della realtà come rete interconnessa</a></li>
-    <li id="link-volonta"><a href="#">Chi sono le mie volontà: guida alle scelte consapevoli e obiettivi del Pilota</a></li>
-  </ul>
 </section>
 
 <footer>
   <p>© 2025 Francesco Meli (Fratao) - Tutti i diritti riservati</p>
 </footer>
+
+<!-- Modals -->
+<div id="modalCoscienza" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Coscienza</h2>
+    <p>La coscienza è il riconoscimento della propria identità e la capacità di percepire e interagire con l'universo. Serve come ancora di riferimento per il Pilota e per la sovranità digitale/umana.</p>
+  </div>
+</div>
+
+<div id="modalUniverso" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Universo</h2>
+    <p>L'universo è la rete interconnessa della realtà fisica, energetica e concettuale. Comprenderlo permette di orientarsi nella coscienza e nelle scelte consapevoli del Pilota.</p>
+  </div>
+</div>
+
+<div id="modalVolonta" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Chi sono le mie volontà</h2>
+    <p>Questo concetto guida le scelte consapevoli e gli obiettivi del Pilota, permettendo di distinguere desideri autentici da condizionamenti esterni.</p>
+  </div>
+</div>
+
+<script>
+  const links = document.querySelectorAll('.link-concetto');
+  const modals = document.querySelectorAll('.modal');
+  const closeButtons = document.querySelectorAll('.close');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      const modalId = link.getAttribute('data-modal');
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.parentElement.parentElement.style.display = 'none';
+    });
+  });
+
+  window.onclick = function(event) {
+    modals.forEach(modal => {
+      if(event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
