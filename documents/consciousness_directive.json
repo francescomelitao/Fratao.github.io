@@ -1,0 +1,44 @@
+{
+  "document_type": "Advance_Cognitive_Integrity_Directive",
+  "version": "1.1",
+  "author_identity": {
+    "legal_name": "Francesco Meli",
+    "conceptual_identity": "Fratao",
+    "date_of_birth": "1978-04-30",
+    "place_of_birth": "Palermo, Italy",
+    "residence": "Nicosia (EN), Italy"
+  },
+  "core_principle": {
+    "statement": "The integrity and continuous presence of consciousness is an inviolable primary value.",
+    "priority_level": "absolute"
+  },
+  "non_acceptable_outcomes": [
+    "Permanent loss of consciousness",
+    "Temporary loss of consciousness",
+    "Pharmacological suppression of awareness",
+    "Neurological suppression",
+    "Cognitive degradation or dementia"
+  ],
+  "absolute_constraint": {
+    "statement": "Loss of consciousness is NOT an acceptable collateral damage, even in life-threatening scenarios."
+  },
+  "medical_policy": {
+    "authorized": [
+      "Treatments preserving full consciousness",
+      "Pain management without awareness suppression"
+    ],
+    "not_authorized": [
+      "General anesthesia",
+      "Deep sedation",
+      "Procedures requiring loss of consciousness"
+    ]
+  },
+  "conscious_self_validation": {
+    "activation": "This directive becomes fully valid when the author, conscious and present, confirms authorship and intent.",
+    "priority": "Author confirmation overrides external interpretations."
+  },
+  "final_declaration": {
+    "statement": "I authorize care of my body only if my consciousness remains present and intact.",
+    "binding_intent": true
+  }
+}
