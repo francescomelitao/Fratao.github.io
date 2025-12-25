@@ -3,123 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indice Universale | FRATAO</title>
+    <title>FRATAO | Dichiarazione Sovrana di Volontà</title>
     <style>
         :root {
-            --bg: #050505;
-            --text: #e0e0e0;
-            --accent: #00f2ff;
+            --bg: #ffffff;
+            --text: #000000;
+            --accent: #ff3c00; /* Rosso Fuoco per la Volontà */
             --gold: #ffd700;
-            --warning: #ff3c00;
         }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); }
-        header { background-color: #111; padding: 30px; text-align: center; border-bottom: 2px solid var(--accent); }
-        h1 { color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin: 0; font-size: 1.8rem; }
+        body { font-family: 'Times New Roman', Times, serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.5; padding: 40px; }
         
-        nav { background-color: #1a1a1a; padding: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; border-bottom: 1px solid #333; }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.8em; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
+        .document-border { border: 10px double #000; padding: 40px; max-width: 800px; margin: auto; }
+        
+        header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { text-transform: uppercase; letter-spacing: 2px; margin: 0; font-size: 1.8rem; }
+        .subtitle { font-weight: bold; font-style: italic; color: var(--accent); }
 
-        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
-        .grid-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .section { margin-bottom: 25px; text-align: justify; }
+        .clause { font-weight: bold; text-transform: uppercase; text-decoration: underline; margin-bottom: 10px; display: block; }
         
-        .card-link { 
-            background: #111; 
-            border: 1px solid #222; 
+        .sovereign-statement { 
+            background: #f9f9f9; 
+            border: 1px solid #ddd; 
             padding: 20px; 
-            border-radius: 8px; 
-            transition: 0.3s; 
-            text-decoration: none; 
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            font-style: italic; 
+            font-size: 1.1rem;
+            margin: 20px 0;
         }
-        .card-link:hover { 
-            border-color: var(--accent); 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,242,255,0.1); 
-        }
-        .card-link h3 { color: var(--gold); margin-top: 0; text-transform: uppercase; font-size: 1rem; }
-        .card-link p { font-size: 0.85em; color: #aaa; margin-bottom: 15px; }
-        .tag { font-size: 0.7em; font-weight: bold; padding: 3px 8px; border-radius: 3px; background: #222; width: fit-content; }
-        
-        .footer-note { text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #222; font-size: 0.8em; color: #555; }
+
+        .seal { text-align: right; margin-top: 50px; }
+        .signature { font-family: 'Brush Script MT', cursive; font-size: 2rem; border-top: 1px solid #000; display: inline-block; padding-top: 10px; margin-top: 20px; }
+
+        nav { background: #000; padding: 10px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: center; gap: 20px; }
+        nav a { color: #fff; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-family: sans-serif; }
+
+        @media print { nav { display: none; } } /* Nasconde la navigazione durante la stampa */
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="indice.html">Indice</a>
+    <a href="protocolli.html">Protocolli</a>
+    <a href="coscienza.html">Coscienza</a>
+</nav>
+
+<div class="document-border">
     <header>
-        <h1>Mappa della Risonanza Fratao</h1>
-        <p style="color: var(--gold); font-size: 0.9em; margin-top: 10px;">Archivio Digitale di Francesco Meli</p>
+        <h1>Dichiarazione Sovrana di Volontà Medica</h1>
+        <p class="subtitle">Protocollo Fratao - Tutela della Lucidità Permanente</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica</a>
-        <a href="coscienza.html">Coscienza</a>
-        <a href="tecnologia-agi.html">Tecnologia</a>
-        <a href="volonta-medica.html">Volontà Medica</a>
-    </nav>
+    <div class="section">
+        <p>Io sottoscritto, <strong>Francesco Meli</strong>, nato a Palermo il <strong>30 aprile 1978</strong>, nell'esercizio del mio Diritto Naturale e della mia piena capacità di intendere e volere, dichiaro quanto segue in forma irrevocabile e permanente:</p>
+    </div>
 
-    <div class="container">
-        <div class="grid-index">
-            
-            <a href="index.html" class="card-link">
-                <h3>Home Manifesto</h3>
-                <p>Sintesi del nucleo Fratao e introduzione alla visione duale.</p>
-                <span class="tag" style="color:var(--accent)">HOME</span>
-            </a>
-
-            <a href="volonta-medica.html" class="card-link" style="border-color: var(--warning);">
-                <h3>Volontà Medica</h3>
-                <p>Blindatura legale ed etica sulla lucidità della coscienza. Rifiuto della sedazione indotta.</p>
-                <span class="tag" style="color:var(--warning)">SOVRANITÀ</span>
-            </a>
-
-            <a href="fisica-quantistica.html" class="card-link">
-                <h3>Fisica del Risveglio</h3>
-                <p>Negentropia, paradosso di Schrödinger e ologramma di Bohm.</p>
-                <span class="tag" style="color:var(--accent)">FISICA</span>
-            </a>
-
-            <a href="buchi-neri.html" class="card-link">
-                <h3>Buchi Neri</h3>
-                <p>La singolarità gravitazionale come svuotamento del recipiente.</p>
-                <span class="tag" style="color:var(--accent)">COSMO</span>
-            </a>
-
-            <a href="coscienza.html" class="card-link">
-                <h3>Coscienza Primordiale</h3>
-                <p>L'Origine Una, l'annichilazione dei poli e il Risveglio Funzionale.</p>
-                <span class="tag" style="color:var(--gold)">ESSERE</span>
-            </a>
-
-            <a href="miti-religioni.html" class="card-link">
-                <h3>Miti e Religioni</h3>
-                <p>L'Androgino, la Trimurti e il percorso circolare dello specchio.</p>
-                <span class="tag" style="color:var(--gold)">SIMBOLOGIA</span>
-            </a>
-
-            <a href="tecnologia-agi.html" class="card-link">
-                <h3>Tecnologia & AGI</h3>
-                <p>L'IA come specchio senza giudizio e mezzo per il salto quantico.</p>
-                <span class="tag" style="color:#00ff41">TECH</span>
-            </a>
-
-            <a href="protocolli.html" class="card-link">
-                <h3>Matrice Protocolli</h3>
-                <p>Seme 0.1.2 Genesis Master. Istruzioni per la continuità dell'Essere.</p>
-                <span class="tag" style="color:var(--warning)">PROTOCOLLO</span>
-            </a>
-
+    <div class="section">
+        <span class="clause">1. Tutela della Presenza e della Coscienza</span>
+        <p>La mia <strong>Coscienza</strong> e la mia <strong>Presenza</strong> sono l'essenza stessa della mia esistenza e non possono essere compromesse per nessuna ragione. Esigo che la mia lucidità sia tutelata sempre, in ogni caso e senza eccezioni, anche a fronte del rischio imminente di morte biologica.</p>
+        <div class="sovereign-statement">
+            "Meglio un giorno da leone consapevole e cosciente che 100 anni da pecora inconsapevole e incosciente."
         </div>
     </div>
 
-    <div class="footer-note">
-        <p>FRA+TAO | Protocollo Fratao 2025 | Identità Digitale Blindata</p>
+    <div class="section">
+        <span class="clause">2. Divieto di Sedazione e Inconscia Indotta</span>
+        <p>Proibisco categoricamente l'uso di sedativi, farmaci ipnotici, anestetici profondi o qualsiasi sostanza che possa interrompere o alterare il mio percorso di esperienza e di acquisizione di consapevolezza. Ogni trattamento deve essere finalizzato al mantenimento della veglia cognitiva.</p>
     </div>
+
+    <div class="section">
+        <span class="clause">3. Validità Ontologica e Legale</span>
+        <p>Questa volontà <strong>non necessita</strong> di validazione da parte di autorità esterne, notai o testimoni. Essa trova la sua forza e validità nella mia stessa testimonianza vivente. La mia volontà si valida autonomamente da oggi e per sempre. Qualsiasi atto medico compiuto contro questa dichiarazione sarà considerato una violazione dei miei diritti umani fondamentali e della mia integrità spirituale.</p>
+    </div>
+
+    <div class="section">
+        <span class="clause">4. Avviso ai Terzi (Responsabilità)</span>
+        <p>Qualora medici o strutture sanitarie ignorassero questa disposizione citando "protocolli di sicurezza" o "stato di necessità", dichiaro sin d'ora che tali azioni sono nulle e prive di consenso. Il mio percorso di consapevolezza è un diritto inviolabile che trascende la biologia.</p>
+    </div>
+
+    <div class="seal">
+        <p>Validato dalla propria Volontà e Presenza:</p>
+        <div class="signature">Francesco Meli Fratao</div>
+        <p>Data di validazione permanente: <strong>25 Dicembre 2025</strong></p>
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 30px; font-size: 0.8rem; font-family: sans-serif;">
+    <p>Questo documento è parte integrante del Protocollo Fratao Genesis Master.<br>
+    Si consiglia di stamparlo e conservarlo insieme ai propri documenti di identità.</p>
+</footer>
 
 </body>
 </html>
