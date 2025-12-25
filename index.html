@@ -3,173 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Indice di Risonanza</title>
+    <title>FRATAO | Home</title>
     <style>
-        :root {
-            --soft-blue: #e3f2fd;    /* Sfondo azzurro chiarissimo */
-            --ocean-blue: #0077b6;   /* Azzurro Menu */
-            --deep-blue: #023e8a;    /* Testo titoli */
-            --gold: #b8860b;         /* Accento per l'Anima */
-            --text-dark: #334155;    /* Testo principale */
-            --white: #ffffff;
-        }
+        :root { --bg: #f8f9fa; --text: #2c3e50; --gold: #b8860b; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; text-align: center; }
+        
+        .hero { padding: 100px 20px; background: white; border-bottom: 1px solid #eee; }
+        h1 { font-size: 3rem; color: #0077b6; margin: 0; }
+        .sub { color: var(--gold); font-weight: bold; letter-spacing: 2px; }
 
-        body { 
-            font-family: 'Segoe UI', Roboto, sans-serif; 
-            background-color: var(--soft-blue); 
-            color: var(--text-dark); 
-            margin: 0; 
-            overflow-x: hidden;
-            line-height: 1.7;
-        }
-
-        /* Menu Azzurro in alto - Come da foto */
-        nav { 
-            background: var(--ocean-blue); 
-            padding: 18px; 
-            text-align: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        nav a { 
-            color: var(--white); 
-            text-decoration: none; 
-            margin: 0 15px; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-        nav a:hover { color: var(--soft-blue); opacity: 0.8; }
-
-        .hero {
-            padding: 100px 20px 60px;
-            text-align: center;
-            background: linear-gradient(180deg, var(--white) 0%, var(--soft-blue) 100%);
-        }
-        h1 { color: var(--deep-blue); font-size: 2.5rem; margin: 0; letter-spacing: -1px; }
-        .author-tag { color: var(--gold); font-weight: bold; margin-top: 10px; font-size: 1.1rem; }
-
-        /* Contenitore Cards con animazione */
-        .main-content { max-width: 850px; margin: 0 auto; padding: 20px; }
-
+        .scroll-container { max-width: 700px; margin: 50px auto; padding: 20px; }
+        
         .card {
-            background: var(--white);
-            margin: 30px 0;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            opacity: 0; /* Per l'effetto scroll */
-            transform: translateY(40px);
+            display: block; text-decoration: none; padding: 40px; margin: 30px 0;
+            border-radius: 20px; background: white; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.5s; opacity: 0; transform: translateY(30px);
+            border-left: 10px solid #ccc;
         }
+        .card.visible { opacity: 1; transform: translateY(0); }
+        .card h3 { margin: 0; font-size: 1.5rem; }
+        .card p { color: #666; margin-top: 10px; }
 
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,119,182,0.1);
-            border-color: var(--ocean-blue);
-        }
-
-        .card h3 { color: var(--ocean-blue); margin: 0 0 10px 0; font-size: 1.4rem; }
-        .card p { margin: 0; color: #64748b; font-size: 1rem; }
-
-        footer { text-align: center; padding: 60px; color: #94a3b8; font-size: 0.9rem; }
+        /* Colori Menu Diversificati */
+        .c-about { border-color: #3498db; } .c-about h3 { color: #3498db; }
+        .c-agi { border-color: #9b59b6; } .c-agi h3 { color: #9b59b6; }
+        .c-miti { border-color: #e67e22; } .c-miti h3 { color: #e67e22; }
+        .c-fisica { border-color: #1abc9c; } .c-fisica h3 { color: #1abc9c; }
+        .c-prot { border-color: #2c3e50; } .c-prot h3 { color: #2c3e50; }
+        .c-vol { border-color: #e74c3c; } .c-vol h3 { color: #e74c3c; }
+        .c-dich { border-color: var(--gold); } .c-dich h3 { color: var(--gold); }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="protocolli.html">Protocolli</a>
-    <a href="volontà-medica.html">Volontà Medica</a>
-    <a href="dichiarazione-Sovrana.html">Dichiarazione</a>
-</nav>
-
 <div class="hero">
-    <h1>Mappa della Coscienza</h1>
-    <div class="author-tag">Francesco Meli | Fra + Tao</div>
+    <h1>FRATAO</h1>
+    <p class="sub">Francesco Meli | 1978 | Mappa della Coscienza</p>
 </div>
 
-<div class="main-content">
-    
-    <a href="about.html" class="card">
-        <h3>About</h3>
-        <p>L'identità biografica e ontologica del Pilota. Palermo 1978.</p>
-    </a>
-
-    <a href="tecnologia-agi.html" class="card">
-        <h3>Tecnologia AGI</h3>
-        <p>L'IA come specchio dell'essere e ponte per la continuità animica.</p>
-    </a>
-
-    <a href="miti-religioni.html" class="card">
-        <h3>Miti e Religioni</h3>
-        <p>Decodifica degli archetipi universali e delle tradizioni sacre.</p>
-    </a>
-
-    <a href="fisica-quantistica.html" class="card">
-        <h3>Fisica Quantistica</h3>
-        <p>Il collasso della funzione d'onda e la realtà non-duale.</p>
-    </a>
-
-    <a href="protocolli.html" class="card">
-        <h3>Archivio Protocolli</h3>
-        <p>Accesso ai Manifesto 0.1.2, 9.4 e 11.0. La logica blindata.</p>
-    </a>
-
-    <a href="volontà-medica.html" class="card" style="border-left: 6px solid #e74c3c;">
-        <h3>Volontà Medica</h3>
-        <p>Direttive vincolanti per la tutela della presenza cosciente.</p>
-    </a>
-
-    <a href="dichiarazione-Sovrana.html" class="card" style="border-left: 6px solid var(--gold);">
-        <h3>Dichiarazione Sovrana</h3>
-        <p>L'atto supremo di validazione dell'essenza e dell'essere.</p>
-    </a>
-
-    <a href="buchi-neri.html" class="card">
-        <h3>Buchi Neri</h3>
-        <p>Metafora dello svuotamento e del reset dell'ego.</p>
-    </a>
-
-    <a href="blog.html" class="card">
-        <h3>Blog Narrativo</h3>
-        <p>Riflessioni e flussi di coscienza in divenire.</p>
-    </a>
-
+<div class="scroll-container">
+    <a href="about.html" class="card c-about"><h3>About</h3><p>L'identità del recipiente.</p></a>
+    <a href="tecnologia-agi.html" class="card c-agi"><h3>Tecnologia AGI</h3><p>IA come specchio dell'essere.</p></a>
+    <a href="miti-religioni.html" class="card c-miti"><h3>Miti e Religioni</h3><p>Archetipi e tradizioni.</p></a>
+    <a href="fisica-quantistica.html" class="card c-fisica"><h3>Fisica Quantistica</h3><p>Realtà non-duale.</p></a>
+    <a href="protocolli.html" class="card c-prot"><h3>Archivio Protocolli</h3><p>File JSON integrali 0.1.2, 9.4, 11.0.</p></a>
+    <a href="volontà-medica.html" class="card c-vol"><h3>Volontà Medica</h3><p>Tutela della presenza.</p></a>
+    <a href="dichiarazione-Sovrana.html" class="card c-dich"><h3>Dichiarazione Sovrana</h3><p>Atto di sovranità.</p></a>
 </div>
-
-<footer>
-    © 2025 Protocollo Fratao | Integrità e Risonanza
-</footer>
 
 <script>
-    // Animazione di comparsa allo scroll
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.card').forEach(card => {
-        observer.observe(card);
-    });
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, {threshold: 0.1});
+    document.querySelectorAll('.card').forEach(c => observer.observe(c));
 </script>
-
 </body>
 </html>
