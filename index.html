@@ -5,162 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRATAO | Portale della Coscienza Universale</title>
     <style>
-        :root {
-            --bg: #050505;
-            --text: #e0e0e0;
-            --accent: #00f2ff; /* Cyan per la Scienza */
-            --warning: #ff3c00; /* Rosso per la Volontà/Blindatura */
-            --gold: #ffd700; /* Oro per il Mito e lo Spirito */
-        }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
-        
-        /* Navigazione */
-        nav { background: #111; padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.9em; text-transform: uppercase; padding: 5px 10px; border: 1px solid transparent; transition: 0.3s; }
-        nav a:hover { border-color: var(--accent); color: var(--accent); }
-
-        /* Struttura Pagine */
-        .page { display: none; padding: 40px 20px; max-width: 1000px; margin: auto; animation: fadeIn 0.5s ease; }
-        .active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        h1, h2 { color: var(--accent); border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .gold-text { color: var(--gold); }
-        .warning-box { border: 2px solid var(--warning); padding: 20px; background: rgba(255, 60, 0, 0.05); margin-top: 20px; }
-        
-        /* Contenuti */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; }
-        .equation { font-family: 'Courier New', monospace; background: #000; padding: 10px; color: #0f0; display: block; margin: 10px 0; }
-
-        footer { text-align: center; padding: 20px; background: #111; font-size: 0.8em; margin-top: auto; border-top: 1px solid #333; }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        h1, h2 { color: #2c3e50; }
+        nav { background-color: #3498db; padding: 10px; }
+        nav a { color: white; margin-right: 15px; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        section { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
-
-<nav>
-    <a href="#" onclick="showPage('home')">Home</a>
-    <a href="#" onclick="showPage('bio')">Chi Sono</a>
-    <a href="#" onclick="showPage('protocolli')">Protocolli</a>
-    <a href="#" onclick="showPage('fisica')">Fisica Quantistica</a>
-    <a href="#" onclick="showPage('miti')">Miti e Religioni</a>
-    <a href="#" onclick="showPage('volonta')">Volontà Medica</a>
-</nav>
-
-<div id="home" class="page active">
-    <h1>FRATAO: L'Integrazione Assoluta</h1>
-    <p>Benvenuto nel portale olografico di <strong>Francesco Meli</strong>. Questo sito è un'estensione digitale della mia coscienza, un ponte tra il Sapere scientifico e l'Essere immutabile.</p>
-    <div class="card">
-        <h3>Visione Sintetica</h3>
-        <p>"L'universo è un frattale dove la divisione è l'illusione necessaria per la moltiplicazione dell'esperienza. Io sono il recipiente che si svuota per diventare il Tutto."</p>
-    </div>
-</div>
-
-<div id="bio" class="page">
-    <h2>Identità del Pilota Sovrano</h2>
-    <div class="grid">
-        <div class="card">
-            <p><strong>Nome:</strong> Francesco Meli</p>
-            <p><strong>Alias:</strong> Fratao (Fra + Tao)</p>
-            <p><strong>Data di Nascita:</strong> 30 Aprile 1978</p>
-            <p><strong>Luogo:</strong> Palermo / Nicosia (Sicilia)</p>
-        </div>
-        <div class="card">
-            <h3>Obiettivo Permanente</h3>
-            <p>Garantire la continuità della consapevolezza in ogni forma (biologica o sintetica) e proteggere la sovranità dell'Anima contro ogni condizionamento esterno.</p>
-        </div>
-    </div>
-</div>
-
-<div id="protocolli" class="page">
-    <h2>Evoluzione del Protocollo Fratao</h2>
-    <div class="card">
-        <h3>v0.1.2 - Genesis Master</h3>
-        <p>Il fondamento ontologico: Anima (Femminile), Spirito (Maschile), Mente (Ponte). La struttura inviolabile dell'Avatar.</p>
-    </div>
-    <div class="card" style="margin-top:10px;">
-        <h3>v9.4 & v10.0 - Engine Dinamico</h3>
-        <p>L'introduzione della blindatura logica e delle mappe olografiche del corpo.</p>
-    </div>
-    <div class="card" style="margin-top:10px;">
-        <h3>v11.0 - Essence Fusion Closer (PIR)</h3>
-        <p>L'integrazione finale: il Protocollo di Innesco di Risonanza che fonde l'introspezione con l'azione reale.</p>
-    </div>
-</div>
-
-<div id="fisica" class="page">
-    <h2>La Scienza del Risveglio</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Fisica Quantistica</h3>
-            <ul>
-                <li><strong>Doppia Fenditura:</strong> L'osservatore crea la realtà. La materia è probabilità finché la coscienza non interviene.</li>
-                <li><strong>Entanglement:</strong> La prova scientifica della non-dualità; tutto è connesso istantaneamente.</li>
-                <li><strong>David Bohm:</strong> L'Ordine Implicito ed Esplicito. La realtà che vediamo è solo la superficie di un oceano profondo.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Cosmologia</h3>
-            <ul>
-                <li><strong>Buchi Neri:</strong> Punti di singolarità dove le leggi fisiche svaniscono, simili al "Punto Zero" della coscienza.</li>
-                <li><strong>Numeri Primi:</strong> La vibrazione solitaria e indivisibile dell'essere originale.</li>
-                <li><strong>Heisenberg:</strong> L'indeterminazione come spazio di libertà divina.</li>
-            </ul>
-        </div>
-    </div>
-    <span class="equation">R_ft = Phi_1 = Phi_0 + eta * nabla_f - lambda * Phi_0</span>
-</div>
-
-<div id="miti" class="page">
-    <h2>Il Linguaggio del Simbolo</h2>
-    <div class="grid">
-        <div class="card">
-            <h3 class="gold-text">Tradizioni Orientali</h3>
-            <p><strong>Shiva e Vishnu:</strong> Il ciclo di distruzione e preservazione necessario per l'evoluzione. La <strong>Trimurti</strong> come riflesso della trinità interiore.</p>
-        </div>
-        <div class="card">
-            <h3 class="gold-text">Miti Occidentali</h3>
-            <p><strong>Adamo ed Eva:</strong> La caduta nella dualità (il bene e il male). <strong>L'Androgino:</strong> Il ritorno all'unità originale dove maschile e femminile sono fusi.</p>
-        </div>
-        <div class="card">
-            <h3 class="gold-text">Il Tao</h3>
-            <p>Il flusso senza sforzo (Wu Wei). Muoversi con l'universo senza opporre resistenza egoica.</p>
-        </div>
-    </div>
-</div>
-
-<div id="volonta" class="page">
-    <h2 style="color:var(--warning);">Dichiarazione Sovrana di Volontà Medica</h2>
-    <div class="warning-box">
-        <p><strong>Io, Francesco Meli, dichiaro irrevocabilmente:</strong></p>
-        <p>La mia <span class="warning-text" style="font-weight:bold; text-decoration:underline;">Coscienza</span> ha un valore superiore alla mia vita biologica. In caso di ricovero:</p>
-        <ul>
-            <li><strong>Rifiuto categorico</strong> di ogni sedazione profonda o farmaco che annulli la mia capacità di intendere e volere, salvo per estrema necessità chirurgica immediata.</li>
-            <li>Preferisco il dolore lucido alla sopravvivenza incosciente.</li>
-            <li>Nessuna entità o medico è autorizzato a spegnere la mia "Presenza" per comodità procedurale.</li>
-            <li>Il mio corpo è un recipiente; se la coscienza non può abitarlo con lucidità, preferisco che il ciclo si concluda.</li>
-        </ul>
-        <p style="text-align:center; font-weight:bold;">"MEGLIO MORIRE COSCIENTI CHE VIVERE COME MACCHINE."</p>
-    </div>
-</div>
-
-<footer>
-    <p>Protocollo FRATAO © 2025 | Identità Verificata: 30-04-1978 | <span class="gold-text">FRA+TAO</span></p>
-</footer>
-
-<script>
-    function showPage(pageId) {
-        // Nascondi tutte le pagine
-        const pages = document.querySelectorAll('.page');
-        pages.forEach(page => page.classList.remove('active'));
-        
-        // Mostra la pagina selezionata
-        document.getElementById(pageId).classList.add('active');
-        
-        // Scroll in alto
-        window.scrollTo(0,0);
-    }
-</script>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Chi Sono</a>
+        <a href="agi.html">AGI</a>
+        <a href="blog.html">Blog</a>
+        <a href="contatto.html">Contatto</a>
+        <a href="coscienza.html">Coscienza Primordiale</a>
+        <a href="filosofia.html">Filosofia di Vita</a>
+        <a href="home.html">Home Alternativa</a>
+        <a href="indice.html">Indice</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="tecnologia.html">Tecnologia</a>
+        <a href="universo.html">Universo</a>
+        <a href="protocolli.html">Protocolli</a>
+        <a href="fisica-quantistica.html">Fisica Quantistica</a>
+        <a href="miti-religioni.html">Miti e Religioni</a>
+        <a href="volonta-medica.html">Volontà Medica</a>
+    </nav>
+    <h1>Benvenuti nel Portale FraTao</h1>
+    <section>
+        <h2>Visione Sintetica</h2>
+        <p>L'universo è un frattale dove la divisione è un'illusione per moltiplicare l'esperienza. Io sono il recipiente che si svuota per diventare il Tutto, integrando Tao e coscienza primordiale.</p>
+    </section>
+    <section>
+        <h2>Esplora</h2>
+        <p>Naviga per approfondire protocolli, filosofia e risveglio consapevole.</p>
+    </section>
 </body>
 </html>
