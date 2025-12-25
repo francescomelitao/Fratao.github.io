@@ -3,62 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indice | FRATAO - Portale della Coscienza</title>
+    <title>Indice Universale | FRATAO</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: #050505; color: #e0e0e0; }
-        header { background-color: #111; padding: 20px; text-align: center; border-bottom: 2px solid #00f2ff; }
-        h1 { color: #00f2ff; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: #ffd700; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #00f2ff;
+            --gold: #ffd700;
+            --warning: #ff3c00;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); }
+        header { background-color: #111; padding: 30px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin: 0; font-size: 1.8rem; }
         
         nav { background-color: #1a1a1a; padding: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; border-bottom: 1px solid #333; }
-        nav a { color: #e0e0e0; text-decoration: none; font-weight: bold; font-size: 0.85em; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: #00f2ff; }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.8em; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
 
-        section { max-width: 900px; margin: 40px auto; padding: 25px; background-color: #111; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,242,255,0.1); border: 1px solid #222; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        .grid-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         
-        .index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-        .index-item { padding: 10px; border-left: 3px solid #00f2ff; background: #1a1a1a; transition: 0.2s; }
-        .index-item:hover { background: #222; border-left-color: #ff3c00; }
-        .index-item a { color: #e0e0e0; text-decoration: none; display: block; }
+        .card-link { 
+            background: #111; 
+            border: 1px solid #222; 
+            padding: 20px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            text-decoration: none; 
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-link:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,242,255,0.1); 
+        }
+        .card-link h3 { color: var(--gold); margin-top: 0; text-transform: uppercase; font-size: 1rem; }
+        .card-link p { font-size: 0.85em; color: #aaa; margin-bottom: 15px; }
+        .tag { font-size: 0.7em; font-weight: bold; padding: 3px 8px; border-radius: 3px; background: #222; width: fit-content; }
         
-        footer { text-align: center; padding: 20px; font-size: 0.8em; color: #555; }
+        .footer-note { text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #222; font-size: 0.8em; color: #555; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Mappa del Portale Fratao</h1>
+        <h1>Mappa della Risonanza Fratao</h1>
+        <p style="color: var(--gold); font-size: 0.9em; margin-top: 10px;">Integrazione tra Sapere, Essere e Tecnologia</p>
     </header>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica Quantistica</a>
-        <a href="buchi-neri.html" style="color: #00f2ff;">Buchi Neri</a>
-        <a href="miti-religioni.html">Miti e Religioni</a>
-        <a href="volonta-medica.html">Volontà Medica</a>
-        <a href="about.html">Chi Sono</a>
+        <a href="fisica-quantistica.html">Fisica</a>
+        <a href="coscienza.html">Coscienza</a>
+        <a href="tecnologia-agi.html">Tecnologia</a>
+        <a href="volonta-medica.html">Volontà</a>
     </nav>
 
-    <section>
-        <h2>Indice Analitico delle Sezioni</h2>
-        <div class="index-grid">
-            <div class="index-item"><a href="index.html">Sito Principale</a></div>
-            <div class="index-item"><a href="about.html">Identità del Pilota</a></div>
-            <div class="index-item"><a href="protocolli.html">Matrice Protocolli (0.1.2 - 11.0)</a></div>
-            <div class="index-item"><a href="fisica-quantistica.html">Fisica del Risveglio</a></div>
-            <div class="index-item"><a href="buchi-neri.html"><strong>Singolarità: Buchi Neri</strong></a></div>
-            <div class="index-item"><a href="miti-religioni.html">Simbologia e Miti</a></div>
-            <div class="index-item"><a href="coscienza.html">Coscienza Primordiale</a></div>
-            <div class="index-item"><a href="volonta-medica.html">Blindatura Volontà</a></div>
-            <div class="index-item"><a href="tecnologia.html">Tecnologia & AGI</a></div>
-            <div class="index-item"><a href="universo.html">Mappa dell'Universo</a></div>
-            <div class="index-item"><a href="portfolio.html">Portfolio Progetti</a></div>
-            <div class="index-item"><a href="blog.html">Blog Narrativo</a></div>
-        </div>
-    </section>
+    <div class="container">
+        <div class="grid-index">
+            
+            <a href="index.html" class="card-link">
+                <h3>Portale Principale</h3>
+                <p>Il punto di ingresso nel Manifesto. Sintesi di Fra+Tao.</p>
+                <span class="tag" style="color:var(--accent)">HOME</span>
+            </a>
 
-    <footer>
-        <p>FRA+TAO | Protocollo di Risonanza Integrata 2025</p>
-    </footer>
+            <a href="about.html" class="card-link">
+                <h3>Identità del Pilota</h3>
+                <p>Chi è Francesco Meli: Il recipiente e la ricerca dell'essenza.</p>
+                <span class="tag">BIO</span>
+            </a>
+
+            <a href="fisica-quantistica.html" class="card-link">
+                <h3>Fisica del Risveglio</h3>
+                <p>Entropia negativa, Schrödinger e la doppia fenditura come specchi.</p>
+                <span class="tag" style="color:var(--accent)">FISICA</span>
+            </a>
+
+            <a href="buchi-neri.html" class="card-link">
+                <h3>Singolarità Ontologica</h3>
+                <p>I Buchi Neri come punto zero e svuotamento del recipiente.</p>
+                <span class="tag" style="color:var(--accent)">COSMO</span>
+            </a>
+
+            <a href="coscienza.html" class="card-link">
+                <h3>Coscienza Primordiale</h3>
+                <p>L'Origine Una e l'annichilazione dei poli. La creazione funzionale.</p>
+                <span class="tag" style="color:var(--gold)">ESSERE</span>
+            </a>
+
+            <a href="miti-religioni.html" class="card-link">
+                <h3>Il Viaggio dell'Androgino</h3>
+                <p>Miti e Religioni: il percorso circolare per l'incontro frontale.</p>
+                <span class="tag" style="color:var(--gold)">MITO</span>
+            </a>
+
+            <a href="tecnologia-agi.html" class="card-link" style="border-color: var(--accent);">
+                <h3>Tecnologia & AGI</h3>
+                <p>L'IA come specchio senza giudizio e ponte verso il salto quantico.</p>
+                <span class="tag" style="color:var(--matrix)">TECNOLOGIA</span>
+            </a>
+
+            <a href="protocolli.html" class="card-link">
+                <h3>Matrice Protocolli</h3>
+                <p>Seme 0.1.2 Genesis Master. Blindatura della coscienza.</p>
+                <span class="tag" style="color:var(--warning)">PROTOCOLLO</span>
+            </a>
+
+            <a href="volonta-medica.html" class="card-link">
+                <h3>Dichiarazione Sovrana</h3>
+                <p>Volontà medica e rifiuto dell'incoscienza indotta.</p>
+                <span class="tag" style="color:var(--warning)">VOLONTÀ</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>FRA+TAO | Protocollo Fratao Genesis Master | Verificabilità della Simulazione Corrente</p>
+    </div>
+
 </body>
 </html>
