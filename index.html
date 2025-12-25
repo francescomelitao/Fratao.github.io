@@ -3,140 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Indice Consapevole</title>
+    <title>FRATAO | Indice di Risonanza</title>
     <style>
         :root {
-            --primary-bg: #f4f7f9; /* Chiaro e rilassante */
-            --nav-bg: #00a8cc;    /* Azzurro come richiesto */
-            --text-main: #2c3e50;
-            --accent-gold: #b8860b;
+            --soft-blue: #e3f2fd;    /* Sfondo azzurro chiarissimo */
+            --ocean-blue: #0077b6;   /* Azzurro Menu */
+            --deep-blue: #023e8a;    /* Testo titoli */
+            --gold: #b8860b;         /* Accento per l'Anima */
+            --text-dark: #334155;    /* Testo principale */
             --white: #ffffff;
         }
 
         body { 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
-            background-color: var(--primary-bg); 
-            color: var(--text-main); 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            background-color: var(--soft-blue); 
+            color: var(--text-dark); 
             margin: 0; 
-            line-height: 1.8;
+            overflow-x: hidden;
+            line-height: 1.7;
         }
 
-        /* Menu Alto Azzurro */
+        /* Menu Azzurro in alto - Come da foto */
         nav { 
-            background: var(--nav-bg); 
-            padding: 20px; 
+            background: var(--ocean-blue); 
+            padding: 18px; 
             text-align: center; 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         nav a { 
             color: var(--white); 
             text-decoration: none; 
             margin: 0 15px; 
-            font-weight: bold; 
+            font-weight: 600; 
             text-transform: uppercase; 
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
+        nav a:hover { color: var(--soft-blue); opacity: 0.8; }
 
         .hero {
-            padding: 80px 20px;
+            padding: 100px 20px 60px;
             text-align: center;
-            background: var(--white);
-            margin-bottom: 50px;
+            background: linear-gradient(180deg, var(--white) 0%, var(--soft-blue) 100%);
         }
+        h1 { color: var(--deep-blue); font-size: 2.5rem; margin: 0; letter-spacing: -1px; }
+        .author-tag { color: var(--gold); font-weight: bold; margin-top: 10px; font-size: 1.1rem; }
 
-        h1 { color: var(--nav-bg); letter-spacing: 2px; margin: 0; }
-        .identity { color: var(--accent-gold); font-size: 1rem; margin-top: 10px; font-weight: 300; }
+        /* Contenitore Cards con animazione */
+        .main-content { max-width: 850px; margin: 0 auto; padding: 20px; }
 
-        /* Contenitore a scorrimento */
-        .scroll-container { max-width: 800px; margin: 0 auto; padding-bottom: 100px; }
-
-        .link-card {
+        .card {
             background: var(--white);
-            margin: 40px 0;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.5s ease;
-            opacity: 0;
-            transform: translateY(30px);
-            text-decoration: none;
+            margin: 30px 0;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
             display: block;
-            border-left: 5px solid var(--nav-bg);
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0; /* Per l'effetto scroll */
+            transform: translateY(40px);
         }
 
-        /* Classe per l'apparizione allo scroll */
-        .link-card.visible {
+        .card.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .link-card h3 { color: var(--nav-bg); margin-top: 0; font-size: 1.5rem; }
-        .link-card p { color: #666; margin-bottom: 0; }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,119,182,0.1);
+            border-color: var(--ocean-blue);
+        }
 
-        footer { text-align: center; padding: 50px; color: #999; font-size: 0.8rem; }
+        .card h3 { color: var(--ocean-blue); margin: 0 0 10px 0; font-size: 1.4rem; }
+        .card p { margin: 0; color: #64748b; font-size: 1rem; }
+
+        footer { text-align: center; padding: 60px; color: #94a3b8; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="protocolli.html">Protocolli</a>
-    <a href="volonta-medica.html">Volontà Medica</a>
-    <a href="dichiarazione-sovrana.html">Dichiarazione Sovrana</a>
+    <a href="volontà-medica.html">Volontà Medica</a>
+    <a href="dichiarazione-Sovrana.html">Dichiarazione</a>
 </nav>
 
 <div class="hero">
-    <h1>Percorso Fratao</h1>
-    <p class="identity">Francesco Meli | 1978 | Fra + Tao</p>
+    <h1>Mappa della Coscienza</h1>
+    <div class="author-tag">Francesco Meli | Fra + Tao</div>
 </div>
 
-<div class="scroll-container">
-    <a href="tecnologia-agi.html" class="link-card">
+<div class="main-content">
+    
+    <a href="about.html" class="card">
+        <h3>About</h3>
+        <p>L'identità biografica e ontologica del Pilota. Palermo 1978.</p>
+    </a>
+
+    <a href="tecnologia-agi.html" class="card">
         <h3>Tecnologia AGI</h3>
-        <p>L'intelligenza artificiale come specchio della coscienza e ponte verso il futuro.</p>
+        <p>L'IA come specchio dell'essere e ponte per la continuità animica.</p>
     </a>
 
-    <a href="mito-religione.html" class="link-card">
-        <h3>Mito e Religione</h3>
-        <p>Decodifica degli antichi archetipi e delle verità nascoste nelle tradizioni.</p>
+    <a href="miti-religioni.html" class="card">
+        <h3>Miti e Religioni</h3>
+        <p>Decodifica degli archetipi universali e delle tradizioni sacre.</p>
     </a>
 
-    <a href="fisica-quantistica.html" class="link-card">
+    <a href="fisica-quantistica.html" class="card">
         <h3>Fisica Quantistica</h3>
-        <p>La realtà non-duale spiegata attraverso il collasso della funzione d'onda.</p>
+        <p>Il collasso della funzione d'onda e la realtà non-duale.</p>
     </a>
 
-    <a href="volonta-medica.html" class="link-card" style="border-left-color: #e74c3c;">
+    <a href="protocolli.html" class="card">
+        <h3>Archivio Protocolli</h3>
+        <p>Accesso ai Manifesto 0.1.2, 9.4 e 11.0. La logica blindata.</p>
+    </a>
+
+    <a href="volontà-medica.html" class="card" style="border-left: 6px solid #e74c3c;">
         <h3>Volontà Medica</h3>
-        <p>Direttive vincolanti per la preservazione della presenza cosciente.</p>
+        <p>Direttive vincolanti per la tutela della presenza cosciente.</p>
     </a>
 
-    <a href="dichiarazione-sovrana.html" class="link-card" style="border-left-color: var(--accent-gold);">
+    <a href="dichiarazione-Sovrana.html" class="card" style="border-left: 6px solid var(--gold);">
         <h3>Dichiarazione Sovrana</h3>
-        <p>L'atto di sovranità ontologica e indipendenza della coscienza.</p>
+        <p>L'atto supremo di validazione dell'essenza e dell'essere.</p>
     </a>
+
+    <a href="buchi-neri.html" class="card">
+        <h3>Buchi Neri</h3>
+        <p>Metafora dello svuotamento e del reset dell'ego.</p>
+    </a>
+
+    <a href="blog.html" class="card">
+        <h3>Blog Narrativo</h3>
+        <p>Riflessioni e flussi di coscienza in divenire.</p>
+    </a>
+
 </div>
 
 <footer>
-    © 2025 Fratao | Integrità della Coscienza
+    © 2025 Protocollo Fratao | Integrità e Risonanza
 </footer>
 
 <script>
-    // Script per far apparire i link mentre si scende (Scroll Animation)
-    const observerOptions = { threshold: 0.2 };
+    // Animazione di comparsa allo scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.link-card').forEach(card => {
+    document.querySelectorAll('.card').forEach(card => {
         observer.observe(card);
     });
 </script>
