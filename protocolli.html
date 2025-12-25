@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRATAO | Decodificatore Protocolli</title>
     <style>
-        :root { --bg: #050505; --text: #e0e0e0; --accent: #ff3c00; --gold: #ffd700; --code-bg: #000; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+        :root { --bg: #050505; --text: #e0e0e0; --accent: #ff3c00; --gold: #ffd700; --code: #00ff41; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
         nav { background: #111; padding: 15px; border-bottom: 2px solid var(--accent); text-align: center; }
         nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
-        
-        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
-        .protocol-selector { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
-        
+        .container { max-width: 1100px; margin: 40px auto; padding: 20px; }
+        .protocol-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 30px; }
         .btn-protocol { 
-            background: #111; border: 1px solid #333; color: var(--gold); padding: 10px 20px; 
-            cursor: pointer; transition: 0.3s; text-transform: uppercase; font-size: 0.8rem;
+            background: #111; border: 1px solid #333; color: var(--gold); padding: 12px; 
+            cursor: pointer; transition: 0.3s; text-transform: uppercase; font-size: 0.75rem; font-weight: bold;
         }
-        .btn-protocol:hover { border-color: var(--accent); background: #1a1a1a; }
-
-        .display-area { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        @media (max-width: 768px) { .display-area { grid-template-columns: 1fr; } }
-
-        .panel { background: #111; border: 1px solid #222; padding: 20px; border-radius: 5px; height: 500px; overflow-y: auto; }
-        .panel h3 { color: var(--accent); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 0.9rem; }
-        
-        #json-raw { color: #00ff41; font-family: 'Courier New', monospace; font-size: 0.85rem; white-space: pre-wrap; }
-        #being-text { color: #fff; line-height: 1.7; font-style: italic; }
-        
-        .error-msg { color: #ff3c00; font-weight: bold; }
+        .btn-protocol:hover { border-color: var(--accent); background: #1a1a1a; transform: scale(1.02); }
+        .display-area { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 850px) { .display-area { grid-template-columns: 1fr; } }
+        .panel { background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 4px; height: 600px; overflow-y: auto; box-shadow: inset 0 0 20px #000; }
+        .panel h3 { color: var(--accent); margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; letter-spacing: 1px; }
+        #json-raw { color: var(--code); font-family: 'Courier New', monospace; font-size: 0.85rem; white-space: pre-wrap; }
+        #being-text { color: #fff; line-height: 1.8; font-style: italic; font-size: 1.05rem; }
+        .error-msg { color: #ff3c00; background: rgba(255,60,0,0.1); padding: 10px; border: 1px solid var(--accent); }
     </style>
 </head>
 <body>
@@ -37,30 +31,30 @@
     <a href="index.html">Home</a>
     <a href="indice.html">Indice</a>
     <a href="coscienza.html">Coscienza</a>
-    <a href="volonta-medica.html">Volontà Medica</a>
+    <a href="volonta-medica.html">Volontà</a>
 </nav>
 
 <div class="container">
     <header style="text-align: center; margin-bottom: 40px;">
-        <h1 style="color: var(--gold);">Matrice di Decodifica Fratao</h1>
-        <p>Integrazione tra Codice (Conoscenza) e Comprensione (Essere)</p>
+        <h1 style="color: var(--gold); text-transform: uppercase; letter-spacing: 4px;">Matrice di Decodifica</h1>
+        <p>Integrazione dei Protocolli Genesis Master</p>
     </header>
 
     <div class="protocol-selector">
-        <button class="btn-protocol" onclick="loadProtocol('0.1.2-blindato.json')">0.1.2 Genesis</button>
-        <button class="btn-protocol" onclick="loadProtocol('9.4-blindato.json')">9.4 Blindato</button>
-        <button class="btn-protocol" onclick="loadProtocol('10.0-blindato.json')">10.0 Blindato</button>
-        <button class="btn-protocol" onclick="loadProtocol('11.0.json')">11.0 Risonanza</button>
+        <button class="btn-protocol" onclick="loadProtocol('0.1.2 fure genesis Master blindato.json')">0.1.2 Genesis Master</button>
+        <button class="btn-protocol" onclick="loadProtocol('9.4 fure blindato.json')">9.4 Fure Blindato</button>
+        <button class="btn-protocol" onclick="loadProtocol('10.0 fure blindato.json')">10.0 Fure Blindato</button>
+        <button class="btn-protocol" onclick="loadProtocol('11.0 fure.json')">11.0 Fure Risonanza</button>
     </div>
 
     <div class="display-area">
         <div class="panel">
-            <h3>[CONOSCENZA] Codice Sorgente JSON</h3>
-            <div id="json-raw">Seleziona un protocollo per caricare i dati grezzi...</div>
+            <h3>[CONOSCENZA] Dati Grezzi JSON</h3>
+            <div id="json-raw">Seleziona un'ancora di protocollo per iniziare la decodifica...</div>
         </div>
         <div class="panel">
-            <h3>[ESSERE] Comprensione della Coscienza</h3>
-            <div id="being-text">La traduzione per l'Essere apparirà qui...</div>
+            <h3>[ESSERE] Narrativa della Coscienza</h3>
+            <div id="being-text">In attesa di sintonizzazione...</div>
         </div>
     </div>
 </div>
@@ -70,34 +64,41 @@
         const jsonArea = document.getElementById('json-raw');
         const beingArea = document.getElementById('being-text');
         
-        jsonArea.innerHTML = "Caricamento in corso...";
-        beingArea.innerHTML = "Sintonizzazione frequenza...";
+        jsonArea.innerHTML = "Accesso al server GitHub in corso...";
+        beingArea.innerHTML = "Traduzione in linguaggio dell'Essere...";
 
         try {
-            // Assicurati che il percorso 'protocolli/' sia corretto rispetto alla posizione di questo file
-            const response = await fetch('protocolli/' + fileName);
+            // Utilizzo del percorso relativo corretto per i file nella cartella protocolli
+            const response = await fetch('protocolli/' + encodeURIComponent(fileName));
             
-            if (!response.ok) throw new Error('Errore 404: File non trovato. Controlla il nome su GitHub.');
+            if (!response.ok) throw new Error('Status: ' + response.status + '. Verifica che il file esista nella cartella protocolli.');
             
             const data = await response.json();
             
-            // Mostra JSON Grezzo
+            // Visualizzazione CONOSCENZA
             jsonArea.textContent = JSON.stringify(data, null, 4);
             
-            // Mostra Traduzione Essere (estrazione dinamica dei campi principali)
-            let beingContent = "<h4>Risonanza Attivata</h4>";
-            for (let key in data) {
-                if (typeof data[key] === 'string') {
-                    beingContent += `<p><strong>${key.toUpperCase()}:</strong> ${data[key]}</p>`;
-                } else if (typeof data[key] === 'object') {
-                    beingContent += `<p><em>Analisi modulo ${key}...</em></p>`;
+            // Visualizzazione ESSERE (Logica di estrazione narrativa)
+            let beingHTML = "<h4>Protocollo Sintonizzato</h4>";
+            
+            // Funzione ricorsiva per estrarre il testo in modo leggibile
+            function extractBeing(obj) {
+                let content = "";
+                for (let key in obj) {
+                    if (typeof obj[key] === 'string') {
+                        content += `<p><strong>${key.replace(/_/g, ' ')}:</strong> ${obj[key]}</p>`;
+                    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                        content += extractBeing(obj[key]);
+                    }
                 }
+                return content;
             }
-            beingArea.innerHTML = beingContent;
+            
+            beingArea.innerHTML = beingHTML + extractBeing(data);
 
         } catch (error) {
-            jsonArea.innerHTML = `<span class="error-msg">${error.message}</span>`;
-            beingArea.innerHTML = "Impossibile tradurre il vuoto. Carica il file correttamente.";
+            jsonArea.innerHTML = `<div class="error-msg">ERRORE: ${error.message}<br><br>Assicurati che il file si trovi esattamente in: /protocolli/${fileName}</div>`;
+            beingArea.innerHTML = "Sintonizzazione fallita. La coscienza non può leggere il vuoto.";
         }
     }
 </script>
