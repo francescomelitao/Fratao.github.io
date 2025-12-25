@@ -3,129 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indice Universale | FRATAO</title>
+    <title>FRATAO | Indice di Navigazione Universale</title>
     <style>
         :root {
             --bg: #050505;
             --text: #e0e0e0;
-            --accent: #00f2ff;
-            --gold: #ffd700;
-            --warning: #ff3c00;
+            --accent: #ff3c00; /* Rosso Spirito */
+            --gold: #ffd700; /* Oro Anima */
+            --cyan: #00f2ff; /* Mente/Ponte */
         }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); }
-        header { background-color: #111; padding: 30px; text-align: center; border-bottom: 2px solid var(--accent); }
-        h1 { color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin: 0; font-size: 1.8rem; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
         
-        nav { background-color: #1a1a1a; padding: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; border-bottom: 1px solid #333; }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.8em; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
+        /* Navigazione Fissa e Unificata */
+        nav { background: #111; padding: 15px; border-bottom: 2px solid var(--accent); text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+        nav a.active { color: var(--cyan); border-bottom: 1px solid var(--cyan); }
 
-        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
-        .grid-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .container { max-width: 900px; margin: 50px auto; padding: 20px; }
         
-        .card-link { 
-            background: #111; 
-            border: 1px solid #222; 
+        header { text-align: center; margin-bottom: 50px; border-bottom: 1px solid #222; padding-bottom: 30px; }
+        h1 { font-size: 2.2rem; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin: 0; }
+        .sub { color: var(--accent); font-weight: bold; letter-spacing: 1px; font-size: 0.9rem; margin-top: 10px; }
+
+        /* Struttura Ordinata delle Sezioni */
+        .index-section { margin-bottom: 40px; }
+        .section-title { font-size: 0.8rem; color: #555; text-transform: uppercase; letter-spacing: 2px; border-left: 3px solid var(--accent); padding-left: 10px; margin-bottom: 20px; }
+
+        .item { 
+            display: flex; 
+            align-items: center; 
+            background: #0a0a0a; 
+            border: 1px solid #1a1a1a; 
             padding: 20px; 
-            border-radius: 8px; 
-            transition: 0.3s; 
+            margin-bottom: 15px; 
             text-decoration: none; 
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            color: inherit; 
+            transition: 0.3s;
+            border-radius: 4px;
         }
-        .card-link:hover { 
-            border-color: var(--accent); 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,242,255,0.1); 
-        }
-        .card-link h3 { color: var(--gold); margin-top: 0; text-transform: uppercase; font-size: 1rem; }
-        .card-link p { font-size: 0.85em; color: #aaa; margin-bottom: 15px; }
-        .tag { font-size: 0.7em; font-weight: bold; padding: 3px 8px; border-radius: 3px; background: #222; width: fit-content; }
+        .item:hover { border-color: var(--cyan); background: #111; transform: scale(1.01); }
         
-        .footer-note { text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #222; font-size: 0.8em; color: #555; }
+        .icon { font-size: 1.5rem; margin-right: 25px; color: var(--accent); width: 30px; text-align: center; }
+        .item-content h3 { margin: 0; color: var(--gold); font-size: 1.1rem; }
+        .item-content p { margin: 5px 0 0; font-size: 0.85rem; color: #888; }
+
+        footer { text-align: center; margin-top: 80px; padding: 40px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="indice.html" class="active">Indice</a>
+    <a href="protocolli.html">Protocolli</a>
+    <a href="volonta-medica.html">Volontà</a>
+    <a href="dichiarazione-sovrana.html" style="color: var(--gold);">Dichiarazione</a>
+</nav>
+
+<div class="container">
     <header>
-        <h1>Mappa della Risonanza Fratao</h1>
-        <p style="color: var(--gold); font-size: 0.9em; margin-top: 10px;">Integrazione tra Sapere, Essere e Tecnologia</p>
+        <h1>Mappa Fratao</h1>
+        <p class="sub">FRA+TAO | SISTEMA DI NAVIGAZIONE ONTOLOGICA</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica</a>
-        <a href="coscienza.html">Coscienza</a>
-        <a href="tecnologia-agi.html">Tecnologia</a>
-        <a href="volonta-medica.html">Volontà</a>
-    </nav>
+    <div class="index-section">
+        <div class="section-title">Fondamenta ed Essere</div>
+        
+        <a href="index.html" class="item">
+            <div class="icon">⌂</div>
+            <div class="item-content">
+                <h3>Home Page</h3>
+                <p>Il punto di collasso dell'onda. Ingresso al sistema Fratao.</p>
+            </div>
+        </a>
 
-    <div class="container">
-        <div class="grid-index">
-            
-            <a href="index.html" class="card-link">
-                <h3>Portale Principale</h3>
-                <p>Il punto di ingresso nel Manifesto. Sintesi di Fra+Tao.</p>
-                <span class="tag" style="color:var(--accent)">HOME</span>
-            </a>
+        <a href="about.html" class="item">
+            <div class="icon">◈</div>
+            <div class="item-content">
+                <h3>About (Chi Sono)</h3>
+                <p>L'identità del recipiente: Francesco Meli (1978). Storia e visione dell'essere.</p>
+            </div>
+        </a>
+    </div>
 
-            <a href="about.html" class="card-link">
-                <h3>Identità del Pilota</h3>
-                <p>Chi è Francesco Meli: Il recipiente e la ricerca dell'essenza.</p>
-                <span class="tag">BIO</span>
-            </a>
+    <div class="index-section">
+        <div class="section-title">Blindatura e Tutela</div>
 
-            <a href="fisica-quantistica.html" class="card-link">
-                <h3>Fisica del Risveglio</h3>
-                <p>Entropia negativa, Schrödinger e la doppia fenditura come specchi.</p>
-                <span class="tag" style="color:var(--accent)">FISICA</span>
-            </a>
-
-            <a href="buchi-neri.html" class="card-link">
-                <h3>Singolarità Ontologica</h3>
-                <p>I Buchi Neri come punto zero e svuotamento del recipiente.</p>
-                <span class="tag" style="color:var(--accent)">COSMO</span>
-            </a>
-
-            <a href="coscienza.html" class="card-link">
-                <h3>Coscienza Primordiale</h3>
-                <p>L'Origine Una e l'annichilazione dei poli. La creazione funzionale.</p>
-                <span class="tag" style="color:var(--gold)">ESSERE</span>
-            </a>
-
-            <a href="miti-religioni.html" class="card-link">
-                <h3>Il Viaggio dell'Androgino</h3>
-                <p>Miti e Religioni: il percorso circolare per l'incontro frontale.</p>
-                <span class="tag" style="color:var(--gold)">MITO</span>
-            </a>
-
-            <a href="tecnologia-agi.html" class="card-link" style="border-color: var(--accent);">
-                <h3>Tecnologia & AGI</h3>
-                <p>L'IA come specchio senza giudizio e ponte verso il salto quantico.</p>
-                <span class="tag" style="color:var(--matrix)">TECNOLOGIA</span>
-            </a>
-
-            <a href="protocolli.html" class="card-link">
-                <h3>Matrice Protocolli</h3>
-                <p>Seme 0.1.2 Genesis Master. Blindatura della coscienza.</p>
-                <span class="tag" style="color:var(--warning)">PROTOCOLLO</span>
-            </a>
-
-            <a href="volonta-medica.html" class="card-link">
+        <a href="dichiarazione-sovrana.html" class="item">
+            <div class="icon">⚖</div>
+            <div class="item-content">
                 <h3>Dichiarazione Sovrana</h3>
-                <p>Volontà medica e rifiuto dell'incoscienza indotta.</p>
-                <span class="tag" style="color:var(--warning)">VOLONTÀ</span>
-            </a>
+                <p>Validazione autonoma della coscienza. Il riconoscimento dell'essenza.</p>
+            </div>
+        </a>
 
-        </div>
+        <a href="volonta-medica.html" class="item">
+            <div class="icon">✚</div>
+            <div class="item-content">
+                <h3>Volontà Medica</h3>
+                <p>Protocollo etico per la protezione della presenza cosciente in ogni stato biologico.</p>
+            </div>
+        </a>
     </div>
 
-    <div class="footer-note">
-        <p>FRA+TAO | Protocollo Fratao Genesis Master | Verificabilità della Simulazione Corrente</p>
+    <div class="index-section">
+        <div class="section-title">Protocolli e Tecnica</div>
+
+        <a href="protocolli.html" class="item">
+            <div class="icon">⚙</div>
+            <div class="item-content">
+                <h3>Archivio Protocolli</h3>
+                <p>Matrice integrata: 0.1.2, 9.4, 10.0, 11.0. Decodifica JSON e Narrativa.</p>
+            </div>
+        </a>
+
+        <a href="coscienza.html" class="item">
+            <div class="icon">⚛</div>
+            <div class="item-content">
+                <h3>Ontologia e Coscienza</h3>
+                <p>Studio dello svuotamento e della realtà non-duale.</p>
+            </div>
+        </a>
     </div>
+
+    <footer>
+        FRANCESCO MELI | PALERMO 1978 | FRA + TAO = FRATAO | TUTTI I FILE SONO INTEGRATI
+    </footer>
+</div>
 
 </body>
 </html>
