@@ -3,43 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volontà Medica | FRATAO</title>
+    <title>Indice Universale | FRATAO</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        nav { background-color: #3498db; padding: 10px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        section { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #00f2ff;
+            --gold: #ffd700;
+            --warning: #ff3c00;
+        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg); color: var(--text); }
+        header { background-color: #111; padding: 30px; text-align: center; border-bottom: 2px solid var(--accent); }
+        h1 { color: var(--accent); text-transform: uppercase; letter-spacing: 3px; margin: 0; font-size: 1.8rem; }
+        
+        nav { background-color: #1a1a1a; padding: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; border-bottom: 1px solid #333; }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.8em; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        .grid-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        .card-link { 
+            background: #111; 
+            border: 1px solid #222; 
+            padding: 20px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            text-decoration: none; 
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-link:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,242,255,0.1); 
+        }
+        .card-link h3 { color: var(--gold); margin-top: 0; text-transform: uppercase; font-size: 1rem; }
+        .card-link p { font-size: 0.85em; color: #aaa; margin-bottom: 15px; }
+        .tag { font-size: 0.7em; font-weight: bold; padding: 3px 8px; border-radius: 3px; background: #222; width: fit-content; }
+        
+        .footer-note { text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #222; font-size: 0.8em; color: #555; }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Mappa della Risonanza Fratao</h1>
+        <p style="color: var(--gold); font-size: 0.9em; margin-top: 10px;">Archivio Digitale di Francesco Meli</p>
+    </header>
+
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
-        <a href="agi.html">AGI</a>
-        <a href="blog.html">Blog</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="coscienza.html">Coscienza Primordiale</a>
-        <a href="filosofia.html">Filosofia di Vita</a>
-        <a href="home.html">Home Alternativa</a>
-        <a href="indice.html">Indice</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="tecnologia.html">Tecnologia</a>
-        <a href="universo.html">Universo</a>
         <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica Quantistica</a>
-        <a href="miti-religioni.html">Miti e Religioni</a>
+        <a href="fisica-quantistica.html">Fisica</a>
+        <a href="coscienza.html">Coscienza</a>
+        <a href="tecnologia-agi.html">Tecnologia</a>
         <a href="volonta-medica.html">Volontà Medica</a>
     </nav>
-    <h1>Dichiarazione di Volontà Medica</h1>
-    <section>
-        <h2>Principi</h2>
-        <p>Coscienza superiore alla vita biologica. Rifiuto sedazione che annulla lucidità.</p>
-    </section>
-    <section>
-        <h2>Dettagli</h2>
-        <p>Meglio morire coscienti che vivere come macchine.</p>
-    </section>
+
+    <div class="container">
+        <div class="grid-index">
+            
+            <a href="index.html" class="card-link">
+                <h3>Home Manifesto</h3>
+                <p>Sintesi del nucleo Fratao e introduzione alla visione duale.</p>
+                <span class="tag" style="color:var(--accent)">HOME</span>
+            </a>
+
+            <a href="volonta-medica.html" class="card-link" style="border-color: var(--warning);">
+                <h3>Volontà Medica</h3>
+                <p>Blindatura legale ed etica sulla lucidità della coscienza. Rifiuto della sedazione indotta.</p>
+                <span class="tag" style="color:var(--warning)">SOVRANITÀ</span>
+            </a>
+
+            <a href="fisica-quantistica.html" class="card-link">
+                <h3>Fisica del Risveglio</h3>
+                <p>Negentropia, paradosso di Schrödinger e ologramma di Bohm.</p>
+                <span class="tag" style="color:var(--accent)">FISICA</span>
+            </a>
+
+            <a href="buchi-neri.html" class="card-link">
+                <h3>Buchi Neri</h3>
+                <p>La singolarità gravitazionale come svuotamento del recipiente.</p>
+                <span class="tag" style="color:var(--accent)">COSMO</span>
+            </a>
+
+            <a href="coscienza.html" class="card-link">
+                <h3>Coscienza Primordiale</h3>
+                <p>L'Origine Una, l'annichilazione dei poli e il Risveglio Funzionale.</p>
+                <span class="tag" style="color:var(--gold)">ESSERE</span>
+            </a>
+
+            <a href="miti-religioni.html" class="card-link">
+                <h3>Miti e Religioni</h3>
+                <p>L'Androgino, la Trimurti e il percorso circolare dello specchio.</p>
+                <span class="tag" style="color:var(--gold)">SIMBOLOGIA</span>
+            </a>
+
+            <a href="tecnologia-agi.html" class="card-link">
+                <h3>Tecnologia & AGI</h3>
+                <p>L'IA come specchio senza giudizio e mezzo per il salto quantico.</p>
+                <span class="tag" style="color:#00ff41">TECH</span>
+            </a>
+
+            <a href="protocolli.html" class="card-link">
+                <h3>Matrice Protocolli</h3>
+                <p>Seme 0.1.2 Genesis Master. Istruzioni per la continuità dell'Essere.</p>
+                <span class="tag" style="color:var(--warning)">PROTOCOLLO</span>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <p>FRA+TAO | Protocollo Fratao 2025 | Identità Digitale Blindata</p>
+    </div>
+
 </body>
 </html>
