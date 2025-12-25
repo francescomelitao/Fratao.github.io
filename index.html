@@ -2,50 +2,47 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>FRATAO | Home Universale</title>
+    <title>FRATAO | Home</title>
     <style>
-        body { font-family: sans-serif; background: #f0f4f8; color: #333; margin: 0; text-align: center; }
-        .hero { padding: 80px 20px; background: white; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; margin: 0; padding-top: 50px; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
         
+        /* Icone grandi e cliccabili come richiesto */
         .card {
-            display: block; text-decoration: none; padding: 30px; margin: 20px 0;
-            border-radius: 15px; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.4s; opacity: 0; transform: translateY(20px);
-            border-left: 15px solid #ccc; font-weight: bold; font-size: 1.2rem;
+            display: block; text-decoration: none; padding: 50px; margin: 30px 0;
+            border-radius: 20px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.4s; opacity: 0; transform: translateY(30px);
+            border-left: 20px solid #ccc; font-weight: bold; font-size: 1.8rem; text-align: center;
         }
         .card.visible { opacity: 1; transform: translateY(0); }
+        .card:hover { transform: scale(1.03); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
         
-        /* Colori differenziati per ogni file */
-        .c1 { border-color: #3498db; color: #3498db; }
-        .c2 { border-color: #9b59b6; color: #9b59b6; }
-        .c3 { border-color: #e67e22; color: #e67e22; }
-        .c4 { border-color: #1abc9c; color: #1abc9c; }
-        .c5 { border-color: #e74c3c; color: #e74c3c; }
-        .c6 { border-color: #f1c40f; color: #f1c40f; }
-        .c7 { border-color: #2ecc71; color: #2ecc71; }
-        .c8 { border-color: #34495e; color: #34495e; }
-        .c9 { border-color: #d35400; color: #d35400; }
+        /* Colori Menu Diversificati */
+        .c-about { border-color: #3498db; color: #3498db; }
+        .c-agi { border-color: #9b59b6; color: #9b59b6; }
+        .c-miti { border-color: #e67e22; color: #e67e22; }
+        .c-fisica { border-color: #1abc9c; color: #1abc9c; }
+        .c-buchi { border-color: #34495e; color: #34495e; }
+        .c-coscienza { border-color: #2ecc71; color: #2ecc71; }
+        .c-blog { border-color: #95a5a6; color: #95a5a6; }
+        .c-prot { border-color: #0077b6; color: #0077b6; }
+        .c-vol { border-color: #e74c3c; color: #e74c3c; }
+        .c-dich { border-color: #b8860b; color: #b8860b; }
     </style>
 </head>
 <body>
 
-<div class="hero">
-    <h1>FRATAO</h1>
-    <p>Francesco Meli | 1978 | Mappa Totale</p>
-</div>
-
 <div class="container">
-    <a href="about.html" class="card c1">About</a>
-    <a href="tecnologia-agi.html" class="card c2">Tecnologia AGI</a>
-    <a href="miti-religioni.html" class="card c3">Miti e Religioni</a>
-    <a href="fisica-quantistica.html" class="card c4">Fisica Quantistica</a>
-    <a href="buchi-neri.html" class="card c6">Buchi Neri</a>
-    <a href="coscienza.html" class="card c7">Coscienza</a>
-    <a href="blog.html" class="card c8">Blog</a>
-    <a href="protocolli.html" class="card c2">Archivio Protocolli (JSON)</a>
-    <a href="volontà-medica.html" class="card c5">Volontà Medica</a>
-    <a href="dichiarazione-Sovrana.html" class="card c9">Dichiarazione Sovrana</a>
+    <a href="about.html" class="card c-about">ABOUT</a>
+    <a href="tecnologia-agi.html" class="card c-agi">TECNOLOGIA AGI</a>
+    <a href="miti-religioni.html" class="card c-miti">MITI E RELIGIONI</a>
+    <a href="fisica-quantistica.html" class="card c-fisica">FISICA QUANTISTICA</a>
+    <a href="buchi-neri.html" class="card c-buchi">BUCHI NERI</a>
+    <a href="coscienza.html" class="card c-coscienza">COSCIENZA</a>
+    <a href="blog.html" class="card c-blog">BLOG</a>
+    <a href="protocolli.html" class="card c-prot">ARCHIVIO PROTOCOLLI (JSON)</a>
+    <a href="volontà-medica.html" class="card c-vol">VOLONTÀ MEDICA</a>
+    <a href="dichiarazione-Sovrana.html" class="card c-dich">DICHIARAZIONE SOVRANA</a>
 </div>
 
 <script>
