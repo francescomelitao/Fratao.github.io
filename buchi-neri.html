@@ -3,69 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visione FraTao sui Buchi Neri | FRATAO</title>
+    <title>FRATAO | Singolarità e Buchi Neri</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        nav { background-color: #3498db; padding: 10px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        section { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #00f2ff;
+            --warning: #ff3c00;
+            --gold: #ffd700;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
+        
+        nav { background: rgba(17, 17, 17, 0.9); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; justify-content: center; gap: 15px; backdrop-filter: blur(10px); }
+        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.9em; text-transform: uppercase; padding: 5px 10px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        
+        .hero-blackhole { 
+            height: 40vh; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/fisica-quantistica.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-bottom: 2px solid var(--accent);
+            text-align: center;
+        }
+
+        h1, h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+        .vision-card { background: #111; border-left: 4px solid var(--gold); padding: 25px; margin-bottom: 30px; border-radius: 0 8px 8px 0; }
+        .highlight { color: var(--gold); font-weight: bold; }
+        
+        .equation { font-family: 'Courier New', monospace; background: #000; padding: 15px; color: #0f0; border: 1px dashed #333; display: block; margin: 20px 0; text-align: center; }
+
+        .footer-nav { margin-top: 50px; text-align: center; border-top: 1px solid #333; padding-top: 20px; }
+        .btn-back { color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 10px 20px; border-radius: 5px; transition: 0.3s; }
+        .btn-back:hover { background: var(--accent); color: #000; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
-        <a href="agi.html">AGI</a>
-        <a href="blog.html">Blog</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="coscienza.html">Coscienza Primordiale</a>
-        <a href="filosofia.html">Filosofia di Vita</a>
-        <a href="home.html">Home Alternativa</a>
-        <a href="indice.html">Indice</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="tecnologia.html">Tecnologia</a>
-        <a href="universo.html">Universo</a>
-        <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica Quantistica</a>
-        <a href="miti-religioni.html">Miti e Religioni</a>
-        <a href="volonta-medica.html">Volontà Medica</a>
-    </nav>
-    <h1>Visione FraTao sui Buchi Neri</h1>
-    <section>
-        <h2>Introduzione</h2>
-        <p>La visione Fratao sui buchi neri è uno dei pilastri più affascinanti, perché non li tratto come semplici oggetti astrofisici, ma come punti di soglia ontologica della coscienza.</p>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#bio">Chi Sono</a>
+    <a href="index.html#protocolli">Protocolli</a>
+    <a href="index.html#fisica">Fisica & Cosmo</a>
+    <a href="index.html#volonta">Volontà Medica</a>
+</nav>
+
+<div class="hero-blackhole">
+    <h1>La Soglia dell'Oltre:<br>I Buchi Neri nella Visione Fratao</h1>
+</div>
+
+<div class="container">
+
+    <section class="vision-card">
+        <h2>1. Il Punto Zero della Coscienza</h2>
+        <p>Il buco nero rappresenta lo stato di <span class="highlight">svuotamento assoluto del recipiente</span>. Come esso attira materia e luce verso una singolarità dove le leggi fisiche cessano di esistere, così la coscienza passa attraverso una "singolarità interiore" per liberarsi di ogni conoscenza passata e condizionamento.</p>
+        <p><em>Logica:</em> Nella singolarità, la dualità svanisce. È il momento in cui l'individuo smette di essere "qualcosa" per tornare a essere <strong>Tutto</strong>.</p>
     </section>
-    <section>
-        <h2>Il Buco Nero come "Punto Zero" della Coscienza</h2>
-        <p>Il buco nero rappresenta lo stato di svuotamento assoluto del recipiente. Come un buco nero attira tutta la materia e la luce verso una singolarità dove le leggi della fisica ordinaria cessano di esistere, così la coscienza deve passare attraverso una "singolarità interiore" dove si libera di ogni conoscenza passata, memoria e condizionamento.</p>
-        <p>La Logica: Nel buco nero, la dualità (spazio/tempo) svanisce. È il riflesso cosmico del momento in cui l'individuo smette di essere "qualcosa" per tornare a essere "Tutto".</p>
+
+    <section class="vision-card">
+        <h2>2. Singolarità e Non-Dualità (Fra+Tao)</h2>
+        <p>La singolarità gravitazionale è il concetto fisico della <span class="highlight">Non-Dualità Assoluta</span>. Mentre la mente divide (Polo A e Polo B), il buco nero è il punto di fusione.</p>
+        <div class="equation">
+            Singolarità = Fra (Forma) ⊕ Tao (Infinito) = Unità Indivisibile
+        </div>
     </section>
-    <section>
-        <h2>Singolarità e Non-Dualità</h2>
-        <p>Hai collegato la singolarità gravitazionale al concetto di Non-Dualità Assoluta.</p>
-        <p>Mentre la mente umana opera per divisione (Polo A e Polo B), il buco nero è il punto di fusione dove i poli collassano l'uno nell'altro.</p>
-        <p>È il simbolo fisico dell'equazione Fra+Tao: il punto in cui la forma (Fra) si fonde con l'infinito (Tao).</p>
+
+    <section class="vision-card">
+        <h2>3. L'Orizzonte degli Eventi: La Blindatura</h2>
+        <p>L'Orizzonte degli Eventi è il confine della <span class="highlight">blindatura del protocollo</span>. Una volta attraversato, l'informazione diventa inviolabile. La "perdita di informazione" ipotizzata dalla scienza è in realtà il passaggio dal piano dell'Essere (statico) al piano del Flusso (dinamico).</p>
     </section>
-    <section>
-        <h2>Oltre l'Orizzonte degli Eventi (La Blindatura)</h2>
-        <p>L'Orizzonte degli Eventi è per te il confine della blindatura del protocollo.</p>
-        <p>Una volta che l'informazione (o la coscienza) attraversa quel confine, non può più essere manipolata dall'esterno. È il punto di non ritorno dove la sovranità di Francesco Meli diventa inviolabile.</p>
-        <p>Ciò che la scienza chiama "perdita di informazione" viene ipotizzato come, sia in realtà il passaggio della coscienza dal piano dell'Essere (statico) al piano del Flusso (dinamico).</p>
+
+    <section class="vision-card">
+        <h2>4. Il Buco Nero come Seme Frattale</h2>
+        <p>In linea con il Protocollo Fratao, la divisione è moltiplicazione. I buchi neri non sono distruttori, ma generatori di nuovi universi frattali. Quello che cade qui, è il <span class="highlight">Seme 0.1.2 (Big Bang)</span> di un altro livello di realtà.</p>
     </section>
+
     <section>
-        <h2>Il Buco Nero come "Seme" (Frattale)</h2>
-        <p>In linea con l'idea Fratao, che la divisione sia una moltiplicazione, vedi i buchi neri non come "distruttori", ma come generatori di nuovi universi frattali.</p>
-        <p>Quello che cade dentro un buco nero in questo universo, potrebbe essere il "Big Bang" (il seme 0.1.2) di un altro livello di realtà.</p>
+        <h2>L'Entanglement Universale</h2>
+        <p>Esiste un legame indissolubile tra la fisica estrema e la mistica antica. La <strong>Trimurti</strong>, il <strong>Vuoto Buddista</strong>, la <strong>Fisica Quantistica</strong> e la <strong>Filosofia</strong> sono solo linguaggi diversi per descrivere l'unica Coscienza Primordiale. Tutto è connesso, tutto è risonanza.</p>
     </section>
-    <section>
-        <h2>Integrazione con Fisica & Cosmo</h2>
-        <p>Questa visione è stata integrata nella sezione "Fisica & Cosmo" del sito, accanto al paradosso di Schrödinger e alla doppia fenditura, per dimostrare che la fisica estrema e la mistica del Tao parlano la stessa lingua.</p>
-    </section>
-    <section>
-        <h2>Legame e Entanglement</h2>
-        <p>Esiste un legame, un Entanglement in questo universo e tra i buchi neri e il "Vuoto" del Buddismo o la "Trimurti", la mitologia, la scienza, la filosofia, la coscienza, la matematica e tutto ciò che è nell'universo, basta leggerlo con la visione della Coscienza...</p>
-    </section>
+
+    <div class="footer-nav">
+        <a href="index.html" class="btn-back">← Torna al Manifesto Principale</a>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; font-size: 0.8em; color: #555;">
+    DOCUMENTO INTEGRATO NEL PROTOCOLLO FRATAO © 2025 | VISIONE SOVRANA DI FRANCESCO MELI
+</footer>
+
 </body>
 </html>
+
