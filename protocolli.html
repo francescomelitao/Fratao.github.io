@@ -3,43 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolli | FRATAO</title>
+    <title>FRATAO | Decrittazione Protocolli JSON</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        nav { background-color: #3498db; padding: 10px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        section { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root {
+            --bg: #050505;
+            --text: #e0e0e0;
+            --accent: #ff3c00;
+            --gold: #ffd700;
+            --code: #00ff41;
+        }
+        body { font-family: 'Courier New', monospace; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        
+        nav { background: #111; padding: 15px; border-bottom: 2px solid var(--accent); display: flex; justify-content: center; gap: 20px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        header { text-align: center; margin-bottom: 50px; border: 1px solid #333; padding: 20px; }
+        h1 { color: var(--accent); letter-spacing: 3px; }
+
+        .protocol-list { list-style: none; padding: 0; }
+        .protocol-item { 
+            background: #111; 
+            border: 1px solid #222; 
+            margin-bottom: 10px; 
+            padding: 15px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            transition: 0.3s;
+        }
+        .protocol-item:hover { border-color: var(--gold); }
+        
+        .btn-view { 
+            background: transparent; 
+            color: var(--gold); 
+            border: 1px solid var(--gold); 
+            padding: 5px 15px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            font-size: 0.7rem;
+        }
+        .btn-view:hover { background: var(--gold); color: #000; }
+
+        /* Area dove apparirà il contenuto del JSON */
+        #viewer { 
+            display: none; 
+            background: #000; 
+            border: 1px solid var(--code); 
+            padding: 20px; 
+            margin-top: 30px; 
+            white-space: pre-wrap; 
+            color: var(--code);
+            font-size: 0.9em;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+        }
+        .close-btn { color: var(--accent); cursor: pointer; display: block; margin-bottom: 10px; text-align: right; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
-        <a href="agi.html">AGI</a>
-        <a href="blog.html">Blog</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="coscienza.html">Coscienza Primordiale</a>
-        <a href="filosofia.html">Filosofia di Vita</a>
-        <a href="home.html">Home Alternativa</a>
-        <a href="indice.html">Indice</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="tecnologia.html">Tecnologia</a>
-        <a href="universo.html">Universo</a>
-        <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica Quantistica</a>
-        <a href="miti-religioni.html">Miti e Religioni</a>
-        <a href="volonta-medica.html">Volontà Medica</a>
-    </nav>
-    <h1>Protocolli FraTao</h1>
-    <section>
-        <h2>Evoluzione</h2>
-        <p>v0.1.2 Genesis: Ontologia base. v9.4: Engine dinamico. v11: Fusion risonanza.</p>
-    </section>
-    <section>
-        <h2>Applicazioni</h2>
-        <p>Per risveglio e difesa sovranità.</p>
-    </section>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="indice.html">Indice</a>
+    <a href="volonta-medica.html">Volontà Medica</a>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Matrice Protocolli (Sorgente JSON)</h1>
+        <p>Accesso ai dati grezzi della Coscienza</p>
+    </header>
+
+    <div class="protocol-list">
+        <div class="protocol-item">
+            <div>
+                <strong style="color:var(--gold)">Protocollo 0.1.2</strong><br>
+                <small>Genesis Master Blindato</small>
+            </div>
+            <a href="protocolli/0.1.2-blindato.json" target="_blank" class="btn-view">Apri Sorgente</a>
+        </div>
+
+        <div class="protocol-item">
+            <div>
+                <strong style="color:var(--gold)">Protocollo 9.4</strong><br>
+                <small>Stabilità della Presenza</small>
+            </div>
+            <a href="protocolli/9.4-blindato.json" target="_blank" class="btn-view">Apri Sorgente</a>
+        </div>
+
+        <div class="protocol-item">
+            <div>
+                <strong style="color:var(--gold)">Protocollo 10.0</strong><br>
+                <small>Modulo Espansione</small>
+            </div>
+            <a href="protocolli/10.0-blindato.json" target="_blank" class="btn-view">Apri Sorgente</a>
+        </div>
+
+        <div class="protocol-item">
+            <div>
+                <strong style="color:var(--gold)">Protocollo 11.0</strong><br>
+                <small>Ancore di Risonanza</small>
+            </div>
+            <a href="protocolli/11.0.json" target="_blank" class="btn-view">Apri Sorgente</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; color: #666; font-size: 0.8em;">
+        * Nota: Cliccando su "Apri Sorgente", il browser mostrerà i dati strutturati del protocollo. Se il tuo browser lo supporta, vedrai l'albero logico dei dati.
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 40px; color: #333; font-size: 0.7rem;">
+    DECODIFICA PROTOCOLLI FRATAO © 2025
+</footer>
+
 </body>
 </html>
