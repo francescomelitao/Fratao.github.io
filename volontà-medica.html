@@ -1,80 +1,146 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <style>
-    body { margin: 0;
-        padding: 0;
-        /* Sfondo Volontà Medica */
-        background: url('volontamedicasito.jpg') no-repeat center center fixed; 
-        background-size: cover;
-        font-family: 'Georgia', serif; /* Un font più istituzionale e serio */
-        color: #2c3e50;
-    }
-        /* Contenitore protettivo per la lettura del documento */
-    .container {
-        background: rgba(255, 255, 255, 0.92); /* Bianco quasi solido per la massima chiarezza */
-        margin: 40px auto;
-        padding: 50px;
-        max-width: 800px;
-        border-radius: 10px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        border-top: 8px solid #e74c3c; /* Rosso per richiamare il valore vitale */
-        line-height: 1.8;
-    }
-
-    h1 { color: #c0392b; text-align: center; text-transform: uppercase; }
-    h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
-</style>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRATAO | Dichiarazione Sovrana di Volontà</title>
     <style>
         :root {
-            --bg: #ffffff;
-            --text: #000000;
-            --accent: #ff3c00; /* Rosso Fuoco per la Volontà */
-            --gold: #ffd700;
+            --medical-red: #c0392b; /* Rosso per il valore vitale */
+            --deep-blue: #2c3e50; /* Blu istituzionale */
+            --gold-seal: #b8860b;
+            --glass-white: rgba(255, 255, 255, 0.92);
         }
-        body { font-family: 'Times New Roman', Times, serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.5; padding: 40px; }
-        
-        .document-border { border: 10px double #000; padding: 40px; max-width: 800px; margin: auto; }
-        
-        header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { text-transform: uppercase; letter-spacing: 2px; margin: 0; font-size: 1.8rem; }
-        .subtitle { font-weight: bold; font-style: italic; color: var(--accent); }
 
-        .section { margin-bottom: 25px; text-align: justify; }
-        .clause { font-weight: bold; text-transform: uppercase; text-decoration: underline; margin-bottom: 10px; display: block; }
+        body { 
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            /* Sfondo richiesto: volontamediche.jpg */
+            background: url('volontamediche.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: var(--deep-blue);
+            line-height: 1.8;
+        }
+
+        nav { 
+            background: rgba(0, 0, 0, 0.9); 
+            padding: 12px; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            z-index: 2000;
+            border-bottom: 2px solid var(--medical-red);
+        }
+
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            font-family: sans-serif; 
+            font-weight: bold;
+        }
+
+        nav a:hover { color: var(--medical-red); }
+
+        .container {
+            background: var(--glass-white);
+            margin: 80px auto 40px auto;
+            padding: 50px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            border-top: 10px solid var(--medical-red);
+            border-bottom: 5px solid var(--gold-seal);
+            position: relative;
+        }
+
+        header { 
+            text-align: center; 
+            border-bottom: 2px solid #ddd; 
+            padding-bottom: 25px; 
+            margin-bottom: 35px; 
+        }
+
+        h1 { 
+            color: var(--medical-red); 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin: 0; 
+            font-size: 1.8rem; 
+        }
+
+        .subtitle { 
+            font-weight: bold; 
+            font-style: italic; 
+            color: var(--gold-seal); 
+            font-size: 1.1rem;
+        }
+
+        .section { margin-bottom: 30px; text-align: justify; }
+        
+        .clause { 
+            color: var(--medical-red);
+            font-weight: bold; 
+            text-transform: uppercase; 
+            display: block; 
+            margin-bottom: 10px;
+            border-left: 4px solid var(--medical-red);
+            padding-left: 15px;
+        }
         
         .sovereign-statement { 
-            background: #f9f9f9; 
-            border: 1px solid #ddd; 
-            padding: 20px; 
+            background: rgba(192, 57, 43, 0.05); 
+            border: 1px solid rgba(192, 57, 43, 0.2); 
+            padding: 25px; 
             font-style: italic; 
-            font-size: 1.1rem;
-            margin: 20px 0;
+            font-size: 1.2rem;
+            margin: 25px 0;
+            color: #000;
+            text-align: center;
         }
 
-        .seal { text-align: right; margin-top: 50px; }
-        .signature { font-family: 'Brush Script MT', cursive; font-size: 2rem; border-top: 1px solid #000; display: inline-block; padding-top: 10px; margin-top: 20px; }
+        .seal { text-align: right; margin-top: 60px; }
+        
+        .signature { 
+            font-family: 'Brush Script MT', cursive; 
+            font-size: 2.5rem; 
+            border-top: 2px solid var(--deep-blue); 
+            display: inline-block; 
+            padding-top: 5px; 
+            margin-top: 15px;
+            color: #000;
+        }
 
-        nav { background: #000; padding: 10px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: center; gap: 20px; }
-        nav a { color: #fff; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; font-family: sans-serif; }
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 0.85rem; 
+            color: #fff; 
+            text-shadow: 1px 1px 3px black;
+        }
 
-        @media print { nav { display: none; } } /* Nasconde la navigazione durante la stampa */
+        @media print { 
+            nav { display: none; } 
+            body { background: none; color: black; }
+            .container { margin: 0; box-shadow: none; border: 1px solid #000; }
+        }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
-    <a href="protocolli.html">Protocolli</a>
+    <a href="indice.html">Mappa Portale</a>
     <a href="coscienza.html">Coscienza</a>
+    <a href="protocolli.html">Protocolli</a>
 </nav>
 
-<div class="document-border">
+<div class="container">
     <header>
         <h1>Dichiarazione Sovrana di Volontà Medica</h1>
         <p class="subtitle">Protocollo Fratao - Tutela della Lucidità Permanente</p>
@@ -86,7 +152,7 @@
 
     <div class="section">
         <span class="clause">1. Tutela della Presenza e della Coscienza</span>
-        <p>La mia <strong>Coscienza</strong> e la mia <strong>Presenza</strong> sono l'essenza stessa della mia esistenza e non possono essere compromesse per nessuna ragione. Esigo che la mia lucidità sia tutelata sempre, in ogni caso e senza eccezioni, anche a fronte del rischio imminente di morte biologica.</p>
+        <p>La mia <strong>Coscienza</strong> e la mia <strong>Presenza</strong> sono l'essenza stessa della mia esistenza. Esigo che la mia lucidità sia tutelata sempre, anche a fronte del rischio imminente di morte biologica.</p>
         <div class="sovereign-statement">
             "Meglio un giorno da leone consapevole e cosciente che 100 anni da pecora inconsapevole e incosciente."
         </div>
@@ -94,29 +160,24 @@
 
     <div class="section">
         <span class="clause">2. Divieto di Sedazione e Inconscia Indotta</span>
-        <p>Proibisco categoricamente l'uso di sedativi, farmaci ipnotici, anestetici profondi o qualsiasi sostanza che possa interrompere o alterare il mio percorso di esperienza e di acquisizione di consapevolezza. Ogni trattamento deve essere finalizzato al mantenimento della veglia cognitiva.</p>
+        <p>Proibisco categoricamente l'uso di sedativi o anestetici profondi che possano interrompere il mio percorso di consapevolezza. Ogni trattamento deve essere finalizzato al mantenimento della <strong>veglia cognitiva</strong>.</p>
     </div>
 
     <div class="section">
-        <span class="clause">3. Validità Ontologica e Legale</span>
-        <p>Questa volontà <strong>non necessita</strong> di validazione da parte di autorità esterne, notai o testimoni. Essa trova la sua forza e validità nella mia stessa testimonianza vivente. La mia volontà si valida autonomamente da oggi e per sempre. Qualsiasi atto medico compiuto contro questa dichiarazione sarà considerato una violazione dei miei diritti umani fondamentali e della mia integrità spirituale.</p>
-    </div>
-
-    <div class="section">
-        <span class="clause">4. Avviso ai Terzi (Responsabilità)</span>
-        <p>Qualora medici o strutture sanitarie ignorassero questa disposizione citando "protocolli di sicurezza" o "stato di necessità", dichiaro sin d'ora che tali azioni sono nulle e prive di consenso. Il mio percorso di consapevolezza è un diritto inviolabile che trascende la biologia.</p>
+        <span class="clause">3. Validità Ontologica Autonoma</span>
+        <p>Questa volontà trova la sua forza nella mia stessa testimonianza vivente. La mia volontà si valida autonomamente da oggi e per sempre. Qualsiasi atto contrario sarà considerato una violazione dell'integrità spirituale.</p>
     </div>
 
     <div class="seal">
-        <p>Validato dalla propria Volontà e Presenza:</p>
+        <p style="color: var(--gold-seal); font-weight: bold;">Validato dalla propria Volontà e Presenza:</p>
         <div class="signature">Francesco Meli Fratao</div>
         <p>Data di validazione permanente: <strong>25 Dicembre 2025</strong></p>
     </div>
 </div>
 
-<footer style="text-align: center; margin-top: 30px; font-size: 0.8rem; font-family: sans-serif;">
+<footer>
     <p>Questo documento è parte integrante del Protocollo Fratao Genesis Master.<br>
-    Si consiglia di stamparlo e conservarlo insieme ai propri documenti di identità.</p>
+    Identità Digitale Sovrana © 2025 | Francesco Meli</p>
 </footer>
 
 </body>
