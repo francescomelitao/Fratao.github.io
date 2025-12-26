@@ -3,81 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Home</title>
+    <title>FRATAO | Mappa del Portale</title>
     <style>
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background: url('yinyangsito.jpg') no-repeat center center fixed;
             background-size: cover;
-            font-family: 'Segoe UI', sans-serif;
             color: white;
-            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Overlay scuro per migliorare la leggibilità come in foto */
+        .page-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        /* Navigazione Standard Fratao - Alta Visibilità */
+        /* Barra di Navigazione Superiore */
         nav {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            border-bottom: 2px solid #d4af37;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
+            margin: 0 15px;
             font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        /* Contenitore Principale */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
             letter-spacing: 1px;
         }
 
-        nav a:hover { color: #d4af37; }
-
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.3); /* Velo per far emergere il testo */
-            text-align: center;
+        .gold-line {
+            width: 80%;
+            height: 3px;
+            background-color: #d4af37;
+            margin: 20px auto;
         }
 
-        h1 { font-size: 4em; letter-spacing: 10px; margin: 0; text-shadow: 2px 2px 15px rgba(0,0,0,0.8); }
-        p { font-size: 1.5em; color: #d4af37; font-style: italic; }
+        .subtitle {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
 
-        .btn-portal {
+        /* Griglia dei Pulsanti */
+        .grid-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
             margin-top: 30px;
-            padding: 15px 40px;
-            border: 2px solid #d4af37;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: 0.3s;
         }
 
-        .btn-portal:hover { background: #d4af37; color: black; }
+        .btn-link {
+            background: rgba(255, 255, 255, 0.85);
+            color: #333;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 0.95em;
+            transition: all 0.3s;
+            text-align: left;
+            border-radius: 2px;
+        }
+
+        .btn-link:hover {
+            background: #d4af37;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px;
+            font-size: 0.8em;
+            text-align: center;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .grid-links { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
+<div class="page-overlay">
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
-        <a href="indice.html">Mappa Portale</a>
+        <a href="about.html">About</a>
         <a href="protocolli.html">Protocolli</a>
     </nav>
-    <div class="hero">
-        <h1>FRATAO</h1>
-        <p>L'Incontro Frontale della Coscienza</p>
-        <a href="indice.html" class="btn-portal">Entra nel Portale</a>
+
+    <div class="container">
+        <h1>Mappa del Portale Fratale</h1>
+        <div class="gold-line"></div>
+        <p class="subtitle">Seleziona l'argomento per esplorare la verità vibrazionale.</p>
+
+        <div class="grid-links">
+            <a href="about.html" class="btn-link">Chi Sono</a>
+            <a href="fisica-quantistica.html" class="btn-link">Fisica Quantistica</a>
+            <a href="fisica-quantistica.html" class="btn-link">Fisica Quantistica (v.2)</a>
+            <a href="miti-religioni.html" class="btn-link">Miti e religioni</a>
+            <a href="volontà-medica.html" class="btn-link">Volontà Medica</a>
+            <a href="universo.html" class="btn-link">Universo</a>
+            <a href="dichiarazione-sovrana.html" class="btn-link">Dichiarazione Sovrana</a>
+            <a href="coscienza.html" class="btn-link">Coscienza</a>
+            <a href="protocolli.html" class="btn-link">Protocolli JSON</a>
+            <a href="filosofia.html" class="btn-link">Filosofia</a>
+        </div>
     </div>
+
+    <footer>
+        FRATAO | INCONTRO FRONTALE © 2025 | Francesco Meli
+    </footer>
+</div>
+
 </body>
 </html>
