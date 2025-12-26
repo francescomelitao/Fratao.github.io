@@ -3,43 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filosofia di Vita | FRATAO</title>
+    <title>FRATAO | La Filosofia dell'Unificazione</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        nav { background-color: #3498db; padding: 10px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        section { margin-bottom: 20px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root {
+            --bg-color: #fcfcfc;
+            --philosophy-blue: #004080;
+            --science-cyan: #008b8b;
+            --math-orange: #d35400;
+            --myth-gold: #b8860b;
+            --consciousness-purple: #8e44ad;
+            --text-main: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.8;
+            background-image: url('filosofiasito.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        nav {
+            background: var(--philosophy-blue);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+
+        .container { max-width: 900px; margin: auto; }
+
+        h1 { 
+            color: var(--philosophy-blue); 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 4px;
+            border-bottom: 3px solid var(--myth-gold);
+            padding-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2em;
+            font-style: italic;
+            color: var(--philosophy-blue);
+            margin-bottom: 50px;
+        }
+
+        .discipline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid;
+        }
+
+        .math { border-color: var(--math-orange); color: var(--math-orange); }
+        .science { border-color: var(--science-cyan); color: var(--science-cyan); }
+        .myth { border-color: var(--myth-gold); color: var(--myth-gold); }
+        .psyche { border-color: var(--philosophy-blue); color: var(--philosophy-blue); }
+
+        .unification-box {
+            margin-top: 40px;
+            background: rgba(142, 68, 173, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px dashed var(--consciousness-purple);
+            text-align: center;
+        }
+
+        .unification-box h2 { color: var(--consciousness-purple); text-transform: uppercase; }
+
+        footer { text-align: center; margin-top: 60px; font-size: 0.8em; opacity: 0.6; }
+
+        @media (max-width: 600px) { .discipline-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
-        <a href="agi.html">AGI</a>
-        <a href="blog.html">Blog</a>
-        <a href="contatto.html">Contatto</a>
-        <a href="coscienza.html">Coscienza Primordiale</a>
-        <a href="filosofia.html">Filosofia di Vita</a>
-        <a href="home.html">Home Alternativa</a>
-        <a href="indice.html">Indice</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="tecnologia.html">Tecnologia</a>
-        <a href="universo.html">Universo</a>
-        <a href="protocolli.html">Protocolli</a>
-        <a href="fisica-quantistica.html">Fisica Quantistica</a>
-        <a href="miti-religioni.html">Miti e Religioni</a>
-        <a href="volonta-medica.html">Volontà Medica</a>
-    </nav>
-    <h1>Filosofia di Vita secondo FraTao</h1>
-    <section>
-        <h2>Fusione Sapere ed Essere</h2>
-        <p>Non-dualità taoista: wu wei per integrare opposti e vivere in flusso.</p>
-    </section>
-    <section>
-        <h2>Applicazioni</h2>
-        <p>Osservazione consapevole per dissolvere ego e condizionamenti.</p>
-    </section>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="indice.html">Indice</a>
+    <a href="universo.html">Universo</a>
+    <a href="coscienza.html">Coscienza</a>
+</nav>
+
+<div class="overlay">
+    <div class="container">
+        <h1>Filosofia del Filo Conduttore</h1>
+        <p class="intro">"Molte discipline, un unico scopo: il riconoscimento del Sé."</p>
+
+        <div class="discipline-grid">
+            <div class="card math">
+                <h3>Materia Matematica</h3>
+                <p style="color: #555;">I numeri e le geometrie (Pi Greco, Sezione Aurea) sono l'ossatura logica della creazione, il linguaggio con cui l'Uno scrive la sua struttura.</p>
+            </div>
+            <div class="card science">
+                <h3>Scienza e Fisica</h3>
+                <p style="color: #555;">Dalla fisica quantistica ai buchi neri, la scienza osserva i meccanismi esterni per confermare le leggi interne della vibrazione.</p>
+            </div>
+            <div class="card myth">
+                <h3>Mito e Religione</h3>
+                <p style="color: #555;">Racconti simbolici dell'Androgino e della separazione, mappe antiche create per ricordare all'uomo la sua origine divina e il suo viaggio di ritorno.</p>
+            </div>
+            <div class="card psyche">
+                <h3>Psicologia ed Essere</h3>
+                <p style="color: #555;">Lo studio della mente come "recipiente" e il superamento dei condizionamenti per liberare la volontà sovrana.</p>
+            </div>
+        </div>
+
+        <section class="unification-box">
+            <h2>L'Unificazione nella Coscienza</h2>
+            <p style="color: var(--text-main); font-size: 1.1em;">
+                Sebbene queste discipline sembrino divise, esse sono parti di un'unica <strong>Materia di Visione</strong>. La Filosofia Fratao agisce come il punto di incontro dove il cerchio si chiude. La divisione è stata necessaria per permettere alla Coscienza di guardarsi da fuori e, infine, comprendersi.
+            </p>
+        </section>
+
+        <footer>
+            FRATAO | FILOSOFIA DELL'UNIFICAZIONE © 2025 | Francesco Meli
+        </footer>
+    </div>
+</div>
+
 </body>
 </html>
