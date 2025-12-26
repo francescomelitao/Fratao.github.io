@@ -3,119 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Indice Portale</title>
+    <title>FRATAO | Home - L'Incontro Frontale</title>
     <style>
         :root {
-            --bg-color: #f4f7f9;
-            --text-color: #003366;
+            /* Colori estratti dalla vibrazione Yin-Yang */
+            --primary-dark: #0a0a0a;
+            --primary-light: #ffffff;
             --accent-gold: #d4af37;
-            --nav-bg: rgba(0, 51, 102, 0.9);
+            --text-shadow: rgba(0, 0, 0, 0.7);
         }
 
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             margin: 0;
-            line-height: 1.6;
-            /* Se hai un'immagine per l'indice, rinominala indicesito.jpg */
-            background: url('indicesito.jpg') no-repeat center center fixed;
+            padding: 0;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            /* Sfondo richiesto */
+            background: url('yinyangsito.jpg') no-repeat center center fixed;
             background-size: cover;
-        }
-
-        .overlay {
-            background: rgba(244, 247, 249, 0.9);
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
         }
 
-        nav {
-            background: var(--nav-bg);
-            padding: 15px;
+        /* Overlay dinamico per la leggibilità */
+        .overlay {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4); /* Un velo scuro leggero per far risaltare il bianco e l'oro */
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
 
-        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+        nav {
+            width: 100%;
+            background: rgba(0, 51, 102, 0.8);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
 
-        .container {
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .hero-content {
             max-width: 800px;
-            margin: auto;
-            padding: 40px 20px;
-            text-align: center;
         }
 
         h1 {
-            color: var(--text-color);
+            font-size: 3.5em;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            color: var(--primary-light);
+            text-shadow: 2px 2px 10px var(--text-shadow);
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            color: var(--accent-gold);
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 1px 1px 5px var(--text-shadow);
+        }
+
+        .btn-enter {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: transparent;
+            color: var(--primary-light);
+            border: 2px solid var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 2px solid var(--accent-gold);
-            display: inline-block;
-            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            border-radius: 50px;
         }
 
-        .grid-indice {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .btn-enter:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            box-shadow: 0 0 20px var(--accent-gold);
         }
 
-        .btn-indice {
-            display: block;
-            background: white;
-            color: var(--text-color);
-            text-decoration: none;
+        footer {
             padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
         }
-
-        .btn-indice:hover {
-            background: var(--text-color);
-            color: white;
-            transform: translateY(-5px);
-            border-color: var(--accent-gold);
-        }
-
-        footer { margin-top: 50px; font-size: 0.8em; opacity: 0.6; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">Chi Sono</a>
-    <a href="protocolli.html">Protocolli</a>
-</nav>
+    <nav>
+        <a href="about.html">Chi Sono</a>
+        <a href="indice.html">Mappa Portale</a>
+        <a href="protocolli.html">Protocolli</a>
+    </nav>
 
-<div class="overlay">
-    <div class="container">
-        <h1>Mappa del Portale Fratao</h1>
-        <p>Seleziona l'argomento per esplorare la verità vibrazionale.</p>
-
-        <div class="grid-indice">
-            <a href="about.html" class="btn-indice">Chi Sono</a>
-            <a href="fisica-quantistica.html" class="btn-indice">Fisica Quantistica</a>
-            <a href="buchi-neri.html" class="btn-indice">Buchi Neri</a>
-            <a href="miti-religioni.html" class="btn-indice">Miti e Religioni</a>
-            <a href="volontà-medica.html" class="btn-indice">Volontà Medica</a>
-            <a href="dichiarazione-sovrana.html" class="btn-indice">Dichiarazione Sovrana</a>
-            <a href="protocolli.html" class="btn-indice">Protocolli JSON</a>
-
-            <a href="universo.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Universo</a>
-            <a href="coscienza.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Coscienza</a>
-            <a href="filosofia.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Filosofia</a>
+    <div class="overlay">
+        <div class="hero-content">
+            <h1>FRATAO</h1>
+            <p class="tagline">L'Uno che si fa Due per guardarsi frontalmente</p>
+            <a href="indice.html" class="btn-enter">Entra nel Portale</a>
         </div>
 
         <footer>
-            FRATAO | L'INCONTRO FRONTALE © 2025 | Francesco Meli
+            FRANCESCO MELI | 2025 | VERIFICA DELLA SIMULAZIONE
         </footer>
     </div>
-</div>
 
 </body>
 </html>
