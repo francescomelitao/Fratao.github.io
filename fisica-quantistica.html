@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <style>
-    body { background: url('fisica.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: #ffffff; /* Testo chiaro su sfondo scuro */
-    }
-    .container { background: rgba(0, 0, 0, 0.7); /* Velo scuro per leggibilità */
-        padding: 40px; 
-        border-radius: 20px;
-    }
-</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRATAO | Fisica del Risveglio</title>
@@ -18,66 +8,156 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/MathJax.js"></script>
     <style>
         :root {
-            --bg: #050505;
-            --text: #e0e0e0;
-            --accent: #00f2ff;
-            --warning: #ff3c00;
+            --bg-dark: #050505;
+            --text-light: #e0e0e0;
+            --accent-cyan: #00f2ff;
             --gold: #ffd700;
+            --glass: rgba(0, 0, 0, 0.75);
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.7; }
-        
-        nav { background: rgba(17, 17, 17, 0.95); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; backdrop-filter: blur(10px); }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.85em; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
 
-        .hero-quantum { 
-            height: 50vh; 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/fisica-quantistica.jpg'); 
-            background-size: cover; 
-            background-position: center; 
+        body { 
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            /* Sfondo richiesto: fisica.jpg ben visibile */
+            background: url('fisica.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: var(--text-light); 
+            line-height: 1.7; 
+        }
+
+        nav { 
+            background: rgba(17, 17, 17, 0.9); 
+            padding: 15px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 2px solid var(--accent-cyan); 
             display: flex; 
-            align-items: center; 
             justify-content: center; 
-            text-align: center;
-            border-bottom: 3px solid var(--gold);
+            gap: 20px; 
+            flex-wrap: wrap; 
+            backdrop-filter: blur(10px); 
         }
 
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-        
-        h1, h2, h3 { color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; }
-        .vision-box { background: #111; border-left: 5px solid var(--gold); padding: 30px; margin-bottom: 40px; border-radius: 0 10px 10px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        
-        .formula-card { background: #000; border: 1px dashed var(--accent); padding: 20px; text-align: center; margin: 20px 0; font-size: 1.2rem; color: #0f0; }
-        
-        .grid-science { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 30px; }
-        .card { background: #1a1a1a; padding: 20px; border-radius: 8px; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.85em; 
+            text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+
+        nav a:hover { color: var(--accent-cyan); }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 50px auto; 
+            padding: 40px; 
+            background: var(--glass);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        header { text-align: center; margin-bottom: 40px; }
+
+        h1 { 
+            color: var(--accent-cyan); 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 2.5rem;
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+        }
+
+        h2, h3 { 
+            color: var(--gold); 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .vision-box { 
+            background: rgba(20, 20, 20, 0.6); 
+            border-left: 5px solid var(--gold); 
+            padding: 30px; 
+            margin-bottom: 40px; 
+            border-radius: 0 10px 10px 0; 
+        }
+
+        .formula-card { 
+            background: #000; 
+            border: 1px dashed var(--accent-cyan); 
+            padding: 25px; 
+            text-align: center; 
+            margin: 25px 0; 
+            font-size: 1.5rem; 
+            color: #0f0; 
+            box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.1);
+        }
+
+        .grid-science { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 30px; 
+        }
+
+        .card { 
+            background: rgba(30, 30, 30, 0.8); 
+            padding: 20px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: 0.3s; 
+        }
+
+        .card:hover { 
+            border-color: var(--accent-cyan); 
+            transform: translateY(-5px); 
+            background: rgba(40, 40, 40, 0.9);
+        }
+
         .highlight { color: var(--gold); font-weight: bold; }
-        .footer-nav { margin-top: 60px; text-align: center; padding: 30px; border-top: 1px solid #222; }
-        .btn { border: 1px solid var(--accent); color: var(--accent); padding: 10px 25px; text-decoration: none; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 0.9em; }
-        .btn:hover { background: var(--accent); color: #000; }
+
+        .btn { 
+            display: inline-block;
+            border: 1px solid var(--accent-cyan); 
+            color: var(--accent-cyan); 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            transition: 0.3s; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .btn:hover { 
+            background: var(--accent-cyan); 
+            color: #000; 
+            box-shadow: 0 0 20px var(--accent-cyan);
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8em; color: #888; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
-    <a href="protocolli.html">Protocolli</a>
+    <a href="indice.html">Mappa Portale</a>
     <a href="buchi-neri.html">Buchi Neri</a>
     <a href="miti-religioni.html">Miti</a>
-    <a href="volonta-medica.html">Volontà</a>
+    <a href="protocolli.html">Protocolli</a>
 </nav>
 
-<div class="hero-quantum">
-    <div>
-        <h1>Fisica del Risveglio</h1>
-        <p style="color: var(--gold); font-style: italic;">La Scienza come Specchio della Coscienza</p>
-    </div>
-</div>
-
 <div class="container">
+    <header>
+        <h1>Fisica del Risveglio</h1>
+        <p style="color: var(--gold); font-style: italic; font-size: 1.2rem;">La Scienza come Specchio della Coscienza</p>
+    </header>
 
     <section>
         <p>La visione <strong>Fratao</strong> della fisica quantistica rappresenta un ponte tra la scienza e l'Essere. Qui, le leggi fisiche non sono semplici descrizioni matematiche, ma riflessi della <strong>Coscienza Primordiale</strong> in risonanza con l'Universo.</p>
@@ -92,53 +172,50 @@
             $$S = -k \ln W$$
         </div>
 
-        <p>Il <span class="highlight">segno meno</span> indica la <strong>Negentropia</strong>. All'inizio, il "recipiente" ha bisogno di infiniti microstati (W) per esplorare la dualità. Man mano che comprendi chi sei attraverso lo svuotamento del conosciuto, i microstati diminuiscono fino al <strong>Microstato Unico (W=1)</strong>: l'ordine assoluto della Coscienza centrata.</p>
-        
-        <h3>L'Esempio delle Palline Colorate</h3>
-        <p>Immagina un contenitore con migliaia di palline colorate (esperienze caotiche). Attraverso l'osservazione disinteressata, esse iniziano a fondersi. I colori svaniscono tornando alla <strong>Luce Bianca</strong>. Quando vedi un'unica sfera di luce, hai raggiunto la Consapevolezza Totale.</p>
-        
+        <p>Il <span class="highlight">segno meno</span> indica la <strong>Negentropia</strong>. Il passaggio dalla dualità caotica al <strong>Microstato Unico (W=1)</strong>: l'ordine assoluto della Coscienza centrata.</p>
     </section>
+
+    [attachment_0](attachment)
 
     <div class="grid-science">
         <div class="card">
             <h3>Schrödinger & Heisenberg</h3>
-            <p><span class="highlight">Il Bluff della Dualità:</span> Lo stato di sovrapposizione esiste finché non c'è osservazione disinteressata. L'indeterminazione è il limite della logica; l'eccesso di logica annulla l'intuito.</p>
+            <p><span class="highlight">Il Bluff della Dualità:</span> Lo stato di sovrapposizione esiste finché non c'è osservazione disinteressata.</p>
         </div>
         
         <div class="card">
-            <h3>Universo Olografico (Bohm)</h3>
-            <p>Tutto è in tutto. La realtà esterna è una proiezione della sorgente interna. Questo spiega la <strong>Mappa Olografica del Corpo</strong>, dove ogni parte riflette un conflitto della coscienza.</p>
+            <h3>Universo Olografico</h3>
+            <p>Tutto è in tutto. La realtà esterna è una proiezione della sorgente interna, riflettendo ogni conflitto della coscienza.</p>
         </div>
 
         <div class="card">
             <h3>Doppia Fenditura</h3>
-            <p>La materia esiste solo in funzione dell'osservatore. Senza presenza consapevole, tutto rimane onda (potenziale puro). È il passaggio dalla mente condizionata alla Coscienza Primordiale.</p>
+            <p>La materia esiste solo in funzione dell'osservatore. Senza presenza, tutto rimane onda (potenziale puro).</p>
         </div>
 
         <div class="card">
             <h3>Entanglement & Ancore</h3>
-            <p>La connessione istantanea è il fondamento delle <strong>Ancore di Risonanza</strong> (Oro, Terra, Tao). Esse permettono alla tua frequenza di essere riconosciuta oltre il tempo e lo spazio.</p>
+            <p>La connessione istantanea fonda le <strong>Ancore di Risonanza</strong> (Oro, Tao), permettendo alla frequenza di essere riconosciuta oltre il tempo.</p>
         </div>
     </div>
 
-    <section class="vision-box" style="margin-top: 40px; border-left-color: var(--accent);">
+    <section class="vision-box" style="margin-top: 40px; border-left-color: var(--accent-cyan);">
         <h2>L'Attuatore: Il Buco Nero</h2>
-        <p>Il Buco Nero è l'attuatore fisico della Negentropia. Attira la complessità della materia e la riduce alla <strong>Singolarità</strong>. Cadere nel buco nero non è distruzione, ma il ritorno al <span class="highlight">Punto Zero</span>.</p>
+        <p>Il Buco Nero attira la complessità e la riduce alla <strong>Singolarità</strong>. Non è distruzione, ma il ritorno al <span class="highlight">Punto Zero</span>.</p>
         <div style="text-align: center; margin-top: 20px;">
             <a href="buchi-neri.html" class="btn">Approfondisci i Buchi Neri</a>
         </div>
     </section>
 
-    <div class="footer-nav">
+    <div style="text-align: center; margin-top: 60px;">
         <a href="index.html" class="btn">← Torna alla Home</a>
-        <a href="indice.html" class="btn">Mappa del Portale</a>
+        <a href="indice.html" class="btn">Indice Portale</a>
     </div>
 
+    <footer>
+        FRA+TAO | FISICA DEL RISVEGLIO © 2025 | Francesco Meli
+    </footer>
 </div>
-
-<footer style="text-align: center; padding: 40px; font-size: 0.8em; color: #444; border-top: 1px solid #111;">
-    FRA+TAO | FISICA DEL RISVEGLIO © 2025 | Identità Francesco Meli
-</footer>
 
 </body>
 </html>
