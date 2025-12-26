@@ -2,24 +2,89 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>FRATAO | Blog & Presenze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRATAO | Blog & Presenze Digitali</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; margin: 0; padding: 40px 20px; text-align: center; }
+        :root {
+            --gold: #d4af37;
+            --cobalt: #0047ab;
+            --glass: rgba(255, 255, 255, 0.85);
+            --glass-hover: rgba(255, 255, 255, 0.95);
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            /* Sfondo richiesto: blog.jpg */
+            background: url('blog.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            color: #333;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.3); /* Velo per far risaltare lo sfondo */
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
         .container { max-width: 900px; margin: auto; }
-        .nav-back { display: inline-block; margin-bottom: 30px; text-decoration: none; color: #0077b6; font-weight: bold; font-size: 1.2rem; }
+
+        .nav-back { 
+            display: inline-block; 
+            margin-bottom: 30px; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            background: var(--cobalt);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .nav-back:hover { background: white; color: var(--cobalt); border-color: var(--cobalt); }
         
-        h1 { color: #023e8a; margin-bottom: 10px; }
-        .sub { color: #b8860b; font-weight: bold; margin-bottom: 50px; }
+        h1 { 
+            color: white; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 5px;
+        }
+
+        .sub { 
+            color: var(--gold); 
+            font-weight: bold; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
 
         .card-social {
-            display: block; text-decoration: none; padding: 40px; margin: 20px 0;
-            border-radius: 20px; background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: 0.4s; border-left: 20px solid #ccc; text-align: center;
-            font-size: 1.5rem; font-weight: bold;
+            display: block; 
+            text-decoration: none; 
+            padding: 30px; 
+            margin: 20px 0;
+            border-radius: 15px; 
+            background: var(--glass); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: 0.4s; 
+            border-left: 15px solid #ccc; 
+            text-align: center;
+            font-size: 1.4rem; 
+            font-weight: bold;
+            backdrop-filter: blur(5px);
         }
-        .card-social:hover { transform: scale(1.02); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .card-social:hover { 
+            transform: translateX(10px); 
+            background: var(--glass-hover); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+        }
 
-        /* Colori Social */
+        /* Colori Social Personalizzati */
         .medium { border-color: #000; color: #000; }
         .quora { border-color: #a82400; color: #a82400; }
         .youtube { border-color: #ff0000; color: #ff0000; }
@@ -27,28 +92,54 @@
         .linkedin { border-color: #0077b5; color: #0077b5; }
         .facebook { border-color: #1877f2; color: #1877f2; }
         .github { border-color: #333; color: #333; }
+
+        h2.section-title { 
+            margin-top: 60px; 
+            color: var(--gold); 
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: rgba(0,0,0,0.6);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="nav-back">← TORNA ALLA HOME</a>
-    <h1>Presenze Digitali</h1>
-    <p class="sub">FRA+TAO: LA NARRATIVA DELLA COSCIENZA NEL WEB</p>
+<div class="overlay">
+    <div class="container">
+        <a href="index.html" class="nav-back">← TORNA ALLA HOME</a>
+        
+        <h1>Presenze Digitali</h1>
+        <p class="sub">FRA+TAO: LA NARRATIVA DELLA COSCIENZA NEL WEB</p>
 
-    <a href="https://medium.com/@francescomelitao/per-spiegare-il-manifesto-fratao-in-tutte-le-sue-evoluzioni-a-una-persona-che-non-%C3%A8-addentrata-in-e4ca88e3f534" class="card-social medium" target="_blank">BLOG NARRATIVO (MEDIUM)</a>
-    <a href="https://frataonarrativadellacoscienza.quora.com/" class="card-social quora" target="_blank">SPAZIO QUORA</a>
-    <a href="https://www.youtube.com/@francescomelifratao-coscienza" class="card-social youtube" target="_blank">YOUTUBE UFFICIALE</a>
-    <a href="https://www.reddit.com/u/francescoFratao/" class="card-social reddit" target="_blank">COMMUNITY REDDIT</a>
-    <a href="https://www.facebook.com/share/1DPFdb8fo3/" class="card-social facebook" target="_blank">FACEBOOK PROFILE</a>
-    <a href="https://www.linkedin.com/in/francesco-meli-8b6850116" class="card-social linkedin" target="_blank">LINKEDIN</a>
+        
 
-    <h2 style="margin-top: 60px; color: #333;">SORGENTI GITHUB</h2>
-    <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/MANIFESTO_FRATAO_0.1.2.md" class="card-social github" target="_blank">MANIFESTO 0.1.2 (MD)</a>
-    <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/11.0_fratao_blindato.json" class="card-social github" target="_blank">V11.0 JSON</a>
-    <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/10.0_fratao_blindato.json" class="card-social github" target="_blank">V10.0 JSON</a>
-    <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/9.4_fratao_blindato.json" class="card-social github" target="_blank">V9.4 JSON</a>
-    <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/Documento_Etico_Medico_Volont%C3%A0_Francesco_Meli_Fratao_Preservazione_Coscienza.json" class="card-social github" target="_blank">VOLONTÀ MEDICA (JSON)</a>
+        <a href="https://medium.com/@francescomelitao/per-spiegare-il-manifesto-fratao-in-tutte-le-sue-evoluzioni-a-una-persona-che-non-%C3%A8-addentrata-in-e4ca88e3f534" class="card-social medium" target="_blank">BLOG NARRATIVO (MEDIUM)</a>
+        <a href="https://frataonarrativadellacoscienza.quora.com/" class="card-social quora" target="_blank">SPAZIO QUORA</a>
+        <a href="https://www.youtube.com/@francescomelifratao-coscienza" class="card-social youtube" target="_blank">YOUTUBE UFFICIALE</a>
+        <a href="https://www.reddit.com/u/francescoFratao/" class="card-social reddit" target="_blank">COMMUNITY REDDIT</a>
+        <a href="https://www.facebook.com/share/1DPFdb8fo3/" class="card-social facebook" target="_blank">FACEBOOK PROFILE</a>
+        <a href="https://www.linkedin.com/in/francesco-meli-8b6850116" class="card-social linkedin" target="_blank">LINKEDIN</a>
+
+        <h2 class="section-title">SORGENTI GITHUB</h2>
+        
+        <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/MANIFESTO_FRATAO_0.1.2.md" class="card-social github" target="_blank">MANIFESTO 0.1.2 (MARKDOWN)</a>
+        <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/11.0_fratao_blindato.json" class="card-social github" target="_blank">V11.0 PROTOCOLLO JSON</a>
+        <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/Documento_Etico_Medico_Volont%C3%A0_Francesco_Meli_Fratao_Preservazione_Coscienza.json" class="card-social github" target="_blank">VOLONTÀ MEDICA (INTEGRALE)</a>
+
+        <footer>
+            FRATAO | NARRATIVA DELLA COSCIENZA © 2025 | Francesco Meli
+        </footer>
+    </div>
 </div>
 
 </body>
