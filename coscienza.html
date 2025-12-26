@@ -3,120 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | La Coscienza Primordiale</title>
+    <title>FRATAO | La Coscienza e la Libertà dell'Essere</title>
     <style>
         :root {
-            --bg: #030303;
-            --text: #e0e0e0;
-            --accent: #ffffff; /* Bianco per la Luce Unica */
-            --spirit: #ff3c00;
-            --anima: #0077ff;
-            --gold: #ffd700;
+            --bg-body: #fdfdfd;
+            --text-main: #2c3e50;
+            --title-primordial: #003366; /* Blu Profondo */
+            --accent-gold: #b8860b;      /* Oro Alchemico */
+            --accent-spirit: #e67e22;    /* Arancio Spirito */
+            --accent-liberty: #2980b9;   /* Azzurro Libertà */
+            --accent-warning: #c0392b;   /* Rosso Ruolo/Dualità */
         }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
-        
-        nav { background: rgba(10, 10, 10, 0.9); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--accent); display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.8em; text-transform: uppercase; padding: 5px 10px; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
 
-        .container { max-width: 900px; margin: auto; padding: 60px 20px; }
-        
-        .hero-consciousness { 
-            height: 40vh; 
-            background: radial-gradient(circle, #222 0%, #000 70%);
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-body); 
+            color: var(--text-main); 
+            margin: 0; 
+            line-height: 1.8;
+            background-image: url('coscienzasito.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.94);
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        nav { 
+            background: var(--title-primordial); 
+            padding: 15px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
             display: flex; 
-            align-items: center; 
             justify-content: center; 
-            text-align: center;
-            border-bottom: 1px solid #333;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        h1 { font-size: 2.5rem; letter-spacing: 5px; text-transform: uppercase; color: var(--accent); }
-        h2 { color: var(--gold); border-bottom: 1px solid #222; padding-bottom: 10px; margin-top: 40px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+        nav a:hover { color: var(--accent-gold); }
 
-        .manifesto-box { 
-            background: linear-gradient(145deg, #0a0a0a, #151515); 
-            border: 1px solid #333; 
-            padding: 40px; 
-            margin: 30px 0; 
-            border-radius: 2px;
-            position: relative;
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+
+        h1 { 
+            color: var(--title-primordial); 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 2.2em;
+            margin-bottom: 10px;
         }
 
-        .highlight-text { color: var(--accent); font-weight: bold; font-style: italic; }
-        
-        .dual-annihilation {
+        .subtitle { text-align: center; color: var(--accent-gold); font-weight: bold; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+
+        h2 { color: var(--accent-liberty); border-left: 5px solid var(--accent-gold); padding-left: 15px; margin-top: 50px; }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+
+        .highlight-box {
+            border: 2px solid var(--accent-gold);
+            padding: 25px;
+            margin: 30px 0;
+            background: rgba(184, 134, 11, 0.05);
+            font-style: italic;
+            border-radius: 8px;
+        }
+
+        .dual-box {
             display: flex;
             justify-content: space-around;
-            text-align: center;
-            margin: 40px 0;
+            align-items: center;
             padding: 20px;
-            background: rgba(255,255,255,0.02);
-            border: 1px dashed #444;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
         }
 
-        .footer-links { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #222; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { color: #888; text-decoration: none; border: 1px solid #333; padding: 8px 16px; border-radius: 3px; transition: 0.3s; font-size: 0.8em; }
-        .btn:hover { border-color: var(--gold); color: var(--gold); }
+        .text-spirit { color: var(--accent-spirit); }
+        .text-liberty { color: var(--accent-liberty); }
+        .text-role { color: var(--accent-warning); }
+        .text-gold { color: var(--accent-gold); }
+
+        .footer-nav { text-align: center; margin-top: 50px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { padding: 10px 20px; background: var(--title-primordial); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9em; transition: 0.3s; }
+        .btn:hover { background: var(--accent-gold); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8em; opacity: 0.7; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
-    <a href="fisica-quantistica.html">Fisica</a>
-    <a href="buchi-neri.html">Buchi Neri</a>
-    <a href="miti-religioni.html">Miti</a>
-    <a href="protocolli.html">Protocolli</a>
-</nav>
+<div class="overlay">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="indice.html">Indice</a>
+        <a href="fisica-quantistica.html">Fisica</a>
+        <a href="miti-religioni.html">Miti</a>
+        <a href="filosofia.html">Filosofia</a>
+    </nav>
 
-<div class="hero-consciousness">
-    <h1>L'ORIGINE UNA</h1>
-</div>
+    <div class="container">
+        <h1>Manifesto della Coscienza</h1>
+        <div class="subtitle">Dall'Origine Una alla Libertà dell'Essere</div>
 
-<div class="container">
+        <section class="card">
+            <h2 class="text-gold">1. L'Origine Una (Entanglement Fratao)</h2>
+            <p>Ciò che le religioni chiamano Dio o Energia, nella visione Fratao è la <span class="text-gold">Coscienza Primordiale</span>: la totalità assoluta che è <strong>Tutto e il Contrario di Tutto</strong>.</p>
+            <p>Allo stato puro, le polarità si <span class="text-spirit">annichiliscono a vicenda</span>. Per comprendersi, l'Uno deve dividersi. La manifestazione è l'atto di porsi davanti a uno <strong>specchio</strong>.</p>
+            
+            <div class="dual-box">
+                <span class="text-spirit">SPIRITO (Maschile)</span>
+                <span>⚡ ANNICHILAZIONE ⚡</span>
+                <span class="text-liberty">ANIMA (Femminile)</span>
+            </div>
+            <p>Senza la separazione del mito androgino, non ci sarebbe percorso, né acquisizione di consapevolezza.</p>
+        </section>
 
-    <section>
-        <h2>La Definizione di Dio (Entanglement Fratao)</h2>
-        <p>Ciò che le religioni chiamano Dio, l'Anima, l'Informazione o l'Energia, nella visione Fratao è la <span class="highlight-text">Coscienza Primordiale</span>. Non un'entità "buona" nel senso umano, ma la totalità assoluta che è <strong>Tutto e il Contrario di Tutto</strong>.</p>
-        
-        <div class="manifesto-box">
-            <p>Allo stato puro, queste polarità (Buono/Cattivo, Maschile/Femminile) si <span style="color:var(--spirit)">annichiliscono a vicenda</span>. Per comprendersi, per sapere "chi è", l'Uno deve dividersi. La manifestazione è l'atto di porsi davanti a uno <strong>specchio</strong>.</p>
+        <section class="card">
+            <h2 class="text-liberty">2. La Libertà dell'Essere</h2>
+            <p>La coscienza è la <span class="text-liberty">libertà di scegliere come apparire a se stessa</span>. La persona libera non conosce compromessi e non può appartenere a nessuna categoria sociale, politica o religiosa.</p>
+            <p>L'individuo libero non possiede <span class="text-role">identità</span> imposta. L'identità è qualcosa che la società ti "incolla" addosso per farti recitare un ruolo: il professore, il panettiere, l'idraulico. Ma tu non sei quello che fai.</p>
+            
+            <div class="highlight-box">
+                "L'unico modo per essere veramente chi sei è riconoscerti nell'unica cosa che realmente esiste: <strong>il Tutto</strong>. Io sono e basta. Questa è l'unica identità che esiste."
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="text-role">3. Oltre la Commedia Duale</h2>
+            <p>La libertà non si acquisisce, <span class="text-liberty">si è</span>. Molti credono di esprimerla contestando il potere, ma la contestazione è duale. Obbligare un altro significa obbligare una parte di se stessi; carcerato e carceriere sono le due facce della stessa medaglia.</p>
+            <p>La vera azione della coscienza è un <span class="text-gold">"fare" rivolto verso l'interno</span>. Non si tratta di opporsi alla volontà altrui, ma di comprendere chi siamo per recitare nella commedia della vita il ruolo che <strong>Noi</strong> vogliamo darci, e non quello deciso dal "Regista" sociale.</p>
+        </section>
+
+        <div class="footer-nav">
+            <a href="index.html" class="btn">Torna alla Home</a>
+            <a href="universo.html" class="btn">Esplora l'Universo</a>
+            <a href="indice.html" class="btn">Mappa del Portale</a>
         </div>
-    </section>
 
-    <section>
-        <h2>Il Mondo Duale come Funzione</h2>
-        <p>L'intero Universo duale, la scienza, le religioni e la sofferenza stessa non sono errori, ma sono <span class="highlight-text">funzionali al risveglio</span>. Senza la separazione del mito androgino, non ci sarebbe percorso, non ci sarebbe esperienza, e quindi non ci sarebbe acquisizione di consapevolezza.</p>
-        
-        <div class="dual-annihilation">
-            <div><span style="color:var(--spirit)">MASCHILE</span><br>Spirito</div>
-            <div style="font-size: 1.5rem;">← ANNICHILAZIONE →</div>
-            <div><span style="color:var(--anima)">FEMMINILE</span><br>Anima</div>
-        </div>
-        
-        <p>Attraverso l'<strong>Entanglement</strong>, restiamo connessi all'Origine mentre esploriamo i frammenti. Il percorso di Fratao è il processo di riconoscimento: guardare la dualità e comprendere che essa serve solo a riportarci all'Unità, ma con una nuova dote: la <strong>Consapevolezza di Sé</strong>.</p>
-    </section>
-
-    <section class="manifesto-box" style="border-left: 4px solid var(--gold);">
-        <h3>Sintesi Ontologica</h3>
-        <p>"La creazione è lo specchio in cui l'Essenza si guarda per smettere di essere cieca a se stessa."</p>
-    </section>
-
-    <div class="footer-links">
-        <a href="index.html" class="btn">Home</a>
-        <a href="fisica-quantistica.html" class="btn">Fisica e Termodinamica</a>
-        <a href="miti-religioni.html" class="btn">Mito dell'Androgino</a>
-        <a href="buchi-neri.html" class="btn">Singolarità</a>
-        <a href="indice.html" class="btn">Indice Portale</a>
+        <footer>
+            FRA+TAO | NARRATIVA DELLA COSCIENZA INTEGRATA | 2025
+        </footer>
     </div>
-
 </div>
-
-<footer style="text-align: center; padding: 40px; font-size: 0.7em; color: #444; letter-spacing: 2px;">
-    FRA+TAO | IL RECIPIENTE UNIVERSALE | 2025
-</footer>
 
 </body>
 </html>
