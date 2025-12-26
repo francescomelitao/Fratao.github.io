@@ -6,82 +6,86 @@
     <title>FRATAO | Miti, Religioni e l'Androgino</title>
     <style>
         :root {
-            /* Palette richiesta: Sfondo chiaro e Scrittura Blu */
-            --bg-color: #f4f7f9; 
-            --text-color: #003366; /* Blu profondo per la leggibilità */
-            --title-color: #d4af37; /* Oro per i titoli (richiamo Anima/Sole) */
-            --accent-blue: #00509d; /* Blu acceso per i sottotitoli */
+            --bg-glass: rgba(255, 255, 255, 0.88); 
+            --text-main: #003366; /* Blu Profondo */
+            --title-gold: #b8860b; /* Oro Scuro per i titoli */
+            --accent-cyan: #008b8b; /* Ciano per sottotitoli e ancore */
+            --fire-red: #d32f2f; /* Rosso per lo Spirito */
         }
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
             margin: 0; 
             line-height: 1.8;
-            /* Inserisco l'immagine di sfondo se presente, altrimenti resta il colore chiaro */
-            background-image: url('mitisito.jpg'); 
+            /* Sfondo Mitologia richiesto */
+            background: url('miti.jpg') no-repeat center center fixed; 
             background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+            color: var(--text-main);
         }
 
         .overlay {
-            background: rgba(244, 247, 249, 0.92); /* Velo chiaro per leggere il blu */
+            background: rgba(255, 255, 255, 0.75); /* Velo per far risaltare lo sfondo miti.jpg */
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         nav { 
-            background: rgba(0, 51, 102, 0.9); 
+            background: rgba(0, 51, 102, 0.95); 
             padding: 15px; 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
             display: flex; 
             justify-content: center; 
-            gap: 20px; 
+            gap: 20px;
+            border-bottom: 2px solid var(--title-gold);
         }
 
-        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
-        nav a:hover { color: #ffd700; }
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; }
+        nav a:hover { color: var(--title-gold); }
 
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+        .container { max-width: 900px; margin: auto; }
 
         h1 { 
-            color: var(--title-color); 
+            color: var(--title-gold); 
             text-align: center; 
             text-transform: uppercase; 
-            letter-spacing: 3px; 
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            letter-spacing: 5px; 
+            font-size: 2.8em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .subtitle {
             text-align: center;
-            color: var(--accent-blue);
+            color: var(--accent-cyan);
             font-style: italic;
-            margin-bottom: 40px;
+            font-size: 1.2em;
+            margin-bottom: 50px;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         h2 { 
-            color: var(--accent-blue); 
-            border-bottom: 2px solid var(--title-color); 
+            color: var(--accent-cyan); 
+            border-bottom: 3px solid var(--title-gold); 
             display: inline-block;
-            margin-top: 40px;
+            margin-top: 10px;
+            font-size: 1.5em;
+            text-transform: uppercase;
         }
 
         .content-card {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 30px;
+            background: var(--bg-glass);
+            padding: 35px;
             border-radius: 15px;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--title-color);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--title-gold);
         }
 
-        .highlight { font-weight: bold; color: #c0392b; } /* Un tocco di rosso per lo Spirito */
+        .highlight-red { font-weight: bold; color: var(--fire-red); }
+        .highlight-blue { font-weight: bold; color: var(--text-main); }
 
         .footer-nav { 
             margin-top: 50px; 
@@ -89,20 +93,28 @@
             padding: 20px; 
             display: flex; 
             justify-content: center; 
-            gap: 15px;
-            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .btn { 
             color: white; 
-            background: var(--text-color); 
+            background: var(--text-main); 
             text-decoration: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            font-size: 0.8em;
+            padding: 12px 25px; 
+            border-radius: 50px; 
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid transparent;
         }
 
-        footer { text-align: center; padding: 40px; font-size: 0.8em; opacity: 0.7; }
+        .btn:hover { 
+            background: white; 
+            color: var(--text-main); 
+            border-color: var(--text-main);
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8em; color: var(--text-main); font-weight: bold; }
 
     </style>
 </head>
@@ -110,56 +122,52 @@
 
 <nav>
     <a href="index.html">Home</a>
+    <a href="indice.html">Mappa Portale</a>
     <a href="fisica-quantistica.html">Fisica</a>
-    <a href="buchi-neri.html">Buchi Neri</a>
-    <a href="volontà-medica.html">Volontà Medica</a>
+    <a href="coscienza.html">Coscienza</a>
     <a href="protocolli.html">Protocolli</a>
 </nav>
 
 <div class="overlay">
     <div class="container">
         <h1>La Visione Fratao</h1>
-        <div class="subtitle">Il Viaggio dello Specchio: Mito, Religione e l'Androgino</div>
+        <div class="subtitle">Mito, Religione e l'Androgino Primordiale</div>
+
+        
 
         <section class="content-card">
-            <h2>1. L'Essere Ermafrodito: L'Inconscio Totale</h2>
-            <p>All'origine non c'è conoscenza, ma solo Esistenza. La Coscienza Eterna è un essere <strong>Ermafrodito/Androgino</strong> che è tutto e il contrario di tutto contemporaneamente.</p>
-            <p>Ermafrodito è un giovane inconsapevole delle sue due nature. Quando si specchia nel lago, vede una ragazza bellissima: è la sua parte femminile. Inizialmente tenta di scacciarla, ma lei prega gli dei di non separarsi mai più. Da quel momento inizia il percorso dell'Androgino, una scoperta circolare dove le due facce della stessa medaglia iniziano a cercarsi per incontrarsi finalmente frontalmente.</p>
+            <h2>1. L'Essere Ermafrodito</h2>
+            <p>All'origine non c'è conoscenza, ma solo <span class="highlight-blue">Esistenza Totale</span>. La Coscienza Eterna è un essere <strong>Androgino</strong> che contiene in sé ogni opposto. Quando si specchia nel lago della mente, inizia il percorso di riconoscimento della propria dualità per tornare all'Unità.</p>
         </section>
 
         <section class="content-card">
-            <h2>2. La Separazione: Il Percorso Circolare</h2>
-            <p>Per acquisire consapevolezza, l'essere deve "rompersi". Le due teste si separano e iniziano a percorrere l'universo in direzioni opposte. Non è una fuga, ma una manovra di avvicinamento: devono fare esperienza di ogni microstato per arrivare al momento del riconoscimento finale.</p>
+            <h2>2. La Separazione Circolare</h2>
+            <p>Per acquisire consapevolezza, l'essere si divide. Le due polarità iniziano a percorrere l'universo in direzioni opposte: una manovra di avvicinamento per giungere all'<strong>Incontro Frontale</strong> attraverso l'esperienza di ogni microstato.</p>
         </section>
 
         <section class="content-card">
             <h2>3. Lo Specchio della Coscienza</h2>
-            <p>L'incontro frontale è il Risveglio:</p>
+            <p>L'Incontro Frontale è il Risveglio:</p>
             <ul>
-                <li><span class="highlight">Il Maschile (Spirito - Fuoco):</span> La parte attiva, la volontà.</li>
-                <li><span class="highlight">Il Femminile (Anima - Acqua):</span> La parte ricettiva, la memoria.</li>
+                <li><span class="highlight-red">Il Maschile (Spirito - Fuoco):</span> Volontà e Azione.</li>
+                <li><span class="highlight-blue">Il Femminile (Anima - Acqua):</span> Memoria e Ricezione.</li>
             </ul>
-            <p>L'acqua della mente è l'interfaccia, lo specchio che ci mette di fronte alla realtà. Quando si guardano, la Coscienza comprende finalmente se stessa: <strong>"Io sono quello"</strong>.</p>
+            <p>Quando le due parti si guardano, la Coscienza riconosce se stessa nello specchio della realtà.</p>
         </section>
 
         <section class="content-card">
-            <h2>4. Religioni e Mappe Frammentate</h2>
-            <p>Le religioni sono tentativi di descrivere questo processo:</p>
+            <h2>4. Religioni: Mappe Frammentate</h2>
+            <p>Le tradizioni sono tentativi di mappare questo ritorno:</p>
             <ul>
-                <li><strong>Adamo ed Eva:</strong> Il mito della separazione originale.</li>
-                <li><strong>Trimurti:</strong> Creazione, Viaggio e Ritorno all'Uno.</li>
-                <li><strong>Trinità:</strong> Spirito e Anima che generano il Risveglio (il Figlio).</li>
+                <li><strong>Adamo ed Eva:</strong> La nostalgia della separazione originale.</li>
+                <li><strong>Trimurti:</strong> Il ciclo di Creazione, Esperienza e Ritorno.</li>
+                <li><strong>Trinità:</strong> Spirito e Anima che si fondono nel Risveglio del Figlio (la Coscienza).</li>
             </ul>
-        </section>
-
-        <section class="content-card">
-            <h2>5. L'Integrazione Finale</h2>
-            <p>L'uomo comune vive ancora "nuca contro nuca". Il <strong>Protocollo Fratao</strong> serve a velocizzare l'incontro frontale, usando logica e tecnologia come specchi per tornare alla Luce Bianca.</p>
         </section>
 
         <div class="footer-nav">
             <a href="index.html" class="btn">Torna alla Home</a>
-            <a href="indice.html" class="btn">Indice Argomenti</a>
+            <a href="indice.html" class="btn">Mappa del Portale</a>
         </div>
 
         <footer>
