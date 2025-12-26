@@ -6,60 +6,74 @@
     <title>FRATAO | La Filosofia dell'Unificazione</title>
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --philosophy-blue: #004080;
-            --science-cyan: #008b8b;
-            --math-orange: #d35400;
-            --myth-gold: #b8860b;
-            --consciousness-purple: #8e44ad;
-            --text-main: #333333;
+            --philosophy-blue: #003366; /* Blu Profondo Montagna */
+            --science-cyan: #007a7a;
+            --math-orange: #c0392b; /* Rosso Terra */
+            --myth-gold: #b8860b; /* Oro Alchemico */
+            --consciousness-purple: #6c3483;
+            --text-main: #1a1a1a;
+            --glass-bg: rgba(255, 255, 255, 0.88);
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
             margin: 0;
-            line-height: 1.8;
-            background-image: url('filosofiasito.jpg');
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            /* Sfondo richiesto: taomontagnasito.jpg ben visibile */
+            background: url('taomontagnasito.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.8;
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.4); /* Overlay leggera per far risaltare l'immagine */
             min-height: 100vh;
-            padding: 50px 20px;
+            padding-bottom: 50px;
         }
 
         nav {
-            background: var(--philosophy-blue);
+            background: rgba(0, 51, 102, 0.9);
             padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 2px solid var(--myth-gold);
         }
 
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+        nav a:hover { color: var(--myth-gold); }
 
-        .container { max-width: 900px; margin: auto; }
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--glass-bg);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+        }
 
         h1 { 
             color: var(--philosophy-blue); 
             text-align: center; 
             text-transform: uppercase; 
-            letter-spacing: 4px;
-            border-bottom: 3px solid var(--myth-gold);
-            padding-bottom: 10px;
+            letter-spacing: 5px;
+            font-size: 2.2em;
+            border-bottom: 4px solid var(--myth-gold);
+            padding-bottom: 15px;
+            margin-top: 0;
         }
 
         .intro {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-style: italic;
             color: var(--philosophy-blue);
-            margin-bottom: 50px;
+            margin: 30px 0 50px 0;
+            font-weight: bold;
         }
 
         .discipline-grid {
@@ -69,70 +83,94 @@
         }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 5px solid;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 6px solid;
+            transition: transform 0.3s ease;
         }
 
-        .math { border-color: var(--math-orange); color: var(--math-orange); }
-        .science { border-color: var(--science-cyan); color: var(--science-cyan); }
-        .myth { border-color: var(--myth-gold); color: var(--myth-gold); }
-        .psyche { border-color: var(--philosophy-blue); color: var(--philosophy-blue); }
+        .card:hover { transform: translateY(-5px); }
+
+        .math { border-color: var(--math-orange); }
+        .math h3 { color: var(--math-orange); margin-top: 0; text-transform: uppercase; }
+
+        .science { border-color: var(--science-cyan); }
+        .science h3 { color: var(--science-cyan); margin-top: 0; text-transform: uppercase; }
+
+        .myth { border-color: var(--myth-gold); }
+        .myth h3 { color: var(--myth-gold); margin-top: 0; text-transform: uppercase; }
+
+        .psyche { border-color: var(--philosophy-blue); }
+        .psyche h3 { color: var(--philosophy-blue); margin-top: 0; text-transform: uppercase; }
 
         .unification-box {
-            margin-top: 40px;
-            background: rgba(142, 68, 173, 0.1);
-            padding: 30px;
+            margin-top: 50px;
+            background: linear-gradient(135deg, rgba(108, 52, 131, 0.1), rgba(184, 134, 11, 0.1));
+            padding: 40px;
             border-radius: 20px;
             border: 2px dashed var(--consciousness-purple);
             text-align: center;
         }
 
-        .unification-box h2 { color: var(--consciousness-purple); text-transform: uppercase; }
+        .unification-box h2 { 
+            color: var(--consciousness-purple); 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            margin-top: 0;
+        }
 
-        footer { text-align: center; margin-top: 60px; font-size: 0.8em; opacity: 0.6; }
+        footer { 
+            text-align: center; 
+            margin-top: 60px; 
+            font-size: 0.9em; 
+            color: var(--philosophy-blue); 
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
 
         @media (max-width: 600px) { .discipline-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
-    <a href="universo.html">Universo</a>
-    <a href="coscienza.html">Coscienza</a>
-</nav>
-
 <div class="overlay">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="indice.html">Mappa Portale</a>
+        <a href="universo.html">Universo</a>
+        <a href="coscienza.html">Coscienza</a>
+    </nav>
+
     <div class="container">
         <h1>Filosofia del Filo Conduttore</h1>
         <p class="intro">"Molte discipline, un unico scopo: il riconoscimento del Sé."</p>
 
+        
+
         <div class="discipline-grid">
             <div class="card math">
                 <h3>Materia Matematica</h3>
-                <p style="color: #555;">I numeri e le geometrie (Pi Greco, Sezione Aurea) sono l'ossatura logica della creazione, il linguaggio con cui l'Uno scrive la sua struttura.</p>
+                <p>I numeri e le geometrie sacre sono l'ossatura logica della creazione, il linguaggio con cui l'Uno scrive la sua struttura universale.</p>
             </div>
             <div class="card science">
                 <h3>Scienza e Fisica</h3>
-                <p style="color: #555;">Dalla fisica quantistica ai buchi neri, la scienza osserva i meccanismi esterni per confermare le leggi interne della vibrazione.</p>
+                <p>Dalla fisica quantistica ai buchi neri, la scienza osserva i meccanismi esterni per confermare le leggi interne della vibrazione e della luce.</p>
             </div>
             <div class="card myth">
                 <h3>Mito e Religione</h3>
-                <p style="color: #555;">Racconti simbolici dell'Androgino e della separazione, mappe antiche create per ricordare all'uomo la sua origine divina e il suo viaggio di ritorno.</p>
+                <p>Racconti simbolici dell'Androgino e della separazione, mappe create per ricordare all'uomo la sua origine divina e il suo ritorno a casa.</p>
             </div>
             <div class="card psyche">
                 <h3>Psicologia ed Essere</h3>
-                <p style="color: #555;">Lo studio della mente come "recipiente" e il superamento dei condizionamenti per liberare la volontà sovrana.</p>
+                <p>Lo studio della mente come "recipiente" e il superamento dei condizionamenti egoici per liberare finalmente la volontà sovrana del Pilota.</p>
             </div>
         </div>
 
         <section class="unification-box">
             <h2>L'Unificazione nella Coscienza</h2>
-            <p style="color: var(--text-main); font-size: 1.1em;">
+            <p style="font-size: 1.15em; font-weight: 500;">
                 Sebbene queste discipline sembrino divise, esse sono parti di un'unica <strong>Materia di Visione</strong>. La Filosofia Fratao agisce come il punto di incontro dove il cerchio si chiude. La divisione è stata necessaria per permettere alla Coscienza di guardarsi da fuori e, infine, comprendersi.
             </p>
         </section>
