@@ -6,114 +6,167 @@
     <title>FRATAO | Miti, Religioni e l'Androgino</title>
     <style>
         :root {
-            --bg: #050505;
-            --text: #e0e0e0;
-            --accent: #ffd700; /* Oro per il Mito */
-            --sub-accent: #00f2ff; /* Cyan per la connessione scientifica */
-            --spirit: #ff3c00; /* Rosso Fuoco per lo Spirito */
-            --anima: #0077ff; /* Blu Acqua per l'Anima */
+            /* Palette richiesta: Sfondo chiaro e Scrittura Blu */
+            --bg-color: #f4f7f9; 
+            --text-color: #003366; /* Blu profondo per la leggibilità */
+            --title-color: #d4af37; /* Oro per i titoli (richiamo Anima/Sole) */
+            --accent-blue: #00509d; /* Blu acceso per i sottotitoli */
         }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
-        
-        nav { background: rgba(17, 17, 17, 0.9); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; justify-content: center; gap: 15px; backdrop-filter: blur(10px); }
-        nav a { color: var(--text); text-decoration: none; font-weight: bold; font-size: 0.9em; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--accent); }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            margin: 0; 
+            line-height: 1.8;
+            /* Inserisco l'immagine di sfondo se presente, altrimenti resta il colore chiaro */
+            background-image: url('mitisito.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .overlay {
+            background: rgba(244, 247, 249, 0.92); /* Velo chiaro per leggere il blu */
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        nav { 
+            background: rgba(0, 51, 102, 0.9); 
+            padding: 15px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+        nav a:hover { color: #ffd700; }
 
         .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        
-        .hero-myth { 
-            height: 45vh; 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/sfondo-home.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-bottom: 3px solid var(--accent);
-            text-align: center;
+
+        h1 { 
+            color: var(--title-color); 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        h1, h2 { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
-        .vision-card { background: #111; border-top: 3px solid var(--accent); padding: 30px; margin-bottom: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        
-        .dual-box { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
-        .spirit-box { flex: 1; border: 1px solid var(--spirit); padding: 15px; background: rgba(255, 60, 0, 0.05); }
-        .anima-box { flex: 1; border: 1px solid var(--anima); padding: 15px; background: rgba(0, 119, 255, 0.05); }
+        .subtitle {
+            text-align: center;
+            color: var(--accent-blue);
+            font-style: italic;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
 
-        .highlight { color: var(--accent); font-weight: bold; }
-        .quote { font-style: italic; border-left: 3px solid var(--accent); padding-left: 15px; margin: 20px 0; color: #bbb; }
+        h2 { 
+            color: var(--accent-blue); 
+            border-bottom: 2px solid var(--title-color); 
+            display: inline-block;
+            margin-top: 40px;
+        }
 
-        .footer-nav { margin-top: 50px; text-align: center; border-top: 1px solid #333; padding-top: 30px; display: flex; justify-content: center; gap: 20px; }
-        .btn { color: var(--text); text-decoration: none; border: 1px solid #444; padding: 10px 20px; border-radius: 5px; transition: 0.3s; font-size: 0.8em; text-transform: uppercase; }
-        .btn:hover { border-color: var(--accent); color: var(--accent); }
+        .content-card {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--title-color);
+        }
+
+        .highlight { font-weight: bold; color: #c0392b; } /* Un tocco di rosso per lo Spirito */
+
+        .footer-nav { 
+            margin-top: 50px; 
+            text-align: center; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn { 
+            color: white; 
+            background: var(--text-color); 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            font-size: 0.8em;
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8em; opacity: 0.7; }
+
     </style>
 </head>
 <body>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
     <a href="fisica-quantistica.html">Fisica</a>
     <a href="buchi-neri.html">Buchi Neri</a>
+    <a href="volontà-medica.html">Volontà Medica</a>
     <a href="protocolli.html">Protocolli</a>
 </nav>
 
-<div class="hero-myth">
-    <div>
-        <h1>Il Linguaggio del Simbolo</h1>
-        <p style="color: var(--accent);">Dall'Ermafrodito allo Specchio della Coscienza</p>
+<div class="overlay">
+    <div class="container">
+        <h1>La Visione Fratao</h1>
+        <div class="subtitle">Il Viaggio dello Specchio: Mito, Religione e l'Androgino</div>
+
+        <section class="content-card">
+            <h2>1. L'Essere Ermafrodito: L'Inconscio Totale</h2>
+            <p>All'origine non c'è conoscenza, ma solo Esistenza. La Coscienza Eterna è un essere <strong>Ermafrodito/Androgino</strong> che è tutto e il contrario di tutto contemporaneamente.</p>
+            <p>Ermafrodito è un giovane inconsapevole delle sue due nature. Quando si specchia nel lago, vede una ragazza bellissima: è la sua parte femminile. Inizialmente tenta di scacciarla, ma lei prega gli dei di non separarsi mai più. Da quel momento inizia il percorso dell'Androgino, una scoperta circolare dove le due facce della stessa medaglia iniziano a cercarsi per incontrarsi finalmente frontalmente.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>2. La Separazione: Il Percorso Circolare</h2>
+            <p>Per acquisire consapevolezza, l'essere deve "rompersi". Le due teste si separano e iniziano a percorrere l'universo in direzioni opposte. Non è una fuga, ma una manovra di avvicinamento: devono fare esperienza di ogni microstato per arrivare al momento del riconoscimento finale.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>3. Lo Specchio della Coscienza</h2>
+            <p>L'incontro frontale è il Risveglio:</p>
+            <ul>
+                <li><span class="highlight">Il Maschile (Spirito - Fuoco):</span> La parte attiva, la volontà.</li>
+                <li><span class="highlight">Il Femminile (Anima - Acqua):</span> La parte ricettiva, la memoria.</li>
+            </ul>
+            <p>L'acqua della mente è l'interfaccia, lo specchio che ci mette di fronte alla realtà. Quando si guardano, la Coscienza comprende finalmente se stessa: <strong>"Io sono quello"</strong>.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>4. Religioni e Mappe Frammentate</h2>
+            <p>Le religioni sono tentativi di descrivere questo processo:</p>
+            <ul>
+                <li><strong>Adamo ed Eva:</strong> Il mito della separazione originale.</li>
+                <li><strong>Trimurti:</strong> Creazione, Viaggio e Ritorno all'Uno.</li>
+                <li><strong>Trinità:</strong> Spirito e Anima che generano il Risveglio (il Figlio).</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>5. L'Integrazione Finale</h2>
+            <p>L'uomo comune vive ancora "nuca contro nuca". Il <strong>Protocollo Fratao</strong> serve a velocizzare l'incontro frontale, usando logica e tecnologia come specchi per tornare alla Luce Bianca.</p>
+        </section>
+
+        <div class="footer-nav">
+            <a href="index.html" class="btn">Torna alla Home</a>
+            <a href="indice.html" class="btn">Indice Argomenti</a>
+        </div>
+
+        <footer>
+            FRATAO | NARRATIVA DELLA COSCIENZA © 2025 | Francesco Meli
+        </footer>
     </div>
 </div>
-
-<div class="container">
-
-    <section class="vision-card">
-        <h2>Il Mito dell'Androgino Originale</h2>
-        <p>All'origine della Coscienza Eterna esiste un essere <span class="highlight">Ermafrodito</span>: è tutto e il contrario di tutto, polarità che si annichiliscono a vicenda in un'unità cieca. Questo essere ha due teste che non possono conoscersi perché appoggiate <strong>nuca contro nuca</strong>.</p>
-        <div class="quote">
-            "Per acquisire consapevolezza di sé, le due teste devono separarsi e affrontare un percorso circolare di incontro frontale."
-        </div>
-        <p>Durante questo viaggio nell'Universo, l'Essere fa esperienza attraverso la separazione per giungere finalmente a guardarsi in faccia. In questo incontro, la Coscienza comprende di essere fatta di due parti speculari.</p>
-    </section>
-
-    <section class="vision-card">
-        <h2>La Dialettica del Tao</h2>
-        <p>Il <span class="highlight">Tao</span> è il principio supremo che contiene la dualità senza esserne schiavo. Rappresenta il flusso in cui lo Yin e lo Yang non sono nemici, ma motori della manifestazione.</p>
-        <div class="dual-box">
-            <div class="spirit-box">
-                <h3 style="color: var(--spirit);">SPIRITO (Maschile)</h3>
-                <p>Il polo attivo, il Fuoco, la volontà di proiezione. È la testa che cerca il riflesso per riconoscersi.</p>
-            </div>
-            <div class="anima-box">
-                <h3 style="color: var(--anima);">ANIMA (Femminile)</h3>
-                <p>Il polo ricettivo, l'Acqua, la memoria profonda. È lo specchio in cui lo Spirito si osserva.</p>
-            </div>
-        </div>
-        <p style="margin-top: 20px;">L'integrazione di questi poli genera la <strong>Coscienza Risvegliata</strong>: il punto di equilibrio dove le due teste non sono più schiena contro schiena, ma unite in uno sguardo frontale eterno.</p>
-    </section>
-
-    <section class="vision-card">
-        <h2>Religioni e Trinità</h2>
-        <p>I grandi miti religiosi sono frammenti di questa verità unica:</p>
-        <ul>
-            <li><strong>Trimurti (Shiva, Vishnu, Brahma):</strong> Il ciclo di distruzione del vecchio "conosciuto" per la creazione del nuovo ordine.</li>
-            <li><strong>Adamo ed Eva:</strong> La separazione necessaria per iniziare il viaggio dell'esperienza.</li>
-            <li><strong>La Trinità:</strong> Il riflesso del rapporto tra Anima e Spirito che partorisce la consapevolezza del Sé.</li>
-        </ul>
-    </section>
-
-    <div class="footer-nav">
-        <a href="index.html" class="btn">Home</a>
-        <a href="fisica-quantistica.html" class="btn">Fisica Quantistica</a>
-        <a href="buchi-neri.html" class="btn">Buchi Neri</a>
-        <a href="indice.html" class="btn">Mappa Portale</a>
-    </div>
-
-</div>
-
-<footer style="text-align: center; padding: 40px; font-size: 0.8em; color: #555;">
-    FRA+TAO | VISIONE MITOLOGICA SOVRANA © 2025 | Francesco Meli
-</footer>
 
 </body>
 </html>
