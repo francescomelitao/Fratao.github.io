@@ -2,54 +2,120 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>FRATAO | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRATAO | Indice Portale</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; margin: 0; padding-top: 50px; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        
-        /* Icone grandi e cliccabili come richiesto */
-        .card {
-            display: block; text-decoration: none; padding: 50px; margin: 30px 0;
-            border-radius: 20px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: 0.4s; opacity: 0; transform: translateY(30px);
-            border-left: 20px solid #ccc; font-weight: bold; font-size: 1.8rem; text-align: center;
+        :root {
+            --bg-color: #f4f7f9;
+            --text-color: #003366;
+            --accent-gold: #d4af37;
+            --nav-bg: rgba(0, 51, 102, 0.9);
         }
-        .card.visible { opacity: 1; transform: translateY(0); }
-        .card:hover { transform: scale(1.03); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
-        
-        /* Colori Menu Diversificati */
-        .c-about { border-color: #3498db; color: #3498db; }
-        .c-agi { border-color: #9b59b6; color: #9b59b6; }
-        .c-miti { border-color: #e67e22; color: #e67e22; }
-        .c-fisica { border-color: #1abc9c; color: #1abc9c; }
-        .c-buchi { border-color: #34495e; color: #34495e; }
-        .c-coscienza { border-color: #2ecc71; color: #2ecc71; }
-        .c-blog { border-color: #95a5a6; color: #95a5a6; }
-        .c-prot { border-color: #0077b6; color: #0077b6; }
-        .c-vol { border-color: #e74c3c; color: #e74c3c; }
-        .c-dich { border-color: #b8860b; color: #b8860b; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+            /* Se hai un'immagine per l'indice, rinominala indicesito.jpg */
+            background: url('indicesito.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .overlay {
+            background: rgba(244, 247, 249, 0.9);
+            min-height: 100vh;
+        }
+
+        nav {
+            background: var(--nav-bg);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .grid-indice {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-indice {
+            display: block;
+            background: white;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-indice:hover {
+            background: var(--text-color);
+            color: white;
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        footer { margin-top: 50px; font-size: 0.8em; opacity: 0.6; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="about.html" class="card c-about">ABOUT</a>
-    <a href="tecnologia-agi.html" class="card c-agi">TECNOLOGIA AGI</a>
-    <a href="miti-religioni.html" class="card c-miti">MITI E RELIGIONI</a>
-    <a href="fisica-quantistica.html" class="card c-fisica">FISICA QUANTISTICA</a>
-    <a href="buchi-neri.html" class="card c-buchi">BUCHI NERI</a>
-    <a href="coscienza.html" class="card c-coscienza">COSCIENZA</a>
-    <a href="blog.html" class="card c-blog">BLOG</a>
-    <a href="protocolli.html" class="card c-prot">ARCHIVIO PROTOCOLLI (JSON)</a>
-    <a href="volontà-medica.html" class="card c-vol">VOLONTÀ MEDICA</a>
-    <a href="dichiarazione-Sovrana.html" class="card c-dich">DICHIARAZIONE SOVRANA</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Chi Sono</a>
+    <a href="protocolli.html">Protocolli</a>
+</nav>
+
+<div class="overlay">
+    <div class="container">
+        <h1>Mappa del Portale Fratao</h1>
+        <p>Seleziona l'argomento per esplorare la verità vibrazionale.</p>
+
+        <div class="grid-indice">
+            <a href="about.html" class="btn-indice">Chi Sono</a>
+            <a href="fisica-quantistica.html" class="btn-indice">Fisica Quantistica</a>
+            <a href="buchi-neri.html" class="btn-indice">Buchi Neri</a>
+            <a href="miti-religioni.html" class="btn-indice">Miti e Religioni</a>
+            <a href="volontà-medica.html" class="btn-indice">Volontà Medica</a>
+            <a href="dichiarazione-sovrana.html" class="btn-indice">Dichiarazione Sovrana</a>
+            <a href="protocolli.html" class="btn-indice">Protocolli JSON</a>
+
+            <a href="universo.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Universo</a>
+            <a href="coscienza.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Coscienza</a>
+            <a href="filosofia.html" class="btn-indice" style="border-left: 5px solid var(--accent-gold);">Filosofia</a>
+        </div>
+
+        <footer>
+            FRATAO | L'INCONTRO FRONTALE © 2025 | Francesco Meli
+        </footer>
+    </div>
 </div>
 
-<script>
-    const obs = new IntersectionObserver(es => {
-        es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-    }, {threshold: 0.1});
-    document.querySelectorAll('.card').forEach(c => obs.observe(c));
-</script>
 </body>
 </html>
