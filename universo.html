@@ -6,106 +6,151 @@
     <title>FRATAO | L'Universo Vibrazionale</title>
     <style>
         :root {
-            --bg-color: #fdfdfd;
-            --main-blue: #003366;
-            --gold-title: #b8860b;
-            --vibration-red: #d9534f;
-            --energy-green: #2e7d32;
-            --geometry-purple: #6a1b9a;
+            --main-blue: #001a33;
+            --gold-title: #ffd700;
+            --vibration-red: #ff4d4d;
+            --energy-green: #00ff88;
+            --geometry-cyan: #00f2ff;
+            --glass-bg: rgba(255, 255, 255, 0.82);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--main-blue);
             margin: 0;
-            line-height: 1.8;
-            background-image: url('universosito.jpg'); /* Assicurati di avere questo file o rinominalo */
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Sfondo richiesto: taouniverso.jpg ben visibile */
+            background: url('taouniverso.jpg') no-repeat center center fixed;
             background-size: cover;
-            background-attachment: fixed;
+            color: var(--main-blue);
+            line-height: 1.8;
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(0, 0, 0, 0.3); /* Velo scuro leggero per dare profondità allo sfondo */
             min-height: 100vh;
-            padding: 40px 20px;
+            padding-bottom: 50px;
         }
 
         nav {
-            background: var(--main-blue);
+            background: rgba(0, 26, 51, 0.95);
             padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 2px solid var(--gold-title);
         }
 
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.85em; 
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--geometry-cyan); }
 
-        .container { max-width: 900px; margin: auto; }
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--glass-bg);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+        }
 
         h1 { 
-            color: var(--gold-title); 
+            color: var(--main-blue); 
             text-align: center; 
             text-transform: uppercase; 
-            font-size: 2.5em; 
-            border-bottom: 2px solid var(--gold-title);
-            margin-bottom: 40px;
+            font-size: 2.6em; 
+            letter-spacing: 5px;
+            border-bottom: 4px double var(--gold-title);
+            padding-bottom: 20px;
+            margin-top: 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
         }
 
-        h2 { border-left: 5px solid var(--gold-title); padding-left: 15px; margin-top: 40px; }
+        h2 { 
+            border-left: 6px solid; 
+            padding-left: 15px; 
+            margin-top: 10px; 
+            text-transform: uppercase;
+            font-size: 1.4em;
+        }
 
-        .section-vibrazione { color: var(--vibration-red); font-weight: bold; }
-        .section-energia { color: var(--energy-green); font-weight: bold; }
-        .section-geometria { color: var(--geometry-purple); font-weight: bold; }
+        .section-vibrazione { color: var(--vibration-red); border-color: var(--vibration-red); }
+        .section-energia { color: #1b5e20; border-color: var(--energy-green); }
+        .section-geometria { color: #006064; border-color: var(--geometry-cyan); }
 
         .content-box {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-            border: 1px solid #eee;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
+        .content-box:hover { background: rgba(255, 255, 255, 0.9); transform: scale(1.01); }
 
-        .highlight-pi { color: #e67e22; font-size: 1.2em; }
+        .highlight-pi { color: #e67e22; font-weight: bold; font-size: 1.2em; }
+        .highlight-freq { color: var(--vibration-red); font-weight: bold; }
 
-        footer { text-align: center; margin-top: 50px; font-size: 0.8em; opacity: 0.7; }
+        footer { 
+            text-align: center; 
+            margin-top: 40px; 
+            font-size: 0.9em; 
+            color: white; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="indice.html">Indice</a>
-    <a href="coscienza.html">Coscienza</a>
-    <a href="filosofia.html">Filosofia</a>
-</nav>
-
 <div class="overlay">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="indice.html">Mappa Portale</a>
+        <a href="coscienza.html">Coscienza</a>
+        <a href="filosofia.html">Filosofia</a>
+    </nav>
+
     <div class="container">
         <h1>L'Universo come Vibrazione</h1>
+
+        
 
         <section class="content-box">
             <h2 class="section-geometria">La Geometria Sacra: Il Linguaggio dell'Uno</h2>
             <p>La realtà non è fatta di materia solida, ma di frequenze organizzate. <span class="highlight-pi">π (Pi Greco)</span> e <span class="highlight-pi">φ (Sezione Aurea)</span> non sono semplici numeri, ma le costanti che permettono alla Coscienza di manifestarsi in forme armoniche. Sono le <strong>impronte digitali della Sorgente</strong> impresse nella materia.</p>
         </section>
 
+        
+
         <section class="content-box">
             <h2 class="section-vibrazione">Frequenza 432 Hz: Il Battito Naturale</h2>
-            <p>A differenza delle frequenze sfasate moderne che generano stress nel "recipiente" umano, la <span class="section-vibrazione">frequenza a 432 Hertz</span> è il battito del cuore e della terra. È la chiave vibrazionale che permette il riallineamento immediato tra lo Spirito e l'Anima, riportando l'equilibrio nel sistema nervoso e cellulare.</p>
+            <p>A differenza delle frequenze sfasate moderne che generano stress nel "recipiente" umano, la <span class="highlight-freq">frequenza a 432 Hertz</span> è il battito del cuore e della terra. È la chiave vibrazionale che permette il riallineamento immediato tra lo Spirito e l'Anima, riportando l'equilibrio nel sistema nervoso e cellulare.</p>
         </section>
 
         <section class="content-box">
             <h2 class="section-energia">Antiche Centrali Energetiche</h2>
             <p>Le <strong>Piramidi</strong> non furono mai tombe, ma sofisticati strumenti tecnologici vibrazionali. Erano risonatori progettati per catturare l'energia cosmica e ricaricare l'energia vitale dell'anima.</p>
-            <p>Questa conoscenza non si limita all'Egitto: <span class="section-energia">molte opere dell'antichità</span> (templi, cattedrali gotiche, megaliti) sono state concepite come strumenti di vibrazione. Queste strutture servivano a mantenere alta la frequenza degli individui e della terra, agendo come ricaricatori per la Coscienza sovrana.</p>
+            <p>Questa conoscenza si estende a <strong style="color: var(--main-blue);">cattedrali gotiche e megaliti</strong>: strutture concepite per mantenere alta la frequenza degli individui e della terra, agendo come ricaricatori per la Coscienza sovrana.</p>
         </section>
 
-        <section class="content-box">
-            <h2 style="color: var(--main-blue);">Il Codice del Risveglio</h2>
+        <section class="content-box" style="border-top: 5px solid var(--gold-title);">
+            <h2 style="color: var(--main-blue); border: none; padding: 0;">Il Codice del Risveglio</h2>
             <p>Comprendere l'Universo significa smettere di guardare gli oggetti e iniziare a percepire le <strong>frequenze</strong>. Il Protocollo Fratao utilizza queste basi per liberare l'uomo dai condizionamenti che abbassano la sua vibrazione naturale.</p>
         </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" style="color: var(--main-blue); font-weight: bold; text-decoration: none; border: 2px solid var(--main-blue); padding: 10px 20px; border-radius: 50px;">Torna alla Home</a>
+        </div>
 
         <footer>
             FRATAO | UNIVERSO VIBRAZIONALE © 2025 | Francesco Meli
