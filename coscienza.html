@@ -17,10 +17,11 @@
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: var(--bg-body); 
+            background-color: #000; /* Fondo nero per dare profondità allo sfondo */
             color: var(--text-main); 
             margin: 0; 
             line-height: 1.8;
+            /* Sfondo coscienza sito.jpg ora protagonista */
             background-image: url('coscienzasito.jpg'); 
             background-size: cover;
             background-attachment: fixed;
@@ -28,13 +29,14 @@
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.94);
+            /* Trasparenza aumentata per vedere meglio lo sfondo */
+            background: rgba(255, 255, 255, 0.4); 
             min-height: 100vh;
             padding-bottom: 60px;
         }
 
         nav { 
-            background: var(--title-primordial); 
+            background: rgba(0, 51, 102, 0.9); 
             padding: 15px; 
             position: sticky; 
             top: 0; 
@@ -43,6 +45,7 @@
             justify-content: center; 
             gap: 20px;
             flex-wrap: wrap;
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
@@ -57,28 +60,41 @@
             letter-spacing: 4px; 
             font-size: 2.2em;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
         }
 
-        .subtitle { text-align: center; color: var(--accent-gold); font-weight: bold; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { 
+            text-align: center; 
+            color: var(--accent-gold); 
+            font-weight: bold; 
+            margin-bottom: 50px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
 
         h2 { color: var(--accent-liberty); border-left: 5px solid var(--accent-gold); padding-left: 15px; margin-top: 50px; }
 
+        /* Card rese trasparenti con effetto sfocatura per la leggibilità */
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 30px;
-            border: 1px solid #eee;
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(10px); /* Effetto vetro per vedere lo sfondo */
         }
 
         .highlight-box {
             border: 2px solid var(--accent-gold);
             padding: 25px;
             margin: 30px 0;
-            background: rgba(184, 134, 11, 0.05);
+            background: rgba(184, 134, 11, 0.15);
             font-style: italic;
             border-radius: 8px;
+            color: #000;
+            font-weight: 500;
         }
 
         .dual-box {
@@ -86,10 +102,11 @@
             justify-content: space-around;
             align-items: center;
             padding: 20px;
-            background: #f8f9fa;
+            background: rgba(248, 249, 250, 0.8);
             border-radius: 10px;
             margin: 20px 0;
             font-weight: bold;
+            border: 1px solid #ccc;
         }
 
         .text-spirit { color: var(--accent-spirit); }
@@ -101,7 +118,14 @@
         .btn { padding: 10px 20px; background: var(--title-primordial); color: white; text-decoration: none; border-radius: 5px; font-size: 0.9em; transition: 0.3s; }
         .btn:hover { background: var(--accent-gold); }
 
-        footer { text-align: center; padding: 40px; font-size: 0.8em; opacity: 0.7; }
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            font-size: 0.9em; 
+            color: #fff; 
+            text-shadow: 1px 1px 3px black;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -118,6 +142,8 @@
     <div class="container">
         <h1>Manifesto della Coscienza</h1>
         <div class="subtitle">Dall'Origine Una alla Libertà dell'Essere</div>
+
+        
 
         <section class="card">
             <h2 class="text-gold">1. L'Origine Una (Entanglement Fratao)</h2>
