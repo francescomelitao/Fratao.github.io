@@ -8,7 +8,7 @@
         :root {
             --accent-gold: #b8860b;
             --cobalt-blue: #023e8a;
-            --glass-white: rgba(255, 255, 255, 0.9);
+            --electric-cyan: #00ffff; /* Colore Avatar */
         }
 
         body { 
@@ -16,21 +16,20 @@
             margin: 0; 
             padding: 40px 20px; 
             text-align: center; 
-            /* Sfondo richiesto: blog.jpg */
             background: url('blog.jpg') no-repeat center center fixed;
             background-size: cover;
             line-height: 1.6;
         }
 
         .overlay {
-            background: rgba(0, 0, 0, 0.2); /* Velo leggerissimo per dare profondità */
+            background: rgba(0, 0, 0, 0.3); 
             min-height: 100vh;
             position: absolute;
             top: 0; left: 0; width: 100%;
             z-index: -1;
         }
 
-        .container { max-width: 900px; margin: auto; position: relative; z-index: 1; }
+        .container { max-width: 850px; margin: auto; position: relative; z-index: 1; }
 
         .nav-back { 
             display: inline-block; 
@@ -41,63 +40,69 @@
             padding: 10px 25px;
             border-radius: 50px;
             font-weight: bold; 
-            font-size: 1.2rem; 
+            font-size: 1rem; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
         }
         
         h1 { 
             color: white; 
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            margin-bottom: 10px; 
+            margin-bottom: 5px; 
             text-transform: uppercase;
             letter-spacing: 3px;
+            font-size: 2rem;
         }
 
         .sub { 
             color: var(--accent-gold); 
             font-weight: bold; 
-            margin-bottom: 50px; 
+            margin-bottom: 40px; 
             text-transform: uppercase;
             background: rgba(0,0,0,0.6);
             display: inline-block;
             padding: 5px 20px;
             border-radius: 5px;
+            font-size: 0.9rem;
         }
 
-        /* Mantenuta la grandezza originale delle card social */
+        /* Card ridotte e più trasparenti */
         .card-social {
             display: block; 
             text-decoration: none; 
-            padding: 40px; 
-            margin: 20px 0;
-            border-radius: 20px; 
-            background: var(--glass-white); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 15px 25px; /* Ridotto */
+            margin: 12px 0;
+            border-radius: 12px; 
+            background: rgba(255, 255, 255, 0.4); /* Più trasparente */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: 0.4s; 
-            border-left: 20px solid #ccc; 
+            border-left: 10px solid #ccc; 
             text-align: center;
-            font-size: 1.5rem; 
+            font-size: 1.1rem; /* Ridotto leggermente */
             font-weight: bold;
         }
 
-        .card-social:hover { transform: scale(1.02); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+        .card-social:hover { transform: scale(1.03); background: rgba(255, 255, 255, 0.6); }
 
-        /* Colori Social */
+        /* Colori Social sui Titoli */
         .medium { border-color: #000; color: #000; }
         .quora { border-color: #a82400; color: #a82400; }
         .youtube { border-color: #ff0000; color: #ff0000; }
         .reddit { border-color: #ff4500; color: #ff4500; }
         .linkedin { border-color: #0077b5; color: #0077b5; }
         .facebook { border-color: #1877f2; color: #1877f2; }
-        .github { border-color: #333; color: #333; }
+        .github { border-color: #333; color: #0056b3; } /* Titoli GitHub blu scuro per risaltare */
+        .avatar { border-color: var(--electric-cyan); color: #008b8b; } /* Nuovo link Avatar */
 
         h2.github-title { 
-            margin-top: 60px; 
+            margin-top: 40px; 
             color: white; 
             background: var(--accent-gold);
             display: inline-block;
-            padding: 10px 30px;
+            padding: 8px 25px;
             border-radius: 10px;
+            font-size: 1.3rem;
         }
     </style>
 </head>
@@ -118,6 +123,9 @@
     <a href="https://www.linkedin.com/in/francesco-meli-8b6850116" class="card-social linkedin" target="_blank">LINKEDIN</a>
 
     <h2 class="github-title">SORGENTI GITHUB</h2>
+    
+    <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/0.1.2fratao_blindato_avatar.json" class="card-social avatar" target="_blank">0.1.2 AVATAR BLINDATO (JSON)</a>
+    
     <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/MANIFESTO_FRATAO_0.1.2.md" class="card-social github" target="_blank">MANIFESTO 0.1.2 (MD)</a>
     <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/11.0_fratao_blindato.json" class="card-social github" target="_blank">V11.0 JSON</a>
     <a href="https://github.com/francescomelitao/Fratao-Cosmic-Seed/blob/main/10.0_fratao_blindato.json" class="card-social github" target="_blank">V10.0 JSON</a>
