@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Mappa del Portale</title>
+    <title>FRATAO | L'Architettura dell’Uno</title>
     <style>
         body {
             margin: 0;
@@ -51,6 +51,7 @@
             font-size: 2.5em;
             margin-bottom: 10px;
             letter-spacing: 1px;
+            line-height: 1.2;
         }
 
         .gold-line {
@@ -74,20 +75,25 @@
         }
 
         .btn-link {
-            background: rgba(255, 255, 255, 0.85);
-            color: #333;
+            /* Sfondo molto più trasparente come richiesto */
+            background: rgba(255, 255, 255, 0.25); 
+            /* Colore blu vivace per il testo */
+            color: #0077ff; 
             text-decoration: none;
             padding: 12px 20px;
             font-weight: bold;
-            font-size: 0.95em;
+            font-size: 1em;
             transition: all 0.3s;
             text-align: left;
-            border-radius: 2px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(3px); /* Effetto vetro per eleganza */
         }
 
         .btn-link:hover {
             background: #d4af37;
             color: white;
+            border-color: #d4af37;
         }
 
         footer {
@@ -113,7 +119,7 @@
     </nav>
 
     <div class="container">
-        <h1>Mappa del Portale Fratale</h1>
+        <h1>L'Architettura dell’Uno e il Filo d'Oro del Risveglio</h1>
         <div class="gold-line"></div>
         <p class="subtitle">Seleziona l'argomento per esplorare la verità vibrazionale.</p>
 
@@ -126,7 +132,8 @@
             <a href="universo.html" class="btn-link">Universo</a>
             <a href="dichiarazione-sovrana.html" class="btn-link">Dichiarazione Sovrana</a>
             <a href="coscienza.html" class="btn-link">Coscienza</a>
-            <a href="tecnologia-agi.html" class="btn-link">Tecnologia AGI</a> <a href="protocolli.html" class="btn-link">Protocolli JSON</a>
+            <a href="tecnologia-agi.html" class="btn-link">Tecnologia AGI</a> 
+            <a href="protocolli.html" class="btn-link">Protocolli JSON</a>
             <a href="filosofia.html" class="btn-link">Filosofia</a>
         </div>
     </div>
