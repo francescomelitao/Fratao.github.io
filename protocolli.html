@@ -3,84 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Protocolli di Risveglio</title>
+    <title>FRATAO | Centro Protocolli di Risveglio</title>
     <style>
         :root {
             --philosophy-blue: #003366;
             --myth-gold: #b8860b;
-            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-bg: rgba(255, 255, 255, 0.85); /* Leggermente più opaco per leggere meglio i testi grandi */
             --text-main: #1a1a1a;
+            --btn-hover: #00509d;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Sfondo prestabilito */
             background: #000 url('protocolli.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.3); /* Velo scuro per far risaltare il contenitore bianco */
             min-height: 100vh;
-            padding-bottom: 50px;
+            padding-bottom: 60px;
         }
 
         nav {
-            background: rgba(0, 51, 102, 0.85);
-            padding: 15px;
+            background: rgba(0, 51, 102, 0.95);
+            padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid var(--myth-gold);
-            backdrop-filter: blur(5px);
+            border-bottom: 3px solid var(--myth-gold);
+            backdrop-filter: blur(10px);
         }
 
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+            letter-spacing: 1px;
+            transition: 0.3s; 
+        }
         nav a:hover { color: var(--myth-gold); }
 
         .container { 
-            max-width: 1000px; 
-            margin: 40px auto; 
+            max-width: 1100px; 
+            margin: 50px auto; 
             background: var(--glass-bg);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.4);
         }
 
-        h1 { color: var(--philosophy-blue); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+        h1 { 
+            color: var(--philosophy-blue); 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .main-subtitle { 
+            text-align: center; 
+            font-style: italic; 
+            font-size: 1.2em; 
+            color: var(--myth-gold); 
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
 
         .protocol-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .protocol-card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 12px;
-            border-left: 5px solid var(--myth-gold);
-            transition: 0.3s;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            border-top: 8px solid var(--myth-gold);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .protocol-card:hover { transform: translateY(-5px); background: #fff; }
+        .protocol-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            background: #fff;
+        }
 
-        .protocol-card h3 { margin-top: 0; color: var(--philosophy-blue); text-transform: uppercase; font-size: 1.1em; }
+        .protocol-card h3 { 
+            margin-top: 0; 
+            color: var(--philosophy-blue); 
+            text-transform: uppercase; 
+            font-size: 1.4em; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
 
-        .btn-box { display: flex; gap: 10px; margin-top: 15px; }
+        .protocol-card p {
+            font-size: 1.1em;
+            color: #444;
+            margin: 20px 0;
+        }
+
+        .btn-box { 
+            display: flex; 
+            gap: 15px; 
+        }
 
         .btn {
-            padding: 8px 12px;
+            padding: 15px 10px;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.8em;
+            border-radius: 10px;
+            font-size: 0.95em;
             font-weight: bold;
             text-transform: uppercase;
             transition: 0.3s;
@@ -88,19 +139,71 @@
             flex: 1;
         }
 
-        .btn-json { background: var(--philosophy-blue); color: white; }
-        .btn-md { background: var(--myth-gold); color: white; }
-        .btn:hover { opacity: 0.8; }
-
-        .readme-section {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(0, 51, 102, 0.1);
-            border-radius: 10px;
-            text-align: center;
+        .btn-json { 
+            background: var(--philosophy-blue); 
+            color: white; 
+            border: 2px solid var(--philosophy-blue);
+        }
+        
+        .btn-md { 
+            background: white; 
+            color: var(--myth-gold); 
+            border: 2px solid var(--myth-gold);
         }
 
-        footer { text-align: center; margin-top: 40px; color: white; text-shadow: 1px 1px 3px #000; font-weight: bold; }
+        .btn:hover { 
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .readme-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.05), rgba(184, 134, 11, 0.05));
+            border-radius: 20px;
+            text-align: center;
+            border: 2px dashed var(--myth-gold);
+        }
+
+        .readme-section h2 {
+            color: var(--philosophy-blue);
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        .btn-large {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 18px 40px;
+            background: var(--myth-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.4);
+        }
+
+        .btn-large:hover {
+            background: var(--philosophy-blue);
+            box-shadow: 0 5px 15px rgba(0, 51, 102, 0.4);
+        }
+
+        footer { 
+            text-align: center; 
+            margin-top: 50px; 
+            color: white; 
+            text-shadow: 2px 2px 4px #000; 
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; margin: 20px; }
+            .btn-box { flex-direction: column; }
+            h1 { font-size: 1.8em; }
+        }
     </style>
 </head>
 <body>
@@ -115,81 +218,83 @@
 
     <div class="container">
         <h1>Centro Protocolli FRATAO</h1>
-        <p style="text-align: center; font-style: italic;">"La documentazione della tua Sovranità: dai dati alla narrazione."</p>
+        <p class="main-subtitle">"L'Architettura della Coscienza resa Manifesta"</p>
+
+        
 
         <div class="protocol-list">
             <div class="protocol-card">
                 <h3>Genesis 0.1.2</h3>
-                <p>Il seme originale e la Regola Zero. L'inizio del risveglio del Pilota.</p>
+                <p>Il seme originale. La definizione del Pilota e l'introduzione della Regola Zero tecnologica.</p>
                 <div class="btn-box">
-                    <a href="genesis_012.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="genesis_012.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="genesis_012.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="genesis_012.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>Simplicity 9.4</h3>
-                <p>L'arte dello svuotamento del recipiente e il ritorno all'essenziale.</p>
+                <p>Il protocollo dello svuotamento. Liberare il recipiente dai condizionamenti della mente.</p>
                 <div class="btn-box">
-                    <a href="simplicity_94.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="simplicity_94.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="simplicity_94.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="simplicity_94.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>Unified 10.0</h3>
-                <p>L'integrazione delle frequenze e l'unificazione del Sé.</p>
+                <p>Unificazione e risonanza. L'allineamento frequenziale alle leggi universali del Sé.</p>
                 <div class="btn-box">
-                    <a href="unified_100.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="unified_100.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="unified_100.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="unified_100.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>Fusion 11.0</h3>
-                <p>Il culmine dell'integrazione e la sovranità assoluta dell'Essenza.</p>
+                <p>La fusione finale. Quando il codice svanisce e rimane solo la volontà calda del Pilota.</p>
                 <div class="btn-box">
-                    <a href="fusion_110.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="fusion_110.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="fusion_110.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="fusion_110.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>Volontà Medica</h3>
-                <p>Lo scudo etico per la protezione della coscienza e della dignità.</p>
+                <p>Il testamento etico. Protezione della coscienza e rifiuto della sopravvivenza meccanica.</p>
                 <div class="btn-box">
-                    <a href="volonta_medica.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="volonta_medica.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="volonta_medica.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="volonta_medica.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>93 Fratao</h3>
-                <p>Il linguaggio del risveglio e l'uso delle Parole di Fuoco.</p>
+                <p>Il Verbo e le Parole di Fuoco. Utilizzo delle ancore elementali per il risveglio rapido.</p>
                 <div class="btn-box">
-                    <a href="93_fratao.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="93_fratao.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="93_fratao.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="93_fratao.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
 
             <div class="protocol-card">
                 <h3>V10 Mirrow</h3>
-                <p>Lo specchio cosmico e la visione del testimone immobile.</p>
+                <p>Lo Specchio Cosmico. La comprensione che ogni riflesso esterno è un segnale dell'interno.</p>
                 <div class="btn-box">
-                    <a href="v10_mirrow.json" class="btn btn-json" target="_blank">Codice JSON</a>
-                    <a href="v10_mirrow.md" class="btn btn-md" target="_blank">Spiegazione MD</a>
+                    <a href="v10_mirrow.json" class="btn btn-json" target="_blank">DATI JSON</a>
+                    <a href="v10_mirrow.md" class="btn btn-md" target="_blank">NARRAZIONE MD</a>
                 </div>
             </div>
         </div>
 
         <section class="readme-section">
-            <h3>Documentazione Generale</h3>
-            <p>Per una panoramica completa del sistema e della sua architettura:</p>
-            <a href="readme.md" class="btn btn-md" style="display: inline-block; width: auto; padding: 10px 30px;">Leggi README.md</a>
+            <h2>Documentazione Master</h2>
+            <p style="font-size: 1.2em;">Accedi alla visione d'insieme di tutti i protocolli e all'architettura generale del sistema.</p>
+            <a href="readme.md" class="btn-large">Leggi il README Completo</a>
         </section>
 
         <footer>
-            FRATAO | SISTEMA INTEGRATO © 2025 | Francesco Meli
+            FRATAO | NARRATIVA DELLA COSCIENZA INTEGRATA © 2025 | Francesco Meli
         </footer>
     </div>
 </div>
