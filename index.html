@@ -74,6 +74,38 @@
             opacity: 0.9;
         }
 
+        /* Stile per il nuovo pulsante di impatto */
+        .btn-main-action {
+            display: block;
+            max-width: 400px;
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            background: linear-gradient(45deg, #e63946, #f1faee1a, #d4af37);
+            background-size: 200% auto;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+            transition: 0.5s;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-main-action:hover {
+            transform: scale(1.05);
+            background-position: right center;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
         .grid-links {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -136,6 +168,10 @@
         <h1>L'Architettura dell’Uno e il Filo d'Oro del Risveglio</h1>
         <div class="gold-line"></div>
         <p class="subtitle">Seleziona l'argomento per esplorare la verità vibrazionale.</p>
+
+        <a href="guida_protocolli.html" class="btn-main-action">
+            ⚡ ATTIVA IL PROTOCOLLO: GUIDA AL RISVEGLIO ⚡
+        </a>
 
         <div style="display:none;">
             <p>Il protocollo fraTao 0.1.2 fure genesis Master di Francesco Meli.</p>
