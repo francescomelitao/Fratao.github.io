@@ -12,7 +12,6 @@
             --myth-gold: #b8860b;
             --consciousness-purple: #6c3483;
             --text-main: #1a1a1a;
-            /* Sfondo dei contenitori più trasparente */
             --glass-bg: rgba(255, 255, 255, 0.75); 
         }
 
@@ -27,7 +26,6 @@
         }
 
         .overlay {
-            /* Trasparenza aumentata per far risaltare lo sfondo montano */
             background: rgba(255, 255, 255, 0.25); 
             min-height: 100vh;
             padding-bottom: 50px;
@@ -55,7 +53,6 @@
             border-radius: 25px;
             box-shadow: 0 15px 45px rgba(0,0,0,0.4);
             border: 1px solid rgba(255,255,255,0.4);
-            /* Effetto sfocatura per far leggere bene il testo sullo sfondo */
             backdrop-filter: blur(12px); 
         }
 
@@ -85,6 +82,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
+            margin-bottom: 40px;
         }
 
         .card {
@@ -110,6 +108,29 @@
 
         .psyche { border-color: var(--philosophy-blue); }
         .psyche h3 { color: var(--philosophy-blue); margin-top: 0; text-transform: uppercase; }
+
+        /* Stile speciale per il link di approfondimento interno */
+        .internal-link-box {
+            background: var(--consciousness-purple);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            transition: 0.3s;
+        }
+        
+        .internal-link-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(108, 52, 131, 0.4);
+        }
+
+        .internal-link-box a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: bold;
+            display: block;
+        }
 
         .unification-box {
             margin-top: 50px;
@@ -173,6 +194,13 @@
             </div>
         </div>
 
+        <div class="internal-link-box">
+            <a href="rivoluzione_coscienza.html">
+                ENTRA NELLA RIVOLUZIONE DELLA CONSAPEVOLEZZA ☯️<br>
+                <span style="font-size: 0.7em; font-weight: normal; opacity: 0.8;">(Guardarsi Dentro: Superare il Dualismo e il Conflitto)</span>
+            </a>
+        </div>
+
         <section class="unification-box">
             <h2>L'Unificazione nella Coscienza</h2>
             <p style="font-size: 1.15em; font-weight: 500;">
@@ -188,3 +216,4 @@
 
 </body>
 </html>
+
