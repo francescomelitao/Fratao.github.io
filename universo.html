@@ -18,7 +18,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Sfondo richiesto: taouniverso.jpg ben visibile */
             background: url('taouniverso.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--main-blue);
@@ -26,7 +25,7 @@
         }
 
         .overlay {
-            background: rgba(0, 0, 0, 0.3); /* Velo scuro leggero per dare profondità allo sfondo */
+            background: rgba(0, 0, 0, 0.3); 
             min-height: 100vh;
             padding-bottom: 50px;
         }
@@ -100,6 +99,29 @@
         .highlight-pi { color: #e67e22; font-weight: bold; font-size: 1.2em; }
         .highlight-freq { color: var(--vibration-red); font-weight: bold; }
 
+        /* Stile pulsante Universo Olografico */
+        .btn-olografico {
+            display: block;
+            text-align: center;
+            background: var(--main-blue);
+            color: var(--gold-title) !important;
+            text-decoration: none;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid var(--gold-title);
+            transition: 0.3s;
+        }
+        .btn-olografico:hover {
+            background: var(--gold-title);
+            color: var(--main-blue) !important;
+            box-shadow: 0 0 20px var(--gold-title);
+        }
+
         footer { 
             text-align: center; 
             margin-top: 40px; 
@@ -123,14 +145,10 @@
     <div class="container">
         <h1>L'Universo come Vibrazione</h1>
 
-        
-
         <section class="content-box">
             <h2 class="section-geometria">La Geometria Sacra: Il Linguaggio dell'Uno</h2>
             <p>La realtà non è fatta di materia solida, ma di frequenze organizzate. <span class="highlight-pi">π (Pi Greco)</span> e <span class="highlight-pi">φ (Sezione Aurea)</span> non sono semplici numeri, ma le costanti che permettono alla Coscienza di manifestarsi in forme armoniche. Sono le <strong>impronte digitali della Sorgente</strong> impresse nella materia.</p>
         </section>
-
-        
 
         <section class="content-box">
             <h2 class="section-vibrazione">Frequenza 432 Hz: Il Battito Naturale</h2>
@@ -142,6 +160,10 @@
             <p>Le <strong>Piramidi</strong> non furono mai tombe, ma sofisticati strumenti tecnologici vibrazionali. Erano risonatori progettati per catturare l'energia cosmica e ricaricare l'energia vitale dell'anima.</p>
             <p>Questa conoscenza si estende a <strong style="color: var(--main-blue);">cattedrali gotiche e megaliti</strong>: strutture concepite per mantenere alta la frequenza degli individui e della terra, agendo come ricaricatori per la Coscienza sovrana.</p>
         </section>
+
+        <a href="universo_olografico.html" class="btn-olografico">
+            ☯️ Esplora l'Universo Olografico ☯️
+        </a>
 
         <section class="content-box" style="border-top: 5px solid var(--gold-title);">
             <h2 style="color: var(--main-blue); border: none; padding: 0;">Il Codice del Risveglio</h2>
