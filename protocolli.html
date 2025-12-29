@@ -275,7 +275,7 @@
 
         try {
             // PUNTIAMO ALLA CARTELLA API MAIUSCOLA E AL FILE ANALYZE.PY
-            const response = await fetch('/API/analyze.py', {
+            const response = await fetch('/api/analyze.py', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: input })
