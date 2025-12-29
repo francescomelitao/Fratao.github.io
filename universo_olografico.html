@@ -11,6 +11,7 @@
             --gold: #d4af37;
             --text-slate: #94a3b8;
             --matrix-green: #00ff88;
+            --deep-purple: #1e1b4b;
         }
 
         body { 
@@ -19,70 +20,90 @@
             background: var(--space-bg);
             color: #e2e8f0;
             line-height: 1.8;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 950px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
 
         header { 
             text-align: center; 
             border-bottom: 2px solid var(--holo-cyan); 
             padding-bottom: 40px; 
             margin-bottom: 50px;
-            text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+            text-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
         }
 
-        h1 { color: var(--holo-cyan); letter-spacing: 4px; font-size: 2.8rem; text-transform: uppercase; margin: 0; }
-        .motto { color: var(--gold); font-style: italic; font-weight: bold; font-size: 1.2rem; }
+        h1 { color: var(--holo-cyan); letter-spacing: 4px; font-size: 3rem; text-transform: uppercase; margin: 0; }
+        .motto { color: var(--gold); font-style: italic; font-weight: bold; font-size: 1.3rem; margin-top: 10px; }
 
         section { 
-            background: rgba(255, 255, 255, 0.03); 
-            padding: 40px; 
-            border-radius: 20px; 
-            margin-bottom: 40px; 
-            border: 1px solid rgba(34, 211, 238, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(30, 27, 75, 0.2));
+            padding: 45px; 
+            border-radius: 25px; 
+            margin-bottom: 45px; 
+            border: 1px solid rgba(34, 211, 238, 0.15);
             backdrop-filter: blur(15px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
-        h2 { color: var(--gold); border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 10px; text-transform: uppercase; }
+        h2 { color: var(--gold); border-bottom: 1px solid rgba(212, 175, 55, 0.4); padding-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
 
         .formula { 
             background: #000; 
             color: var(--holo-cyan); 
-            padding: 25px; 
+            padding: 30px; 
             text-align: center; 
-            font-size: 1.8rem; 
-            border-radius: 12px; 
+            font-size: 2rem; 
+            border-radius: 15px; 
             font-family: 'Courier New', monospace;
-            margin: 30px 0;
+            margin: 35px 0;
             border: 1px dashed var(--gold);
-            box-shadow: inset 0 0 15px rgba(34, 211, 238, 0.2);
+            box-shadow: inset 0 0 20px rgba(34, 211, 238, 0.3);
         }
 
         .highlight { color: var(--holo-cyan); font-weight: bold; }
-        .warning { color: #ff4d4d; font-weight: bold; border-left: 3px solid #ff4d4d; padding-left: 15px; }
-
+        .quote { font-style: italic; color: var(--matrix-green); border-left: 3px solid var(--matrix-green); padding-left: 20px; margin: 20px 0; }
+        
         .experience-box {
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.12);
             border: 1px solid var(--gold);
-            padding: 25px;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .scientist-card {
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            padding: 20px;
             border-radius: 12px;
-            margin: 25px 0;
+            margin: 15px 0;
+        }
+
+        .scientist-card strong { color: var(--holo-cyan); display: block; margin-bottom: 5px; }
+
+        .warning-box {
+            background: rgba(255, 77, 77, 0.1);
+            border: 1px solid #ff4d4d;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
         }
 
         .btn-back {
             text-decoration: none;
             color: var(--holo-cyan);
-            border: 1px solid var(--holo-cyan);
-            padding: 10px 25px;
+            border: 2px solid var(--holo-cyan);
+            padding: 12px 30px;
             border-radius: 50px;
             transition: 0.4s;
             font-weight: bold;
             text-transform: uppercase;
+            display: inline-block;
         }
-        .btn-back:hover { background: var(--holo-cyan); color: #000; box-shadow: 0 0 20px var(--holo-cyan); }
+        .btn-back:hover { background: var(--holo-cyan); color: #000; box-shadow: 0 0 25px var(--holo-cyan); }
 
-        footer { text-align: center; color: var(--text-slate); font-size: 0.9rem; padding: 40px; }
+        footer { text-align: center; color: var(--text-slate); font-size: 0.9rem; padding: 60px; border-top: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
 <body>
@@ -92,41 +113,64 @@
 
     <header>
         <h1>Universo Olografico</h1>
-        <p class="motto">"Siamo i creatori che hanno dimenticato di esserlo"</p>
+        <p class="motto">"Siamo la Coscienza che osserva il proprio riflesso nel pozzo del tempo"</p>
     </header>
 
     <section>
-        <h2>Il Risveglio nel Puzzle dell'Uno</h2>
-        <p>L'universo è un immenso ologramma dove lo spazio e il tempo non sono principi fondamentali, ma proiezioni. Come dimostrato dal fisico <strong>Alain Aspect</strong> nel 1982, le particelle sono connesse in modo non-locale: ciò che accade a una, accade istantaneamente all'altra perché, in realtà, <strong>non sono mai state separate</strong>.</p>
+        <h2>L'Illusione della Separazione: La Scienza dell'Uno</h2>
+        <p>Nella visione <strong>Fratao</strong>, la separazione è solo un velo. La fisica moderna ha iniziato a scorgere ciò che la Coscienza sa da sempre: l'universo non è fatto di "parti" isolate, ma è un organismo indivisibile.</p>
         
-        <div class="experience-box">
-            <strong>L'Esempio della Casa:</strong> Immagina di aver comprato un oggetto anni fa e di averlo nascosto in casa. Hai dimenticato dove sia. Inizi a cercarlo aprendo cassetti, facendo mente locale. La ricerca è l'esperienza necessaria per acquisire consapevolezza. Alla fine, trovi l'oggetto e capisci che eri stato tu a nasconderlo. L'Universo è quell'oggetto: lo abbiamo creato noi, dimenticandolo apposta per rendere l'esperienza della dualità reale ed efficace.
+        <div class="scientist-card">
+            <strong>David Bohm (Ordine Implicato):</strong> Il celebre fisico sosteneva che la nostra realtà (Ordine Esplicato) sia come la proiezione di un film, la cui pellicola (Ordine Implicato) contiene l'intera informazione in ogni singolo punto. Come in un ologramma, se rompi la pellicola, ogni frammento contiene ancora l'intera immagine.
         </div>
-        
+
+        <div class="scientist-card">
+            <strong>Alain Aspect (L'Esperimento del Secolo):</strong> Nel 1982, Aspect dimostrò l'<em>Entanglement</em>: particelle subatomiche comunicano istantaneamente a miliardi di chilometri. Questo significa che la distanza è un'illusione. In un universo olografico, non c'è un "qui" e un "là", perché tutto è "ORA".
+        </div>
+
+        <div class="experience-box">
+            <strong>L'Esempio della Casa (Francesco Meli):</strong> Immagina di aver comprato un oggetto prezioso anni fa e di averlo nascosto in un cassetto dimenticato. Passi la vita a cercarlo fuori, ma l'oggetto è sempre stato in casa tua. La ricerca è l'esperienza necessaria per risvegliarti. Noi siamo i creatori che hanno nascosto la Verità (Noi Stessi) dentro la virtualità per giocare il gioco della dualità e ritrovarci con una consapevolezza nuova.
+        </div>
     </section>
 
     <section>
-        <h2>S = -k ln W | La Fisica del Ritorno</h2>
-        <p>Nella visione Fratao, l'entropia non è solo disordine, ma il percorso della Coscienza. Utilizzando il <strong>segno meno</strong>, trasformiamo la degradazione in raffinamento (Negentropia).</p>
+        <h2>S = -k ln W | Il Motore del Ritorno</h2>
+        <p>Mentre la scienza ufficiale vede l'entropia (S) come una condanna al disordine, la visione Fratao inserisce il <strong>segno meno</strong>. È la fisica del risveglio: la <strong>Negentropia</strong>.</p>
         <div class="formula">S = -k ln W</div>
-        <p>La Coscienza si è divisa in infiniti microstati (W) per scoprire cosa significa essere "due". Man mano che integriamo le esperienze e svuotiamo il "recipiente" dal conosciuto, i microstati diminuiscono. Quando torniamo all'Unità (W=1), l'entropia diventa Zero: il <strong>Punto Zero</strong> della consapevolezza totale.</p>
+        <p>La Coscienza primordiale si è frammentata in infiniti microstati (W) per fare esperienza. Ogni vita, ogni dolore, ogni gioia è un microstato. Man mano che comprendi chi sei e svuoti la mente dal "conosciuto", i microstati si fondono. Quando torni all'Unità (W=1), l'entropia diventa Zero. È il <strong>Punto Zero</strong>: l'ordine assoluto dove la Coscienza non è più dispersa, ma centrata.</p>
     </section>
 
     <section>
-        <h2>L'Anima Nuotatrice e l'Onda di Volontà</h2>
-        <p>Il nostro cervello non produce la realtà, ma è un <strong>lettore di ologrammi</strong>. L'Anima, avendo una coscienza più forte di Spirito e Mente, emette archetipi che modificano la virtualità.</p>
-        <p>Immagina lo spazio-tempo come un mare. L'Anima è un <strong>nuotatore</strong>: più si muove con consapevolezza, più produce onde che interferiscono con gli eventi che galleggiano sulla superficie. Attraverso una "Onda di Volontà" sufficientemente grande, l'Anima consapevole può letteralmente spostare o cancellare eventi dal piano spazio-temporale, esercitando il vero <strong>Libero Arbitrio</strong>.</p>
+        <h2>Il Cervello: Il Lettore dell'Ologramma</h2>
+        <p>Noi non "vediamo" la realtà, la decodifichiamo. Il cervello funziona secondo principi olografici.</p>
         
+        <div class="scientist-card">
+            <strong>Karl Pribram:</strong> Il neurofisiologo scoprì che i ricordi non sono in un punto preciso del cervello, ma distribuiti olograficamente. Il cervello è un interprete di frequenze che trasforma il caos matematico della realtà implicata in oggetti solidi e immagini.
+        </div>
+
+        <p class="quote">"La realtà è un'illusione, sebbene molto persistente." - Albert Einstein</p>
+        
+        <p>L'Anima, avendo una frequenza vibrazionale superiore alla Mente e allo Spirito, agisce come il proiettore di questo ologramma. La tua vita non ti "accade", è proiettata dalla tua Anima sulla membrana della realtà virtuale.</p>
     </section>
 
     <section>
-        <h2>La Manipolazione dell'Ologramma</h2>
-        <p class="warning">Attenzione: Il nostro grado di consapevolezza determina chi controlla l'ologramma.</p>
-        <p>I "Poteri Forti" e i loro apparati sanno che siamo creatori. Per questo utilizzano mass media e informazione per inculcare terrore, paura e odio. Proiettando immagini negative nella nostra mente, ci inducono a co-creare una realtà virtuale favorevole a loro e non a noi. Il risveglio Fratao consiste nel riprendersi il comando del proprio "lettore olografico" per smettere di essere burattini e tornare a essere Dei.</p>
+        <h2>L'Anima Nuotatrice e il Libero Arbitrio</h2>
+        <p>Immagina lo spazio-tempo come un oceano. La maggior parte degli uomini galleggia come detriti alla deriva, trascinati dalle correnti (il karma, i condizionamenti). L'Anima consapevole, nella visione Fratao, è un <strong>nuotatore</strong>.</p>
+        <p>Più acquisisci consapevolezza, più le tue bracciate producono <strong>Onde di Volontà</strong>. Queste onde interferiscono con la griglia olografica dello spazio-tempo (teorizzata da Maldacena e Susskind come una proiezione di dati su una superficie). Se la tua volontà è pura e centrata, puoi perturbare gli eventi futuri, cambiare la posizione dei "pixel" della tua realtà e cancellare i conflitti prima che si manifestino nel corpo fisico.</p>
+    </section>
+
+    <section>
+        <h2>La Prigione Olografica e il Riscatto</h2>
+        <div class="warning-box">
+            <strong>Attenzione:</strong> Il controllo dell'ologramma è conteso. I "Poteri Forti" sanno che siamo dei creatori smemorati.
+        </div>
+        <p>Attraverso mass media, istruzione limitata e frequenze sfasate, iniettano immagini di terrore e scarsità nel nostro "lettore cerebrale". Se noi accettiamo quelle immagini come vere, usiamo il nostro potere creativo per manifestare la *loro* realtà. Ci inducono a costruire una prigione con le nostre stesse mani.</p>
+        <p>Il <strong>Protocollo Fratao</strong> rompe questo incantesimo. Riprendersi il comando significa capire che l'universo è fatto di <em>Informazione</em> e che noi siamo gli autori del codice. Non sei un passeggero della Matrix: sei l'Architetto che ha finto di essere un prigioniero per il gusto di evadere.</p>
     </section>
 
     <footer>
-        <p>FRATAO | L'Architettura dell'Uno © 2025 | Francesco Meli</p>
+        <p>FRATAO | UNIVERSO OLOGRAFICO © 2025 | Francesco Meli</p>
+        <p style="font-size: 0.7rem; opacity: 0.5;">Riferimenti Scientifici: Bohm, Aspect, Pribram, Bekenstein, Maldacena, Heisenberg.</p>
     </footer>
 </div>
 
