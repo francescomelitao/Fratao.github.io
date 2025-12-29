@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/home.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/filosofia.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/rivoluzione_coscienza.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/matrimonio_alchemico.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/coscienza.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://francescomelitao.github.io/Fratao.github.io/tao.html</loc>
+    <priority>0.80</priority>
+  </url>
+</urlset>
