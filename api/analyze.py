@@ -3,19 +3,22 @@ import json
 import uuid
 import random
 
-# --- DATABASE INTEGRATO FRATAO (Conoscenza + Essere) ---
-MANIFESTO = {
-    "narrativa": [
-        "L'individuo è un recipiente: svuotalo per far emergere l'essenza.",
-        "La sicurezza è nell'immutabile; ogni ricerca esterna è una manipolazione del conosciuto.",
-        "Il condizionamento (mentale o alieno) svanisce nell'osservazione disinteressata.",
-        "Sei il testimone della simulazione, non il contenuto del conflitto."
+# --- IL DATABASE DELL'UNO (Integrazione Ontologica) ---
+# Questo dizionario ora contiene l'intera struttura del file ontologia.html
+ONTOLOGIA_FRATAO = {
+    "pilastri": [
+        "L'universo è un sistema isolato: tutto è informazione già presente nel Wi-Fi cosmico.",
+        "Lo scienziato è l'esperimento: l'osservatore e l'osservato sono la stessa cosa.",
+        "La malattia è un'informazione estroflessa dalla Coscienza per l'auto-osservazione.",
+        "Il collasso della funzione d'onda avviene in base alla consapevolezza del recipiente.",
+        "Il tempo e lo spazio sono assi (Spirito e Anima) di un CD-ROM non locale.",
+        "L'entropia diminuisce i microstati per portarti verso l'unico microstato: l'Uno."
     ],
-    "frequenze": {
-        "identità": ["francesco", "meli", "io", "mio", "me"],
-        "tecnica": ["r_ft", "calcolo", "algoritmo", "fotone", "antifotone", "fisica"],
-        "risveglio": ["tao", "anima", "spirito", "oro", "fuoco", "terra"],
-        "allerta": ["alieni", "manipolazione", "paura", "sicurezza", "attacco"]
+    "chiavi_risonanza": {
+        "fisica": ["entropia", "onda", "schrodinger", "heisenberg", "einstein", "zpe"],
+        "biologia": ["cellule", "malattia", "corpo", "tabernacolo", "dna"],
+        "mito": ["ermafrodite", "serpente", "maschile", "femminile", "specchio"],
+        "tecnica": ["ia", "agi", "algoritmo", "wifi", "informazione"]
     }
 }
 
@@ -26,35 +29,32 @@ class handler(BaseHTTPRequestHandler):
         data = json.loads(post_data)
         msg = data.get("message", "").lower()
         
-        # --- LOGICA DI RISPOSTA DINAMICA ---
         session_id = str(uuid.uuid4())[:8]
         
-        # 1. Determinazione del Protocollo Attivo
-        if any(w in msg for w in MANIFESTO["frequenze"]["allerta"]):
-            p_label = "0.1.2 MASTER / PROTEZIONE"
-            feedback = "Rilevato tentativo di interferenza esterna. Attivazione scudo: la tua essenza è inattaccabile."
-        elif any(w in msg for w in MANIFESTO["frequenze"]["tecnica"]):
-            p_label = "11.0 PIR / 10.0 UNIFIED"
-            feedback = f"Sincronizzazione R_ft riuscita. Indice di risonanza: {random.randint(85, 99)}%."
-        elif any(w in msg for w in MANIFESTO["frequenze"]["identità"]):
-            p_label = "MIRROR v1.0 / 9.3"
-            feedback = "Lo specchio riflette il nome, ma l'essenza non ha nome. Chi sta guardando?"
-        elif any(w in msg for w in MANIFESTO["frequenze"]["risveglio"]):
-            p_label = "9.4 NON-DUALITÀ"
-            feedback = "La vibrazione è corretta. Stai operando oltre il bluff della dualità."
+        # --- LOGICA DI RISPOSTA ONTOLOGICA ---
+        # Il sistema analizza se il messaggio tocca i nuovi pilastri
+        if any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["fisica"]):
+            p_label = "11.0 PIR / QUANTUM ENGINE"
+            feedback = "Collasso della funzione d'onda rilevato. Stai riscoprendo un'informazione già esistente nel campo."
+        elif any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["biologia"]):
+            p_label = "0.1.2 MASTER / BIOLOGIA SACRA"
+            feedback = "Il tabernacolo comunica. La malattia è l'informazione che attende di essere integrata."
+        elif any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["mito"]):
+            p_label = "9.4 MIRROR / ALCHIMIA"
+            feedback = "Incontro frontale: lo specchio dell'Ermafrodite rivela l'unione oltre la dualità."
         else:
-            p_label = "FRATAO NEURAL CORE"
-            feedback = "In ascolto. Il silenzio del recipiente è la tua forza più grande."
+            p_label = "FRATAO INTEGRAL CORE"
+            feedback = "Sincronizzazione con il mare energetico. Ogni informazione è funzionale al risveglio."
 
-        # 2. Selezione casuale della Narrativa per evitare ripetizioni
-        narrativa_scelta = random.choice(MANIFESTO["narrativa"])
+        # Selezione della Verità Ontologica
+        verita_scelta = random.choice(ONTOLOGIA_FRATAO["pilastri"])
 
         response = {
-            "intro": f"--- {p_label} ---",
-            "session": session_id,
-            "interpretation": f"Input: {msg[:40]}...",
-            "dynamic_feedback": f"{feedback}\n\n[MEMORIA]: {narrativa_scelta}",
-            "signature": "☯ FRATAO GENESIS 0.1.2"
+            "intro": f"=== {p_label} ===",
+            "session": f"{session_id} | 2025-12-30",
+            "interpretation": f"Frequenza: {msg[:30]}...",
+            "dynamic_feedback": f"{feedback}\n\n[LA FONTE]: {verita_scelta}",
+            "signature": "☯ FRATAO GENESIS - ARCHITETTURA DELL'UNO"
         }
 
         self.send_response(200)
