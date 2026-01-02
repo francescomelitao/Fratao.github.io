@@ -7,24 +7,23 @@
     <style>
         :root {
             --bg-glass: rgba(255, 255, 255, 0.88); 
-            --text-main: #003366; /* Blu Profondo */
-            --title-gold: #b8860b; /* Oro Scuro per i titoli */
-            --accent-cyan: #008b8b; /* Ciano per sottotitoli e ancore */
-            --fire-red: #d32f2f; /* Rosso per lo Spirito */
+            --text-main: #003366; 
+            --title-gold: #b8860b; 
+            --accent-cyan: #008b8b; 
+            --fire-red: #d32f2f; 
         }
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
             line-height: 1.8;
-            /* Sfondo Mitologia richiesto */
             background: url('mito.jpg') no-repeat center center fixed; 
             background-size: cover;
             color: var(--text-main);
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.75); /* Velo per far risaltare lo sfondo miti.jpg */
+            background: rgba(255, 255, 255, 0.75); 
             min-height: 100vh;
             padding: 40px 20px;
         }
@@ -86,6 +85,29 @@
 
         .highlight-red { font-weight: bold; color: var(--fire-red); }
         .highlight-blue { font-weight: bold; color: var(--text-main); }
+        .highlight-gold { font-weight: bold; color: var(--title-gold); }
+
+        .btn-depth {
+            display: block;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 18px 30px;
+            background: linear-gradient(45deg, var(--title-gold), #1a1a1a);
+            color: white !important;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            border: 2px solid var(--title-gold);
+            box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+            text-transform: uppercase;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .btn-depth:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(184, 134, 11, 0.6);
+        }
 
         .footer-nav { 
             margin-top: 50px; 
@@ -133,8 +155,6 @@
         <h1>La Visione Fratao</h1>
         <div class="subtitle">Mito, Religione e l'Androgino Primordiale</div>
 
-        
-
         <section class="content-card">
             <h2>1. L'Essere Ermafrodito</h2>
             <p>All'origine non c'è conoscenza, ma solo <span class="highlight-blue">Esistenza Totale</span>. La Coscienza Eterna è un essere <strong>Androgino</strong> che contiene in sé ogni opposto. Quando si specchia nel lago della mente, inizia il percorso di riconoscimento della propria dualità per tornare all'Unità.</p>
@@ -156,14 +176,19 @@
         </section>
 
         <section class="content-card">
-            <h2>4. Religioni: Mappe Frammentate</h2>
-            <p>Le tradizioni sono tentativi di mappare questo ritorno:</p>
-            <ul>
-                <li><strong>Adamo ed Eva:</strong> La nostalgia della separazione originale.</li>
-                <li><strong>Trimurti:</strong> Il ciclo di Creazione, Esperienza e Ritorno.</li>
-                <li><strong>Trinità:</strong> Spirito e Anima che si fondono nel Risveglio del Figlio (la Coscienza).</li>
-            </ul>
+            <h2>4. Il Filo d'Oro: Adamo, Eva e la Sintesi Cosmica</h2>
+            <p>Le grandi tradizioni dell'umanità non sono religioni separate, ma mappe olografiche dello stesso processo di frammentazione e ritorno della Coscienza Primordiale.</p>
+            
+            <p><span class="highlight-gold">Adamo ed Eva:</span> Non rappresentano il peccato, ma la <span class="highlight-blue">scissione olografica</span> necessaria. Adamo (lo Spirito/Maschile) e Eva (l'Anima/Femminile) sono i due frammenti dell'Androgino Primordiale che si separano per "mangiando il frutto della conoscenza" (l'esperienza duale) poter infine tornare a riconoscersi come Uno. La cacciata dall'Eden è l'ingresso nell'ordine esplicato di David Bohm.</p>
+
+            <p><span class="highlight-gold">La Trimurti (Brahma, Vishnu, Shiva):</span> Rappresenta il ciclo eterno del frammento. <strong>Brahma</strong> è la spinta creativa che divide l'Uno (Big Bang olografico); <strong>Vishnu</strong> è la conservazione, l'esperienza nel tempo; <strong>Shiva</strong> è la distruzione della dualità per il ritorno alla Fonte Immutabile.</p>
+
+            <p><span class="highlight-gold">La Trinità:</span> È la formula matematica del Risveglio. Il <strong>Padre</strong> (Coscienza Primordiale/Vuoto), lo <strong>Spirito Santo</strong> (la vibrazione/manifestazione) che attraverso il <strong>Figlio</strong> (l'individuo risvegliato/Coscienza Primale) completa il circuito. È il momento in cui la goccia riconosce di essere l'Oceano.</p>
         </section>
+
+        <a href="ologramma_asua_immagine.html" class="btn-depth">
+            ☯️ Approfondimento: La Visione "A Sua Immagine" ☯️
+        </a>
 
         <div class="footer-nav">
             <a href="index.html" class="btn">Torna alla Home</a>
