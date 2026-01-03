@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/index.html</loc>
+    <loc>https://fratao-github-io.vercel.app/index.html</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/home.html</loc>
+    <loc>https://fratao-github-io.vercel.app/home.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/filosofia.html</loc>
+    <loc>https://fratao-github-io.vercel.app/miti-religioni.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/rivoluzione_coscienza.html</loc>
+    <loc>https://fratao-github-io.vercel.app/ologramma_asua_immagine.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/matrimonio_alchemico.html</loc>
+    <loc>https://fratao-github-io.vercel.app/filosofia.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/coscienza.html</loc>
+    <loc>https://fratao-github-io.vercel.app/rivoluzione_coscienza.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://fratao-github-io.vercel.app/matrimonio_alchemico.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://fratao-github-io.vercel.app/coscienza.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://francescomelitao.github.io/Fratao.github.io/tao.html</loc>
+    <loc>https://fratao-github-io.vercel.app/tao.html</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
