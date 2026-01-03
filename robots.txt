@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Indica ai robot dove si trova la mappa per gli umani e quella per i motori
+Sitemap: https://francescomelitao.github.io/Fratao.github.io/sitemap.xml
