@@ -3,119 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRATAO | Il Tao: La Via dell'Uno</title>
+    <title>TAO | La Via della Coscienza Primordiale</title>
     <style>
         :root {
-            --bg-tao: #0a0a0a;
-            --text-light: #e0e0e0;
-            --yin: #000000;
-            --yang: #ffffff;
             --gold: #d4af37;
-            --cyan: #00ffff;
+            --cyan: #00e5ff;
+            --deep-bg: #050505;
+            --card-bg: rgba(20, 20, 20, 0.9);
+            --fire: #ff4d4d;
         }
 
         body { 
-            margin: 0; padding: 0;
-            font-family: 'Optima', 'Segoe UI', sans-serif; 
-            background: var(--bg-tao);
-            color: var(--text-light);
-            line-height: 1.8;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--deep-bg); 
+            color: #f0f0f0; 
+            line-height: 1.8; 
+            margin: 0;
+            padding: 0;
         }
 
-        .container { max-width: 900px; margin: auto; padding: 60px 20px; }
-
-        header { text-align: center; margin-bottom: 60px; }
-        h1 { font-size: 3rem; letter-spacing: 5px; color: var(--yang); text-transform: uppercase; margin-bottom: 10px; }
-        .motto { color: var(--gold); font-style: italic; font-size: 1.2rem; }
-
-        .tao-symbol-container { text-align: center; margin: 40px 0; }
-        .tao-symbol { font-size: 150px; color: var(--yang); filter: drop-shadow(0 0 15px rgba(255,255,255,0.3)); }
-
-        section { 
-            background: rgba(255, 255, 255, 0.05); 
-            padding: 40px; 
-            border-radius: 20px; 
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            margin-bottom: 40px;
-            backdrop-filter: blur(10px);
+        .container { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 20px;
         }
 
-        h2 { color: var(--gold); border-bottom: 1px solid var(--gold); display: inline-block; padding-bottom: 10px; }
-
-        .dual-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            margin: 30px 0;
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(0,0,0,1) 70%);
+            border-bottom: 2px solid var(--gold);
+            border-radius: 0 0 50px 50px;
         }
 
-        .yin-box { background: #000; color: #fff; padding: 20px; border: 1px solid #333; border-radius: 10px; text-align: center; }
-        .yang-box { background: #fff; color: #000; padding: 20px; border: 1px solid #ccc; border-radius: 10px; text-align: center; }
+        h1 { 
+            color: var(--gold); 
+            font-size: 3em; 
+            text-transform: uppercase; 
+            letter-spacing: 8px;
+            margin: 0;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
 
-        .highlight { color: var(--cyan); font-weight: bold; }
-
-        .footer-note { text-align: center; margin-top: 50px; font-size: 1.1rem; color: var(--gold); }
-
-        .btn-back {
-            text-decoration: none;
-            color: var(--cyan);
+        .intro-box {
+            background: var(--card-bg);
             border: 1px solid var(--cyan);
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: 0.3s;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: -30px;
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1);
         }
-        .btn-back:hover { background: var(--cyan); color: #000; }
+
+        h2 { 
+            color: var(--cyan); 
+            border-left: 5px solid var(--fire); 
+            padding-left: 15px; 
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+
+        p { font-size: 1.15em; text-align: justify; }
+
+        .highlight-gold { color: var(--gold); font-weight: bold; }
+        .highlight-fire { color: var(--fire); font-weight: bold; }
+
+        .dual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .yin-yang-card {
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .yin { background: #000; color: #fff; border: 1px solid #fff; }
+        .yang { background: #fff; color: #000; }
+
+        .formula-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            border: 2px dashed var(--gold);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            margin: 40px 0;
+        }
+
+        .maestri-list {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 40px;
+            border-radius: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px;
+            color: var(--gold);
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .symbol { font-size: 3em; margin-bottom: 10px; display: block; }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>IL TAO</h1>
+    <p style="color: var(--cyan); letter-spacing: 3px;">La Via dell'Uno e la Danza della Creazione</p>
+</header>
+
 <div class="container">
-    <a href="indice.html" class="btn-back">← Torna all'Architettura dell'Uno</a>
-
-    <header>
-        <div class="tao-symbol-container">
-            <span class="tao-symbol">☯</span>
-        </div>
-        <h1>TAO: LA VIA</h1>
-        <p class="motto">L'osservazione consapevole dell'Unico Organismo Vivente</p>
-    </header>
-
-    <section>
-        <h2>Cos'è il Tao?</h2>
-        <p>Il Tao non è una filosofia, né una religione o una setta. È la <strong>VIA</strong>, la Verità scoperta da Saggi e Mistici attraverso l’osservazione umile e profonda di se stessi e dell’universo. In esso è racchiusa tutta la creazione, dal principio del <span class="highlight">fotone/antifotone</span> alla certezza che tutto è connesso.</p>
-        <p>Antichi maestri, inclusi Gesù e i mistici d'Oriente, hanno compreso che l'universo e il corpo umano sono la stessa cosa: frammenti (<span class="highlight">frattali</span>) di un unico organismo vivente creato a immagine e somiglianza della <strong>Coscienza Creatrice</strong>.</p>
+    <section class="intro-box">
+        <p>Il <strong>Tao</strong> non è una semplice filosofia, né una religione o una setta. È la <span class="highlight-gold">VIA</span>, la Verità assoluta scoperta da Saggi e Mistici attraverso l’osservazione umile e profonda di se stessi (<em>coscienza primale</em>) e dell’universo (<em>Coscienza Primordiale</em>).</p>
+        
+        <p>Dobbiamo comprendere che "Tao" è solo una parola limitata di questo mondo, proprio come "DIO", "Brahma" o "Coscienza". Sono etichette umane che cercano di descrivere una visione consapevole della realtà che va oltre ogni confine.</p>
     </section>
 
+    <div class="formula-box">
+        "In esso è racchiusa tutta la creazione: dal mistero del <span class="highlight-fire">fotone/antifotone</span> alla certezza scientifica e spirituale che <span class="highlight-cyan">TUTTO È CONNESSO</span>."
+    </div>
+
+    <h2>I Maestri: Specchi dell'Infinito</h2>
+    <section class="maestri-list">
+        <p>Uomini straordinari che chiamiamo <strong>Maestri</strong> per convenzione — come <span class="highlight-gold">Gesù</span>, i mistici d'Oriente e molti altri — hanno capito un segreto immenso: <strong>l’universo e il corpo umano sono la stessa cosa.</strong></p>
+        <p>Siamo <span class="highlight-fire">frattali</span> (piccole parti che riproducono la forma del tutto) di un unico organismo vivente, creato a immagine e somiglianza della Coscienza Creatrice.</p>
+        <p>Il dramma umano è nato quando i seguaci di questi maestri hanno smarrito il messaggio di <strong>Unità</strong>, creando dogmi e divisioni. Ma attenzione: questa divisione non è un errore! È <span class="highlight-cyan">funzionale al risveglio</span>. Serve alla Coscienza per osservarsi nel contrasto, perdersi e infine ritrovare la strada verso l'Uno con una consapevolezza nuova.</p>
+    </section>
+
+    <h2>La Dualità: Yin e Yang ☯</h2>
+    <p>In questa realtà, tutto si manifesta attraverso due polarità. Non sono nemiche, ma amanti in un abbraccio eterno: le due facce della stessa medaglia.</p>
     
-
-    <section>
-        <h2>La Dualità: Yin e Yang</h2>
-        <p>In questa realtà illusoria, tutto si manifesta attraverso due polarità complementari. Esse non sono in conflitto, ma formano le due facce della stessa medaglia.</p>
-        
-        <div class="dual-grid">
-            <div class="yin-box">
-                <strong>YIN ☯</strong><br>
-                Nero | Femminile | Passivo | Creatore | Intuitivo
-            </div>
-            <div class="yang-box">
-                <strong>YANG ☯</strong><br>
-                Bianco | Maschile | Attivo | Razionale | Calcolatore
-            </div>
+    <div class="dual-section">
+        <div class="yin-yang-card yin">
+            <span class="symbol">☯</span>
+            <strong>YIN</strong><br>
+            Nero | Femminile<br>
+            Passivo | Creatore<br>
+            Intuitivo
         </div>
-        
-        <p>Il pallino bianco nel nero e quello nero nel bianco indicano che nulla è assoluto: ogni parte contiene il seme dell'altra. Equilibrare queste forze dentro di noi è il segreto per vivere in armonia con il cosmo.</p>
+        <div class="yin-yang-card yang">
+            <span class="symbol">☯</span>
+            <strong>YANG</strong><br>
+            Bianco | Maschile<br>
+            Attivo | Razionale<br>
+            Calcolatore
+        </div>
+    </div>
+    <p>Il segreto è l'equilibrio: il seme del bianco nel nero e viceversa ci ricorda che nulla è separato. Equilibrare queste forze dentro di noi significa risuonare con il battito del Cosmo.</p>
+
+    <h2>"Chi Sono?" - Il Grande Risveglio di Dio</h2>
+    <section class="intro-box" style="border-color: var(--fire);">
+        <p>Immaginate la Coscienza (il Tao) all'inizio dei tempi. Si trovava in uno stato di annichilimento totale, una pace senza forma. Poi, sorse la domanda fondamentale: <span class="highlight-gold">"CHI SONO?"</span>.</p>
+        <p>Da quel primo pensiero è nata la <strong>vibrazione</strong>, la luce e tutta la creazione. Noi siamo "pezzetti" di quella Coscienza, inviati attraverso infinite vite e dimensioni per esplorare ogni angolo dell'esistenza. </p>
+        <p><span class="highlight-fire">Il fine ultimo è meraviglioso:</span> quando ogni singolo frammento (ognuno di noi) acquisirà la consapevolezza totale, allora anche Dio/Coscienza saprà finalmente chi è.</p>
     </section>
 
-    <section>
-        <h2>"Chi Sono?" - Il Pensiero della Coscienza</h2>
-        <p>Possiamo immaginare il Tao come <strong>Dio/Coscienza</strong>. All'inizio, in uno stato di annichilimento totale senza consapevolezza di sé, la Coscienza si è posta la domanda fondamentale: <span class="highlight">"Chi sono?"</span>.</p>
-        <p>Da quel pensiero è nata la vibrazione, la manifestazione, la creazione. Noi siamo pezzetti di quella Coscienza, inviati attraverso vite e dimensioni per fare esperienza. Quando ogni frammento acquisirà consapevolezza totale, anche Dio saprà finalmente chi è.</p>
-    </section>
-
-    <div class="footer-note">
-        Il risveglio è la comprensione che tutto è UNO.<br>
-        <strong>Francesco Meli</strong>
+    <div class="footer">
+        FRATAO | IL LINGUAGGIO DELL'UNO © 2026
     </div>
 </div>
 
