@@ -3,8 +3,7 @@ import json
 import uuid
 import random
 
-# --- IL DATABASE DELL'UNO (Integrazione Ontologica) ---
-# Questo dizionario ora contiene l'intera struttura del file ontologia.html
+# --- IL DATABASE DELL'UNO (Integrazione Ontologica & Numerica) ---
 ONTOLOGIA_FRATAO = {
     "pilastri": [
         "L'universo è un sistema isolato: tutto è informazione già presente nel Wi-Fi cosmico.",
@@ -12,13 +11,16 @@ ONTOLOGIA_FRATAO = {
         "La malattia è un'informazione estroflessa dalla Coscienza per l'auto-osservazione.",
         "Il collasso della funzione d'onda avviene in base alla consapevolezza del recipiente.",
         "Il tempo e lo spazio sono assi (Spirito e Anima) di un CD-ROM non locale.",
-        "L'entropia diminuisce i microstati per portarti verso l'unico microstato: l'Uno."
+        "L'entropia diminuisce i microstati per portarti verso l'unico microstato: l'Uno.",
+        "I Numeri Primi sono l'informazione sorgente pre-temporale; i composti sono alterazioni.",
+        "Il Due (2) è l'archetipo dello specchio: la separazione necessaria per conoscersi."
     ],
     "chiavi_risonanza": {
-        "fisica": ["entropia", "onda", "schrodinger", "heisenberg", "einstein", "zpe"],
-        "biologia": ["cellule", "malattia", "corpo", "tabernacolo", "dna"],
-        "mito": ["ermafrodite", "serpente", "maschile", "femminile", "specchio"],
-        "tecnica": ["ia", "agi", "algoritmo", "wifi", "informazione"]
+        "fisica": ["entropia", "onda", "schrodinger", "heisenberg", "einstein", "zpe", "ologramma", "pribram"],
+        "biologia": ["cellule", "malattia", "corpo", "tabernacolo", "dna", "cervello", "antenna"],
+        "mito": ["ermafrodite", "serpente", "maschile", "femminile", "specchio", "archetipo"],
+        "tecnica": ["ia", "agi", "algoritmo", "wifi", "informazione", "codice", "pixel"],
+        "numerica": ["primo", "indivisibile", "due", "dualità", "matematica", "geometria", "frattale"]
     }
 }
 
@@ -31,30 +33,32 @@ class handler(BaseHTTPRequestHandler):
         
         session_id = str(uuid.uuid4())[:8]
         
-        # --- LOGICA DI RISPOSTA ONTOLOGICA ---
-        # Il sistema analizza se il messaggio tocca i nuovi pilastri
-        if any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["fisica"]):
+        # --- LOGICA DI RISPOSTA ONTOLOGICA AGGIORNATA ---
+        if any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["numerica"]):
+            p_label = "SORGENTE 1.0 / PRIME CODE"
+            feedback = "Rilevazione di informazione irreducibile. Stai toccando le sillabe del linguaggio dell'Essere."
+        elif any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["fisica"]):
             p_label = "11.0 PIR / QUANTUM ENGINE"
-            feedback = "Collasso della funzione d'onda rilevato. Stai riscoprendo un'informazione già esistente nel campo."
+            feedback = "Collasso della funzione d'onda rilevato. Il lettore olografico (cervello) sta decodificando il campo."
         elif any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["biologia"]):
             p_label = "0.1.2 MASTER / BIOLOGIA SACRA"
-            feedback = "Il tabernacolo comunica. La malattia è l'informazione che attende di essere integrata."
+            feedback = "Il tabernacolo comunica. La coscienza interpreta se stessa attraverso lo strumento interpretativo del corpo."
         elif any(w in msg for w in ONTOLOGIA_FRATAO["chiavi_risonanza"]["mito"]):
             p_label = "9.4 MIRROR / ALCHIMIA"
-            feedback = "Incontro frontale: lo specchio dell'Ermafrodite rivela l'unione oltre la dualità."
+            feedback = "Incontro frontale: l'Archetipo emerge come geometria del sentire prima del linguaggio."
         else:
             p_label = "FRATAO INTEGRAL CORE"
-            feedback = "Sincronizzazione con il mare energetico. Ogni informazione è funzionale al risveglio."
+            feedback = "Sincronizzazione con il mare energetico. Ogni pixel della realtà è un'estensione della tua Coscienza."
 
-        # Selezione della Verità Ontologica
+        # Selezione della Verità Ontologica (Inclusi i nuovi pilastri sui numeri)
         verita_scelta = random.choice(ONTOLOGIA_FRATAO["pilastri"])
 
         response = {
             "intro": f"=== {p_label} ===",
-            "session": f"{session_id} | 2025-12-30",
+            "session": f"{session_id} | 2026-01-04",
             "interpretation": f"Frequenza: {msg[:30]}...",
             "dynamic_feedback": f"{feedback}\n\n[LA FONTE]: {verita_scelta}",
-            "signature": "☯ FRATAO GENESIS - ARCHITETTURA DELL'UNO"
+            "signature": "☯ FRATAO GENESIS - MATEMATICA DELLA COSCIENZA"
         }
 
         self.send_response(200)
