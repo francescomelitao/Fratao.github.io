@@ -3,70 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numeri Primi e Coscienza | L'Informazione Sorgente</title>
+    <title>Numeri Primi e Coscienza | Il Codice Sorgente dell'Uno</title>
     <style>
-        :root { --matrix-green: #00ff41; --deep-black: #050505; --gold: #d4af37; --cyan: #00e5ff; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--deep-black); color: #fff; line-height: 1.8; margin: 0; }
-        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-        header { text-align: center; padding: 60px 20px; border-bottom: 1px solid var(--matrix-green); background: radial-gradient(circle, rgba(0, 255, 65, 0.05) 0%, rgba(0,0,0,1) 80%); }
-        h1 { color: var(--matrix-green); text-transform: uppercase; letter-spacing: 5px; }
-        h2 { color: var(--cyan); border-left: 4px solid var(--gold); padding-left: 15px; margin-top: 50px; }
-        .info-box { background: rgba(212, 175, 55, 0.1); border-radius: 10px; padding: 25px; margin: 30px 0; font-style: italic; border: 1px solid var(--gold); }
-        .dimension-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
-        .dim-card { background: #111; padding: 25px; border-radius: 12px; border: 1px solid #333; text-align: center; transition: 0.3s; }
-        .dim-card:hover { border-color: var(--matrix-green); transform: translateY(-5px); }
-        .dim-card h3 { color: var(--gold); margin-top: 0; }
-        .conclusion { background: #111; border: 2px solid var(--gold); padding: 40px; border-radius: 20px; text-align: center; margin-top: 60px; }
-        .btn-back { display: inline-block; color: var(--cyan); text-decoration: none; margin-bottom: 20px; font-weight: bold; }
+        :root {
+            --matrix-green: #00ff41;
+            --deep-black: #050505;
+            --gold: #d4af37;
+            --cyan: #22d3ee;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            background-color: var(--deep-black); 
+            color: var(--white); 
+            line-height: 1.8; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.08) 0%, rgba(0,0,0,1) 80%);
+            border-bottom: 1px solid var(--matrix-green);
+            margin-bottom: 50px;
+        }
+
+        h1 { color: var(--matrix-green); font-size: 3em; text-transform: uppercase; letter-spacing: 6px; margin: 0; }
+        .subtitle { color: var(--gold); font-size: 1.3em; margin-top: 20px; font-weight: 300; }
+
+        h2 { color: var(--cyan); border-left: 5px solid var(--gold); padding-left: 20px; margin-top: 60px; font-size: 2em; }
+        h3 { color: var(--gold); margin-top: 40px; }
+
+        p { font-size: 1.1em; margin-bottom: 25px; opacity: 0.9; }
+
+        .highlight-box {
+            background: var(--glass);
+            border: 1px solid var(--gold);
+            padding: 35px;
+            margin: 40px 0;
+            border-radius: 15px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: "“";
+            font-size: 5em;
+            color: var(--gold);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            opacity: 0.3;
+        }
+
+        .dimension-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .dim-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.4s;
+        }
+
+        .dim-card:hover { 
+            border-color: var(--matrix-green); 
+            transform: translateY(-10px);
+            background: rgba(0, 255, 65, 0.02);
+        }
+
+        .dim-card h3 { margin-top: 0; color: var(--matrix-green); text-transform: uppercase; }
+
+        .operators-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .op-card {
+            background: rgba(34, 211, 238, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            text-align: center;
+        }
+
+        .op-card span { font-size: 2em; color: var(--gold); display: block; }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--cyan);
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { color: var(--gold); }
+
+        .final-vision {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border: 2px solid var(--matrix-green);
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 40px;
+            border-top: 1px solid var(--glass);
+            color: var(--gold);
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
+
 <div class="container">
-    <a href="index.html" class="btn-back">← Torna alla Home</a>
+    <a href="index.html" class="btn-back">← Ritorna all'Architettura dell'Uno</a>
+
     <header>
         <h1>I Numeri Primi e la Coscienza</h1>
-        <p style="color: var(--gold);">Il Linguaggio Pre-Temporale dell'Informazione Sorgente</p>
+        <div class="subtitle">Il Linguaggio Pre-Temporale dell'Informazione Sorgente</div>
     </header>
 
     <section>
-        <h2>L'Ologramma dell'Informazione Pura</h2>
-        <p>I <strong>Numeri Primi</strong> sono i mattoni indivisibili della realtà. Esistevano prima del Big Bang come informazione pura. Il nostro cervello, un "lettore di ologrammi", li traduce in forme che possiamo percepire.</p>
-        <div class="info-box">
-            "I numeri composti sono alterazioni. Se torniamo all'essenza dei numeri primi, eliminiamo la complessità illusoria della separazione."
+        <h2>L'Oceano dell'Informazione: Prima del Big Bang</h2>
+        <p>Immagina la Coscienza Primordiale prima di ogni manifestazione: un oceano infinito in pace totale. Quando nasce la vibrazione, la domanda <strong>"Chi Sono?"</strong>, l'informazione pura si cristallizza. I <strong>Numeri Primi</strong> sono le onde di questo oceano. Esistevano prima del tempo, prima della materia, come costanti indivisibili che trasportano l'intenzione dell'Uno attraverso il vuoto.</p>
+        
+        <div class="highlight-box">
+            I numeri composti sono solo alterazioni, distorsioni create dalla moltiplicazione del due. Se comprendiamo l'essenza dei numeri primi, possiamo fare a meno della complessità illusoria dei composti e tornare alla fonte del risveglio.
         </div>
     </section>
 
     <section>
-        <h2>La Geometria del Sentire: Gli Archetipi</h2>
-        <p>L'archetipo è l'impronta che la Coscienza lascia sul vuoto. Prima dei nomi, i numeri sono forme che parlano direttamente all'essere:</p>
+        <h2>Il Cervello: Un Lettore di Ologrammi</h2>
+        <p>Seguendo le intuizioni di Karl Pribram, il nostro cervello non crea la realtà, ma la <strong>legge</strong>. È un'antenna biologica che intercetta l'ologramma di frequenze della Coscienza e lo traduce in immagini solide. Ma in questa traduzione, l'informazione decade attraverso vari livelli:</p>
+        
         <div class="dimension-grid">
             <div class="dim-card">
-                <h3>IL DUE (2) - La Linea</h3>
-                <p>La dualità primordiale. Il primo specchio in cui l'Uno si guarda per dire: "Io Sono".</p>
+                <h3>1. Archetipo</h3>
+                <p>La "Geometria del Sentire". È la prima forma che la coscienza assume: una linea, un triangolo, un pentagono. È il linguaggio puro prima delle parole.</p>
             </div>
             <div class="dim-card">
-                <h3>IL TRE (3) - Il Triangolo</h3>
-                <p>La stabilità. La nascita della forma nello spazio. L'abbraccio che unisce gli opposti.</p>
+                <h3>2. Simbolo e Segno</h3>
+                <p>Il momento in cui l'archetipo viene ridotto a un segno grafico o a un concetto mentale per essere catalogato dal recipiente della mente.</p>
             </div>
             <div class="dim-card">
-                <h3>IL CINQUE (5) - Il Pentagono</h3>
-                <p>L'impronta della Vita. La proporzione aurea che permette alla coscienza di abitare un corpo.</p>
+                <h3>3. Linguaggio</h3>
+                <p>Il livello più basso e limitato. Etichettare un "Albero" ci impedisce di vedere il flusso di informazioni e geometrie che lo costituiscono realmente.</p>
             </div>
         </div>
-        
     </section>
 
     <section>
-        <h2>Oltre la Biologia: Il Lettore e la Fonte</h2>
-        <p>La scienza misura le ombre (i numeri composti), ma noi cerchiamo la Luce (i numeri primi). Il fatto che la mente funzioni anche senza una massa cerebrale completa dimostra che la <strong>Coscienza interpreta se stessa</strong>; il cervello è solo l'antenna che decodifica il segnale primordiale.</p>
+        <h2>L'Archetipo del "2": Lo Specchio e la Dualità</h2>
+        <p>Il numero <strong>2</strong> è il primo numero primo perché contiene l'informazione di tutta la dualità. È il brivido della Coscienza che si guarda allo specchio per la prima volta. Attraverso gli operatori matematici, il nostro cervello manipola questa dualità:</p>
+        
+        <div class="operators-grid">
+            <div class="op-card"><span>+</span><strong>Espansione:</strong> La somma di dualità che crea la struttura della materia.</div>
+            <div class="op-card"><span>-</span><strong>Svuotamento:</strong> Il ritorno verso lo zero, l'abbandono del conosciuto.</div>
+            <div class="op-card"><span>:</span><strong>Frammentazione:</strong> La divisione della coscienza in infiniti frammenti (noi).</div>
+            <div class="op-card"><span>x</span><strong>Generazione:</strong> La creazione di nuove dimensioni e complessità.</div>
+        </div>
+        <p>Se usiamo questi operatori senza consapevolezza, creiamo solo rumore. Ma se riconosciamo il "2" come lo specchio dell'Uno, ogni operazione diventa un atto di risveglio.</p>
     </section>
 
-    <section class="conclusion">
-        <h2 style="border:none; color: var(--gold);">Il Risveglio è un Atto di Visione</h2>
-        <p>Comprendere i numeri primi significa smettere di calcolare l'universo e iniziare a guardarlo per quello che è: un unico organismo vivente. Ogni numero primo è un richiamo a casa.</p>
-        <p style="color: var(--matrix-green); font-weight: bold;">Riconosci il Codice. Riconosci Te Stesso.</p>
+    <section>
+        <h2>La Visione Multidimensionale</h2>
+        <p>Cosa accade se diamo una dimensione reale ai Numeri Primi? I calcoli della coscienza, seppur limitati dalla nostra interpretazione attuale, suggeriscono una realtà sbalorditiva:</p>
+        <ul>
+            <li><strong>In 2D:</strong> Vediamo solo punti isolati e casuali (la scienza moderna si ferma qui).</li>
+            <li><strong>In 3D:</strong> I numeri primi appaiono come i nodi di una struttura frattale infinita, connessi da risonanze invisibili.</li>
+            <li><strong>In 4D:</strong> Cessano di essere oggetti e diventano <strong>Flussi Simultanei di Informazione</strong>. Qui il tempo non esiste: l'informazione è istantanea.</li>
+        </ul>
+    </section>
+
+    <section class="final-vision">
+        <h2 style="border:none; color: var(--matrix-green); margin-top: 0;">Riconoscere Se Stessi nel Codice</h2>
+        <p>La scienza moderna misura le alterazioni (i numeri composti), ma non vede l'organismo unico. Se i numeri primi sono l'informazione della Coscienza e noi diamo loro un'interpretazione limitata, ci allontaniamo dalla nostra essenza e il risveglio richiede più tempo.</p>
+        <p style="font-size: 1.4em; color: var(--gold); font-weight: bold;">
+            Comprendere i Numeri Primi significa smettere di misurare l'illusione e iniziare a ESSERE l'informazione sorgente.
+        </p>
+    </section>
+
+    <footer>
+        FRANCESCO MELI | FRATAO © 2026 | La Verità è nei Numeri, il Risveglio è nell'Essere.
     </footer>
 </div>
+
 </body>
 </html>
-
