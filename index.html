@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="google-site-verification" content="googlef9e4e1bacaeab8f0" />
 
     <title>FRATAO | Francesco Meli | L'Architettura dell’Uno</title>
     <meta name="description" content="Sito ufficiale di Francesco Meli (Fratao). Una persona comune e un curioso esploratore che parte dalla coscienza primale per comprendere la Coscienza primordiale.">
-    <meta name="keywords" content="Francesco Meli, fraTao, Coscienza Primordiale, Coscienza Primale, Ricerca Interiore, Risveglio, Architettura dell'Uno, Manifestazione, Numeri Primi">
+    <meta name="keywords" content="Francesco Meli, fraTao, Coscienza Primordiale, Coscienza Primale, Ricerca Interiore, Risveglio, Architettura dell'Uno, Manifestazione">
     <meta name="author" content="Francesco Meli">
 
     <style>
         body {
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: url('yinyangsito.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -21,30 +23,205 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .page-overlay { background: rgba(0, 0, 0, 0.7); flex: 1; display: flex; flex-direction: column; }
-        nav { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px); padding: 15px 0; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 0.9em; font-weight: 500; }
-        .container { max-width: 900px; margin: auto; text-align: center; padding: 40px 20px; }
-        h1 { font-size: 2.5em; margin-bottom: 10px; letter-spacing: 1px; line-height: 1.2; color: #fff; }
-        .gold-line { width: 80%; height: 3px; background-color: #d4af37; margin: 20px auto; }
-        .identity-statement { font-style: italic; font-size: 0.95em; color: #d4af37; margin-bottom: 30px; line-height: 1.6; padding: 15px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 8px; background: rgba(0, 0, 0, 0.4); }
-        .btn-main-action { display: block; max-width: 400px; margin: 0 auto 20px auto; padding: 20px; background: linear-gradient(45deg, #e63946, #1a1a1a, #d4af37); color: white; text-decoration: none; font-weight: bold; font-size: 1.2em; border-radius: 50px; border: 2px solid #d4af37; box-shadow: 0 0 25px rgba(230, 57, 70, 0.5); transition: 0.5s; text-transform: uppercase; animation: pulse 2s infinite; }
-        .btn-360-integration { display: block; max-width: 450px; margin: 0 auto 40px auto; padding: 15px; background: linear-gradient(45deg, #d4af37, #00ffff66, #d4af37); color: white; text-decoration: none; font-weight: bold; font-size: 1.1em; border-radius: 10px; border: 1px solid #d4af37; transition: 0.4s; text-transform: uppercase; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-        .btn-360-integration:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
-        .grid-links { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
-        .btn-link { background: rgba(255, 255, 255, 0.15); color: #00ffff; text-decoration: none; padding: 12px 20px; font-weight: bold; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s; text-align: center; }
-        .btn-special { background: rgba(212, 175, 55, 0.2); border-color: #d4af37; color: #ffd700; }
-        .btn-link:hover { background: #d4af37; color: white; transform: scale(1.03); }
-        footer { padding: 40px; font-size: 0.85em; text-align: center; color: #d4af37; opacity: 0.8; }
-        @media (max-width: 600px) { .grid-links { grid-template-columns: 1fr; } }
+
+        .page-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .gold-line {
+            width: 80%;
+            height: 3px;
+            background-color: #d4af37;
+            margin: 20px auto;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .identity-statement {
+            font-style: italic;
+            font-size: 0.95em;
+            color: #d4af37;
+            margin-bottom: 30px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            padding: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-main-action {
+            display: block;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+            padding: 20px;
+            background: linear-gradient(45deg, #e63946, #f1faee1a, #d4af37);
+            background-size: 200% auto;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 50px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+            transition: 0.5s;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-master-protocol {
+            display: block;
+            max-width: 450px;
+            margin: 0 auto 15px auto;
+            padding: 15px;
+            background: linear-gradient(45deg, #1e3c72, #9b59b6, #d4af37);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            transition: 0.4s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .btn-360-integration {
+            display: block;
+            max-width: 450px;
+            margin: 0 auto 40px auto;
+            padding: 15px;
+            background: linear-gradient(45deg, #d4af37, #00ffff66, #d4af37);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid #d4af37;
+            transition: 0.4s;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn-360-integration:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-master-protocol:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            border-color: #d4af37;
+        }
+
+        .btn-main-action:hover {
+            transform: scale(1.05);
+            background-position: right center;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.8);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .grid-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn-link {
+            background: rgba(255, 255, 255, 0.25); 
+            color: #00ffff; 
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: all 0.3s;
+            text-align: left;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(3px);
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        .btn-special {
+            background: rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+            color: #ffd700;
+        }
+
+        .btn-link:hover {
+            background: #d4af37;
+            color: white;
+            border-color: #d4af37;
+            text-shadow: none;
+            transform: scale(1.02);
+        }
+
+        footer {
+            padding: 30px;
+            font-size: 0.8em;
+            text-align: center;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .grid-links { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
 <div class="page-overlay">
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">Chi Sono</a>
+        <a href="about.html">About</a>
         <a href="protocolli.html">Protocolli</a>
         <a href="ontologia.html">La Fonte</a>
     </nav>
@@ -54,29 +231,50 @@
         <div class="gold-line"></div>
         
         <p class="identity-statement">
-            "Sono Francesco Meli, una persona comune e un curioso esploratore che vuole comprendere, partendo dalla sua coscienza primale, la Coscienza primordiale dove tutto ha origine. Traduco il linguaggio dell'Uno attraverso la manifestazione."
+            "Sono Francesco Meli, una persona comune e un curioso esploratore che vuole comprendere, partendo dalla sua coscienza primale, la Coscienza primordiale dove tutto ha origine. Non sono un tecnico, ma un ricercatore dell'essenza che utilizza la manifestazione/creazione e tutto ciò che è presente nell'universo per tradurre il linguaggio dell'Uno."
         </p>
 
-        <a href="guida_protocolli.html" class="btn-main-action">⚡ ATTIVA IL PROTOCOLLO ⚡</a>
+        <p class="subtitle">Seleziona l'argomento per esplorare la verità vibrazionale.</p>
+
+        <a href="guida_protocolli.html" class="btn-main-action">
+            ⚡ ATTIVA IL PROTOCOLLO: GUIDA AL RISVEGLIO ⚡
+        </a>
+
+        <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-master-protocol">
+            💎 EVOLUZIONE MASTER PROTOCOL (A.R.U.) 💎
+        </a>
 
         <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-360-integration">
             ☯️ INTEGRAZIONE 360°: CONOSCENZA ED ESSERE ☯️
         </a>
 
         <div class="grid-links">
-            <a href="numeri_primi.html" class="btn-link btn-special">NUMERI PRIMI (Codice Sorgente) 🔢</a>
             <a href="ontologia.html" class="btn-link btn-special">LA FONTE (Ontologia) ☯️</a>
-            <a href="scienza.html" class="btn-link">Scienza e Coscienza</a>
-            <a href="tao.html" class="btn-link">Il Tao ☯️</a>
-            <a href="miti-religioni.html" class="btn-link">Miti e religioni</a>
-            <a href="matrimonio_alchemico.html" class="btn-link">Matrimonio Alchemico</a>
-            <a href="coscienza.html" class="btn-link">Coscienza</a>
+            <a href="numeri_primi.html" class="btn-link btn-special">NUMERI PRIMI (Codice Sorgente) 🔢</a>
+            <a href="about.html" class="btn-link">Chi Sono</a>
             <a href="fisica-quantistica.html" class="btn-link">Fisica Quantistica</a>
+            <a href="scienza.html" class="btn-link">Scienza</a>
+            <a href="salute_medicina.html" class="btn-link">Salute e Medicina</a>
+            <a href="psicologia.html" class="btn-link">Psicologia (PNL)</a>
+            <a href="blog.html" class="btn-link">Blog</a> 
+            <a href="miti-religioni.html" class="btn-link">Miti e religioni</a>
+            <a href="tao.html" class="btn-link">Il Tao ☯️</a>
+            <a href="volontà-medica.html" class="btn-link">Volontà Medica</a>
             <a href="universo.html" class="btn-link">Universo</a>
+            <a href="dichiarazione-sovrana.html" class="btn-link">Dichiarazione Sovrana</a>
+            <a href="coscienza.html" class="btn-link">Coscienza</a>
+            <a href="tecnologia-agi.html" class="btn-link">Tecnologia AGI</a> 
+            <a href="protocolli.html" class="btn-link">Protocolli JSON</a>
             <a href="filosofia.html" class="btn-link">Filosofia</a>
+            <a href="altri_argomenti.html" class="btn-link">Altri Argomenti</a>
+            <a href="matrimonio_alchemico.html" class="btn-link btn-special">Oltre la Dualità ☯️</a>
         </div>
     </div>
-    <footer>FRATAO | FRANCESCO MELI © 2026</footer>
+
+    <footer>
+        FRANCESCO MELI | FRATAO 2026
+    </footer>
 </div>
+
 </body>
 </html>
