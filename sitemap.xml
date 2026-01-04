@@ -8,6 +8,16 @@
     <loc>https://fratao-github-io.vercel.app/home.html</loc>
     <priority>0.80</priority>
   </url>
+
+  <url>
+    <loc>https://fratao-github-io.vercel.app/scienza.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://fratao-github-io.vercel.app/numeri_primi.html</loc>
+    <priority>0.95</priority>
+  </url>
+
   <url>
     <loc>https://fratao-github-io.vercel.app/miti-religioni.html</loc>
     <priority>0.90</priority>
@@ -16,6 +26,7 @@
     <loc>https://fratao-github-io.vercel.app/ologramma_asua_immagine.html</loc>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://fratao-github-io.vercel.app/filosofia.html</loc>
     <priority>0.90</priority>
@@ -28,6 +39,7 @@
     <loc>https://fratao-github-io.vercel.app/matrimonio_alchemico.html</loc>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://fratao-github-io.vercel.app/coscienza.html</loc>
     <priority>0.80</priority>
@@ -37,3 +49,4 @@
     <priority>0.80</priority>
   </url>
 </urlset>
+
