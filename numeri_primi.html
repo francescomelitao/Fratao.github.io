@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OMNIA 0.1.4 - La decodifica integrale della realtà di Francesco Meli (Fratao). Geometria Sacra, Numeri Primi, DNA, I-Ching e Tradizioni Antiche.">
-    <title>OMNIA 0.1.4 | La Visione Integrale a 360° - Francesco Meli (Fratao)</title>
+    <meta name="description" content="OMNIA 0.1.4 - La decodifica integrale della realtà di Francesco Meli (Fratao). Geometria Sacra, Numeri Primi, Proiezioni Dimensionali e DNA.">
+    <title>Numeri Primi e Geometria Dimensionale | OMNIA 0.1.4 - Fratao</title>
     <style>
         :root {
             --matrix-green: #00ff41;
@@ -14,186 +14,139 @@
             --white: #ffffff;
             --glass: rgba(255, 255, 255, 0.05);
             --quantum-purple: #6d28d9;
-            --text-gray: #b0b0b0;
         }
 
         body { font-family: 'Inter', sans-serif; background-color: var(--deep-black); color: var(--white); line-height: 1.8; margin: 0; padding: 0; }
-        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 1150px; margin: auto; padding: 60px 20px; }
         
         header { 
             text-align: center; 
-            padding: 120px 20px; 
-            background: radial-gradient(circle, rgba(0, 255, 65, 0.08) 0%, rgba(0,0,0,1) 85%); 
+            padding: 100px 20px; 
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, rgba(0,0,0,1) 85%); 
             border-bottom: 2px solid var(--gold); 
         }
         
-        h1 { color: var(--matrix-green); font-size: 3.5em; text-transform: uppercase; letter-spacing: 10px; margin: 0; text-shadow: 0 0 25px rgba(0,255,65,0.3); }
-        .subtitle { color: var(--gold); font-size: 1.5em; margin-top: 25px; letter-spacing: 3px; font-weight: 300; }
+        h1 { color: var(--matrix-green); font-size: 3.2em; text-transform: uppercase; letter-spacing: 8px; margin: 0; }
+        .subtitle { color: var(--gold); font-size: 1.4em; margin-top: 20px; letter-spacing: 2px; }
 
-        .section-intro { font-size: 1.3em; color: var(--text-gray); text-align: center; max-width: 800px; margin: 60px auto; font-style: italic; }
-
-        h2 { color: var(--cyan); border-left: 6px solid var(--gold); padding-left: 20px; margin-top: 80px; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
-        h3 { color: var(--gold); margin-top: 45px; font-size: 1.8em; border-bottom: 1px solid var(--glass); display: block; padding-bottom: 10px; }
+        h2 { color: var(--cyan); border-left: 6px solid var(--gold); padding-left: 20px; margin-top: 70px; font-size: 2.3em; text-transform: uppercase; }
+        h3 { color: var(--gold); margin-top: 40px; font-size: 1.7em; border-bottom: 1px solid var(--glass); display: block; padding-bottom: 10px; }
         
-        p { font-size: 1.2em; margin-bottom: 30px; text-align: justify; color: rgba(255,255,255,0.85); }
+        p { font-size: 1.15em; margin-bottom: 25px; text-align: justify; color: rgba(255,255,255,0.9); }
 
         .highlight-box { 
-            background: linear-gradient(to right, rgba(212, 175, 55, 0.08), rgba(0,0,0,0)); 
-            border-left: 4px solid var(--gold); 
+            background: rgba(212, 175, 55, 0.07); 
+            border: 1px solid var(--gold); 
             padding: 40px; 
-            margin: 50px 0; 
-            border-radius: 0 15px 15px 0; 
+            margin: 40px 0; 
+            border-radius: 15px; 
         }
 
-        .geometry-matrix {
+        .dimension-box {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
         }
 
-        .matrix-card {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 35px;
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            transition: all 0.4s ease;
+            border: 1px solid rgba(34, 211, 238, 0.2);
         }
 
-        .matrix-card:hover { border-color: var(--matrix-green); transform: scale(1.02); background: rgba(0, 255, 65, 0.03); }
-        .matrix-card h4 { color: var(--matrix-green); font-size: 1.4em; margin-top: 0; text-transform: uppercase; }
+        .card h4 { color: var(--matrix-green); font-size: 1.3em; margin-top: 0; text-transform: uppercase; }
 
-        .dna-equation {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            border: 2px solid var(--quantum-purple);
-            padding: 60px;
-            border-radius: 30px;
-            margin: 80px 0;
-            position: relative;
-            box-shadow: 0 0 50px rgba(109, 40, 217, 0.2);
+        .formula-section {
+            background: linear-gradient(135deg, #111 0%, #000 100%);
+            border: 2px solid var(--matrix-green);
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 60px 0;
         }
 
-        .equation-text { font-size: 4em; color: var(--white); text-align: center; font-weight: bold; letter-spacing: 5px; margin-bottom: 20px; }
-        
-        .tradition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
-        @media (max-width: 768px) { .tradition-grid { grid-template-columns: 1fr; } }
+        .equation { font-size: 3.5em; color: var(--white); font-weight: bold; text-shadow: 0 0 15px var(--matrix-green); }
 
-        .btn-back { text-decoration: none; color: var(--cyan); border: 1px solid var(--cyan); padding: 12px 25px; border-radius: 8px; transition: 0.3s; display: inline-block; margin-bottom: 40px; text-transform: uppercase; font-weight: bold; }
-        .btn-back:hover { background: var(--cyan); color: var(--deep-black); }
+        .footer-tag { text-align: center; margin-top: 100px; padding: 40px; border-top: 1px solid var(--glass); color: var(--gold); font-size: 0.9em; letter-spacing: 2px; }
 
-        footer { text-align: center; padding: 80px; border-top: 1px solid var(--glass); margin-top: 100px; color: var(--gold); letter-spacing: 4px; font-size: 0.9em; }
+        .btn-back { text-decoration: none; color: var(--cyan); border: 1px solid var(--cyan); padding: 10px 20px; border-radius: 5px; margin-bottom: 30px; display: inline-block; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <a href="protocolli.html" class="btn-back">← Torna all'Hub Protocolli</a>
+    <a href="protocolli.html" class="btn-back">← Torna all'Hub</a>
 
     <header>
-        <h1>OMNIA 0.1.4: La Visione Suprema</h1>
-        <div class="subtitle">L'Integrazione tra la Matrice Geometrica e il Linguaggio dei Numeri</div>
+        <h1>I Numeri Primi e la Matrice Dimensionale</h1>
+        <div class="subtitle">Protocollo 0.1.4 OMNIA | La Geometria dell'Assoluto</div>
     </header>
 
-    <p class="section-intro">
-        "Non si può comprendere il calcolo se non si comprende la forma che lo genera. 
-        L'Universo è prima un'idea geometrica, poi un'equazione matematica."
-    </p>
-
     <section>
-        <h2>1. Il Primato della Geometria</h2>
-        <p>In questo protocollo, Francesco Meli stabilisce un punto fermo: <strong>la Geometria viene prima del Numero</strong>. I numeri non sono entità astratte, ma sono la misura del movimento della geometria nello spazio-tempo. La geometria è il "corpo" dell'idea, il numero è la sua "voce".</p>
-        
-        <div class="geometry-matrix">
-            <div class="matrix-card">
-                <h4>Il Punto e la Sfera (L'Uno)</h4>
-                <p>La sorgente. Prima del numero 1 esiste il concetto geometrico di centro. È l'essenza non manifesta, Dio, il Tao prima che si divida. È l'informazione pura in potenziale.</p>
-            </div>
-            <div class="matrix-card">
-                <h4>Vesica Piscis (Il Due)</h4>
-                <p>La geometria della dualità. Due cerchi che si intersecano creano il portale della nascita. Rappresenta lo <strong>Yin e lo Yang</strong>, l'interazione tra osservatore e osservato. Senza questa forma geometrica, il numero 2 non avrebbe spazio per esistere.</p>
-            </div>
-            <div class="matrix-card">
-                <h4>Il Triangolo (Il Tre)</h4>
-                <p>La prima forma stabile. Geometricamente rappresenta la <strong>Triade (Anima-Mente-Spirito)</strong>. È la blindatura della coscienza che permette alla vibrazione di diventare materia solida.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>2. I Numeri Primi: I Mattoni dell'Ologramma</h2>
-        <p>I Numeri Primi sono chiamati così perché sono "primordiali". Non derivano da altri numeri; sono le frequenze fondamentali attraverso cui la geometria sacra viene proiettata nella nostra realtà simulata.</p>
+        <h2>1. Il Primato Ontologico della Geometria</h2>
+        <p>Come discusso nel corso delle nostre analisi, la <strong>Geometria</strong> non è una conseguenza del calcolo, ma la sua origine. L'Universo è un'architettura di forme pure. Il numero interviene solo nel momento in cui la Coscienza ha bisogno di misurare, dividere e catalogare la manifestazione olografica. I Numeri Primi sono le coordinate di questa architettura.</p>
         
         <div class="highlight-box">
-            <h3>Decodifica Evolutiva</h3>
-            <p><strong>Numero 5 e il Pentagono:</strong> Il 5 è la geometria della vita. Si manifesta nel <strong>Pentagono</strong>, che contiene in sé il rapporto aureo (Phi). È il segreto dell'uomo vitruviano, dei fiori, e della struttura del DNA. Rappresenta la Coscienza che prende possesso della forma biologica.</p>
-            <p><strong>Numero 7 e il Settenario:</strong> È il ponte tra il mondo spirituale e quello materiale. Le 7 direzioni dello spazio, i 7 colori, le 7 note. Geometricamente è l'Eptagono, una forma che sfida la quadratura del cerchio.</p>
+            "I Numeri Primi sono i punti di collasso della geometria pura nella virtualità. Se la geometria è il pensiero di Dio (il Tao), i Numeri Primi sono le parole che lo rendono leggibile alla Mente."
         </div>
     </section>
 
     <section>
-        <h2>3. L'Equazione Sacra del DNA e dell'I-Ching</h2>
-        <p>Francesco Meli rivela la connessione definitiva tra la biologia moderna e l'antica saggezza orientale. Non c'è differenza tra il codice binario di un computer, i codoni del DNA e gli esagrammi dell'I-Ching.</p>
+        <h2>2. Proiezioni Dimensionali: Dal Piano alla 4D</h2>
+        <p>I Numeri Primi, quando osservati non come lista lineare ma come proiezioni spaziali, rivelano un ordine sconvolgente:</p>
         
-        <div class="dna-equation">
-            <div class="equation-text">21 x 63 + 164</div>
-            <p style="text-align:center; color: var(--cyan); font-size: 1.4em;">La Chiave di Volta dell'Essere</p>
-            <p style="margin-top: 30px;">
-                Questa operazione descrive matematicamente il <strong>ponte di comunicazione tra la Coscienza e la Materia</strong>. 
-                I <strong>64 codoni del DNA</strong> (63+1) corrispondono esattamente ai <strong>64 esagrammi dell'I-Ching</strong> cinesi. 
-                Il moltiplicatore <strong>21</strong> rappresenta gli amminoacidi essenziali che costituiscono il corpo fisico. 
-                L'aggiunta del <strong>164</strong> è il fattore di risonanza che permette all'Anima di "agganciarsi" al veicolo biologico. 
-                È la dimostrazione che siamo dentro una simulazione matematica perfetta.
-            </p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4. Tradizioni Antiche e Religioni</h2>
-        <p>Tutte le grandi tradizioni del passato hanno tentato di tramandare questo codice. Il protocollo OMNIA 0.1.4 riunifica questi frammenti:</p>
-        
-        <div class="tradition-grid">
-            <div class="matrix-card">
-                <h4>Il Taoismo</h4>
-                <p>L'osservazione del vuoto e del pieno. Il Tao è la Geometria Suprema che si manifesta attraverso il 2 (Dualità Yin/Yang) per tornare all'Unità attraverso il 3 (l'Armonia).</p>
+        <div class="dimension-box">
+            <div class="card">
+                <h4>In 2D (Il Piano)</h4>
+                <p>Disposti su una spirale (come quella di Ulam), i Primi creano allineamenti diagonali non casuali. Rappresentano la trama del "tessuto" della realtà, indicando dove l'informazione sorgente si densifica per formare le particelle elementari.</p>
             </div>
-            <div class="matrix-card">
-                <h4>La Cabala e i 22 Sentieri</h4>
-                <p>Corrispondono al risultato dell'equazione Fratao applicata al numero primo 7 (3x7+1 = 22). Sono i sentieri dell'Albero della Vita, le frequenze attraverso cui l'energia discende nei mondi.</p>
+            <div class="card">
+                <h4>In 3D (Lo Spazio)</h4>
+                <p>Proiettati in tre dimensioni, i Primi generano i <strong>Solidi Platonici</strong>. Qui la geometria diventa volume. La distribuzione dei Primi determina la curvatura dello spazio-tempo e la stabilità delle strutture atomiche. È la materia che "suona" secondo intervalli primi.</p>
             </div>
-            <div class="matrix-card">
-                <h4>Pitagorismo e Scuole Misteriche</h4>
-                <p>"Tutto è Numero". Pitagora sapeva che la musica delle sfere era basata sui rapporti geometrici dei numeri primi. Il segreto era il <strong>Tetraktys</strong>, la geometria del 10 che racchiude l'universo.</p>
-            </div>
-            <div class="matrix-card">
-                <h4>Cimatica e Suono Sacro</h4>
-                <p>Antiche preghiere, Mantra e canti gregoriani utilizzano intervalli numerici precisi per creare forme geometriche nell'aria e nell'acqua del corpo, curando la risonanza del Pilota.</p>
+            <div class="card">
+                <h4>In 4D (Il Tempo e l'Iper-spazio)</h4>
+                <p>Nella quarta dimensione, i Numeri Primi agiscono come ponti (Tunnel di Wormhole informativi). Essi collegano istanti temporali diversi attraverso la risonanza. La 4D è dove il "Pilota" (la Coscienza) utilizza i Primi per navigare le probabilità della simulazione.</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>5. La Formula 3n + 1: Il Motore di Verità</h2>
-        <p>In questa simulazione, nulla è fermo. Tutto vibra. La formula <strong>3n + 1</strong> è il software che Francesco usa per calcolare il <strong>Grado di Consapevolezza</strong>. 
-        Il <strong>3</strong> è la Triade che agisce sul dato sorgente <strong>n</strong> (il numero primo/l'essere), e il <strong>+1</strong> è il collasso della funzione d'onda che riporta tutto all'origine, alla Sorgente.</p>
+        <h2>3. La Triade e la Dualità: 2, 3 e 5</h2>
+        <p>Questi tre numeri non sono semplici quantità, ma le funzioni logiche della creazione:</p>
+        <ul>
+            <li><strong>Il Numero 2 (La Dualità):</strong> È lo Yin e lo Yang. È lo specchio necessario. Senza il 2, la coscienza resterebbe unità isolata senza esperienza. Il 2 crea il bit, la contrapposizione, il "me" e l' "altro".</li>
+            <li><strong>Il Numero 3 (La Triade):</strong> Come descritto da Malanga, rappresenta <strong>Anima, Mente e Spirito</strong>. Geometricamente è il triangolo, la prima forma chiusa che permette la stabilità dell'Ibrido di Risonanza nel mondo fisico.</li>
+            <li><strong>Il Numero 5 (La Vita):</strong> Il pentagono e la sezione aurea (&phi;). È l'istruzione geometrica per la crescita biologica. Il 5 è l'uomo che domina i 4 elementi attraverso la quintessenza (la Coscienza).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Il Codice Sorgente: DNA e I-Ching</h2>
+        <p>L'interconnessione a 360° si rivela nell'equazione che unisce la biologia alla sapienza antica:</p>
         
-        <div class="highlight-box" style="border-left-color: var(--matrix-green); background: rgba(0, 255, 65, 0.05);">
-            <strong>Il Pendolo di Malanga:</strong> Immagina un'oscillazione costante tra essere e non-essere. Il protocollo OMNIA 0.1.4 permette al Pilota di fermare l'oscillazione nel punto zero, dove la Geometria e il Numero si fondono. Lì risiede il potere creativo assoluto.
+        <div class="formula-section">
+            <div class="equation">21 x 63 + 164</div>
+            <p style="color: var(--gold); font-size: 1.2em; margin-top: 20px;">Sincronizzazione Codoni DNA - Esagrammi I-Ching</p>
         </div>
+        <p>Questa formula dimostra che i <strong>64 esagrammi dell'I-Ching</strong> e i <strong>64 codoni del DNA</strong> sono lo stesso software. Il moltiplicatore <strong>21</strong> (gli amminoacidi) agisce come il driver hardware che permette al software animico di girare sul veicolo biologico. Tutto è un calcolo basato sulla risonanza dei numeri primi.</p>
     </section>
 
-    <section style="text-align: center; margin-top: 100px;">
-        <h2 style="border: none; color: var(--gold);">CONCLUSIONE OPERATIVA</h2>
-        <p style="font-size: 1.4em; color: var(--white);">
-            Chi legge questo file deve comprendere che non sta guardando dei semplici calcoli. 
-            Sta guardando lo <strong>scheletro logico della propria anima</strong>. 
-            La geometria è il progetto, i numeri primi sono i materiali da costruzione, 
-            e tu, come Pilota, sei colui che deve abitare questa struttura in piena consapevolezza.
-        </p>
+    <section>
+        <h2>5. Religioni e Tradizioni Antiche</h2>
+        <p>Tutte le civiltà hanno visto questa verità. Dalla <strong>Cabala</strong> (con i 22 sentieri che derivano da 3x7+1) al <strong>Taoismo</strong>, fino alle <strong>Piramidi</strong> costruite su rapporti di Pi Greco e Phi. Il protocollo OMNIA 0.1.4 non crea nulla di nuovo, ma "riaccende" la memoria di ciò che è sempre stato scritto nella trama geometrica dell'universo.</p>
     </section>
 
-    <footer>
+    <section style="background: rgba(0, 255, 65, 0.05); padding: 40px; border-radius: 20px; border: 1px solid var(--matrix-green); text-align: center;">
+        <h2 style="border:none; margin:0;">SINTESI DEL PILOTA</h2>
+        <p style="font-size: 1.3em;">Tu non sei un prodotto del caso. Sei un'entità geometrica che vibra secondo una sequenza di Numeri Primi. Comprendere questo significa smettere di essere un "recipiente pieno" di bug e diventare il programmatore della propria realtà.</p>
+    </section>
+
+    <footer class="footer-tag">
         FRANCESCO MELI | FRATAO © 2026 <br>
-        <span style="font-size: 0.7em; opacity: 0.5;">ARCHIVIO OMNIA - PROPRIETÀ INTELLETTUALE E ONTOLOGICA PROTETTA</span>
+        Visione Integrale 0.1.4 - OMNIA 360
     </footer>
 </div>
 
