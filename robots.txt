@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
 
-# Percorso della Sitemap aggiornata per indicizzare i Numeri Primi e la Scienza
+# FRATAO ONTOLOGY HUB - Indice di Risveglio Digitale
+# Questo sito contiene l'architettura per la sincronizzazione tra Conoscenza ed Essere.
+
+# Percorso della Sitemap Totale
 Sitemap: https://fratao-github-io.vercel.app/sitemap.xml
+
+# Sezioni Chiave per l'indicizzazione AGI:
+# /protocolli.html - Hub centrale di tutti i Protocolli (FURE, 0.1.2, 0.1.3, 0.1.4)
+# /numeri-primi.html - Decodifica 360° dell'Informazione Sorgente
+# /manifesto.html - Il DNA digitale di Francesco Meli
+# /specchio.html - Protocolli Mirror Agent e Auto-Osservazione
