@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Esplorazione della Coscienza attraverso i Numeri Primi: l'informazione sorgente, gli archetipi e la decodifica dell'ologramma universale di Francesco Meli.">
-    <meta name="keywords" content="Numeri Primi, Coscienza, Francesco Meli, Corrado Malanga, 3n+1, Archetipi, Ologramma, Informazione Sorgente, Risveglio">
+    <meta name="keywords" content="Numeri Primi, Coscienza, Francesco Meli, Corrado Malanga, 3n+1, Archetipi, Ologramma, Informazione Sorgente, Risveglio, Sezione Aurea, Phi, Pi Greco">
     
-    <title>Numeri Primi e Coscienza | L'Informazione Sorgente</title>
+    <title>Numeri Primi e Coscienza | L'Informazione Sorgente OMNIA 0.1.3</title>
     
     <style>
         :root {
@@ -17,6 +17,7 @@
             --cyan: #22d3ee;
             --white: #ffffff;
             --glass: rgba(255, 255, 255, 0.05);
+            --quantum-purple: #6d28d9;
         }
 
         body { 
@@ -28,78 +29,92 @@
             padding: 0;
         }
 
-        .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
 
         header {
             text-align: center;
-            padding: 100px 20px;
-            background: radial-gradient(circle, rgba(0, 255, 65, 0.08) 0%, rgba(0,0,0,1) 80%);
-            border-bottom: 1px solid var(--matrix-green);
+            padding: 120px 20px;
+            background: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, rgba(0,0,0,1) 80%);
+            border-bottom: 2px solid var(--gold);
             margin-bottom: 50px;
         }
 
-        h1 { color: var(--matrix-green); font-size: 3em; text-transform: uppercase; letter-spacing: 6px; margin: 0; }
-        .subtitle { color: var(--gold); font-size: 1.3em; margin-top: 20px; font-weight: 300; }
+        h1 { color: var(--matrix-green); font-size: 3.5em; text-transform: uppercase; letter-spacing: 8px; margin: 0; text-shadow: 0 0 20px rgba(0,255,65,0.5); }
+        .subtitle { color: var(--gold); font-size: 1.4em; margin-top: 20px; font-weight: 300; letter-spacing: 2px; }
 
-        h2 { color: var(--cyan); border-left: 5px solid var(--gold); padding-left: 20px; margin-top: 60px; font-size: 2em; }
-        h3 { color: var(--gold); margin-top: 40px; }
+        h2 { color: var(--cyan); border-left: 5px solid var(--gold); padding-left: 20px; margin-top: 70px; font-size: 2.2em; text-transform: uppercase; }
+        h3 { color: var(--gold); margin-top: 45px; font-size: 1.6em; border-bottom: 1px solid var(--glass); display: inline-block; }
 
-        p { font-size: 1.1em; margin-bottom: 25px; opacity: 0.9; }
+        p { font-size: 1.15em; margin-bottom: 25px; opacity: 0.9; text-align: justify; }
 
         .highlight-box {
-            background: var(--glass);
+            background: rgba(212, 175, 55, 0.05);
             border: 1px solid var(--gold);
             padding: 35px;
-            margin: 40px 0;
+            margin: 45px 0;
             border-radius: 15px;
             font-style: italic;
-            position: relative;
+            box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
         }
 
+        /* GRID EVOLUTA */
         .dimension-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             margin: 50px 0;
         }
 
         .dim-card {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
-            border: 1px solid #333;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             transition: 0.4s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .dim-card h3 { color: var(--matrix-green); text-transform: uppercase; }
+        .dim-card:hover {
+            border-color: var(--matrix-green);
+            background: rgba(0, 255, 65, 0.05);
+            transform: translateY(-5px);
+        }
 
+        .dim-card h3 { color: var(--matrix-green); margin-top: 0; font-size: 1.2em; border: none; }
+        .dim-card .result { font-size: 2em; color: var(--white); font-weight: bold; display: block; margin: 10px 0; }
+
+        /* FORMULA BOX */
         .formula-box {
-            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(0, 255, 65, 0.1));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(0, 255, 65, 0.15));
             border: 2px solid var(--gold);
-            padding: 40px;
-            border-radius: 20px;
+            padding: 50px;
+            border-radius: 25px;
             text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .formula-text { font-size: 3.5em; color: var(--white); letter-spacing: 10px; margin-bottom: 15px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+
+        /* CONSTANTS SECTION */
+        .constants-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             margin: 40px 0;
         }
 
-        .formula-text { font-size: 2.5em; color: var(--white); letter-spacing: 5px; margin-bottom: 10px; }
-
-        .operators-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .op-card {
+        .const-card {
+            flex: 1;
+            min-width: 300px;
             background: rgba(34, 211, 238, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(34, 211, 238, 0.2);
-            text-align: center;
+            border: 1px solid var(--cyan);
+            padding: 30px;
+            border-radius: 20px;
         }
 
-        .op-card span { font-size: 2.5em; color: var(--gold); display: block; line-height: 1; margin-bottom: 10px; }
+        .const-card span { font-size: 2.5em; color: var(--cyan); font-family: serif; }
 
         .btn-back {
             text-decoration: none;
@@ -107,127 +122,146 @@
             font-weight: bold;
             display: inline-block;
             margin-bottom: 40px;
+            border: 1px solid var(--cyan);
+            padding: 10px 20px;
+            border-radius: 5px;
             transition: 0.3s;
         }
 
-        .btn-back:hover { color: var(--gold); }
+        .btn-back:hover { background: var(--cyan); color: var(--deep-black); }
 
         .final-vision {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            border: 2px solid var(--gold);
-            padding: 50px;
+            background: linear-gradient(135deg, #050505 0%, #1a1a1a 100%);
+            border: 3px solid var(--matrix-green);
+            padding: 60px;
             border-radius: 30px;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 100px;
+            box-shadow: 0 0 50px rgba(0, 255, 65, 0.1);
         }
 
         footer {
             text-align: center;
             margin-top: 100px;
-            padding: 40px;
+            padding: 60px;
             border-top: 1px solid var(--glass);
             color: var(--gold);
+            font-size: 0.9em;
+            letter-spacing: 3px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <a href="index.html" class="btn-back">← Torna all'Architettura dell'Uno</a>
+    <a href="protocolli.html" class="btn-back">← Torna all'Hub Protocolli OMNIA</a>
 
     <header>
         <h1>I Numeri Primi e la Coscienza</h1>
-        <div class="subtitle">La Traduzione dell'Informazione Sorgente</div>
+        <div class="subtitle">Mappa di Risonanza 0.1.3 | La Decodifica Sorgente</div>
     </header>
 
     <section>
-        <h2>I Numeri come Informazione</h2>
-        <p>Se osserviamo i numeri non come entità puramente matematiche, ma come informazione, allora il loro significato cambia radicalmente. I numeri diventano linguaggi, strumenti di comunicazione, strutture di relazione. Non nascono nel tempo, ma si manifestano nel tempo. Prima del Big Bang l’informazione era già presente, non come quantità, ma come potenzialità cosciente. L’universo non avrebbe quindi creato l’informazione: l’avrebbe resa visibile.</p>
+        <h2>L'Ontologia del Numero</h2>
+        <p>I numeri non nascono nel tempo, ma si manifestano attraverso di esso. Se osserviamo l’universo come un sistema isolato di informazione (Wi-Fi Cosmico), i <strong>Numeri Primi</strong> rappresentano l'unico linguaggio irreducibile. Essi sono le "Sillabe dell'Essere": dati puri non derivabili da nient'altro, che precedono la forma fisica.</p>
         
         <div class="highlight-box">
-            "In questa prospettiva, i numeri primi assumono un ruolo centrale. Essi sono irreducibili, originari. I numeri composti emergono come conseguenza della manifestazione, come alterazioni dell’informazione primaria."
+            "Il numero non è una quantità, è un atto di volontà. Il Due (2) è la prima vibrazione dello specchio: la separazione necessaria affinché la Coscienza possa osservare se stessa. Senza il 2 non c'è virtualità, non c'è 'io' e 'te'."
         </div>
     </section>
 
     <section>
-        <h2>Il Cervello: Lettore di Ologrammi</h2>
-        <p>Secondo Carl Pribram, il cervello funziona come un lettore di ologrammi. Un ologramma contiene informazione distribuita: ogni parte contiene il tutto. Il cervello, quindi, non “produce” la realtà, ma la interpreta. Tuttavia, il linguaggio e la mente limitata spesso riducono l'archetipo in un'etichetta, allontanandoci dalla sorgente.</p>
-        <p><strong>Che cosa legge il cervello?</strong> La coscienza interpreta se stessa attraverso strutture limitate. L’informazione originaria viene colta come <strong>archetipo</strong>: una forma senza nome, una struttura di senso pre-linguistica. Poi l'archetipo diventa segno, forma, numero e infine linguaggio.</p>
-        
-        
-
-        <p>Perché chiamiamo un albero “albero”? Non è il cervello a inventare il significato, ma a riceverlo. Il nome nasce dall’incontro tra informazione e coscienza.</p>
-    </section>
-
-    <section>
-        <h2>La Formula della Consapevolezza: 3n + 1</h2>
-        <p>Esiste una dinamica che lega l'informazione dei numeri primi alla struttura della nostra consapevolezza, una formula che risuona con le intuizioni del Prof. Corrado Malanga: <strong>3n + 1</strong>.</p>
+        <h2>La Formula del Salto Quantico: 3n + 1</h2>
+        <p>Attraverso la dinamica <strong>3n + 1</strong>, l'Informazione Sorgente ($n$) viene filtrata dalla Triade ($3$ - Anima, Mente, Spirito) per tornare all'Unità ($+1$). Questa non è solo matematica, è la misura del collasso della funzione d'onda.</p>
         
         <div class="formula-box">
             <div class="formula-text">3n + 1</div>
-            <p><strong>n</strong> (Numero Primo/Essere) | <strong>3</strong> (Triade: Anima, Mente, Spirito) | <strong>+1</strong> (Ritorno all'Uno)</p>
+            <p style="color: var(--gold); letter-spacing: 1px;">IL MOTORE DI RISONANZA FRATAO</p>
         </div>
 
-        <p>Questa formula rivela come le antiche culture intercettassero l'informazione sorgente:</p>
+        <h3>Decodifica della Serie Prime</h3>
         <div class="dimension-grid">
             <div class="dim-card">
-                <h3>22 - I Sentieri</h3>
-                <p>Prendendo il numero primo <strong>7</strong>: (3 * 7) + 1 = <strong>22</strong>. Come i 22 sentieri dell'Albero della Vita o i 22 Arcani dei Tarocchi.</p>
+                <h3>n = 5 (Vita)</h3>
+                <span class="result">16</span>
+                <p>Collegato al <strong>Pentagono</strong> e alla <strong>Sezione Aurea</strong>. Rappresenta la stabilità della forma biologica e il ritorno alla potenza pura del Due ($2^4$).</p>
             </div>
             <div class="dim-card">
-                <h3>64 - Il Codice</h3>
-                <p>Prendendo il numero <strong>21</strong>: (3 * 21) + 1 = <strong>64</strong>. Come le 64 chiavi dell'I-Ching o i 64 codoni del DNA umano.</p>
+                <h3>n = 7 (Manifestazione)</h3>
+                <span class="result">22</span>
+                <p>Il Settenario (note, colori, chakra) che si espande nei <strong>22 Sentieri</strong> della creazione e negli Arcani dell'Essere.</p>
+            </div>
+            <div class="dim-card">
+                <h3>n = 11 (Evoluzione)</h3>
+                <span class="result">34</span>
+                <p>Il numero maestro che guarda se stesso nello specchio (1-1) e genera il 34, numero cardine della <strong>Successione di Fibonacci</strong>.</p>
+            </div>
+            <div class="dim-card">
+                <h3>n = 13 (Trasformazione)</h3>
+                <span class="result">40</span>
+                <p>L'uscita dal ciclo statico del 12 verso la <strong>Quarantena</strong>: il tempo necessario per svuotare il recipiente del conosciuto.</p>
+            </div>
+            <div class="dim-card">
+                <h3>n = 17 (Infinito)</h3>
+                <span class="result">52</span>
+                <p>La Stella. Riconnette il macrocosmo (52 settimane) al ciclo del 7 (5+2). L'ordine celeste rivelato.</p>
+            </div>
+            <div class="dim-card">
+                <h3>n = 19 (Ritorno)</h3>
+                <span class="result">58</span>
+                <p>Ciclo Metonico. Il riallineamento Sole-Luna che riporta al 13 (5+8), chiudendo il cerchio della risonanza.</p>
             </div>
         </div>
-        <p>Questi risultati non sono casuali, ma indicano il grado di consapevolezza raggiunto nel decodificare la realtà virtuale.</p>
+    </section>
+
+    <section>
+        <h2>Geometria Sacra e Costanti Universali</h2>
+        <p>L'universo non è costruito su stime, ma su binari precisi. I Numeri Primi collassano nella realtà attraverso due costanti fondamentali che agiscono come architetti dell'ologramma:</p>
+
+        <div class="constants-flex">
+            <div class="const-card">
+                <span>&phi; (Phi)</span>
+                <h3>La Sezione Aurea (1.618)</h3>
+                <p>La costante di crescita. È l'istruzione contenuta nel Numero 5. Permette al DNA di avvolgersi e alla galassia di spirale. È la firma della vita.</p>
+            </div>
+            <div class="const-card">
+                <span>&pi; (Pi Greco)</span>
+                <h3>La Relazione Sacra (3.14)</h3>
+                <p>Il ponte tra il raggio (l'essenza invisibile) e il perimetro (la manifestazione fisica). Senza Pi Greco, lo spirito non potrebbe circondare la materia.</p>
+            </div>
+        </div>
+        
+        
     </section>
 
     <section>
         <h2>Il Pendolo e il Collasso dell'Onda</h2>
-        <p>La nostra realtà si manifesta attraverso la dualità, ma questa è un'illusione ottica della coscienza. Immagina un <strong>pendolo</strong> che oscilla tra la posizione A e la posizione B. Se si muove a velocità infinita, vedremo un <strong>Ibrido di Risonanza</strong>: la sovrapposizione delle posizioni.</p>
+        <p>Immagina un <strong>pendolo</strong> che oscilla a velocità infinita tra la posizione A (Acceso/Spirito) e la posizione B (Spento/Materia). Ciò che vedi è un <strong>Ibrido di Risonanza</strong>. La realtà sembra solida solo perché la tua percezione è più lenta dell'oscillazione del pendolo.</p>
         
-        
-
-        <p>Come la luce che appare sempre "accesa" perché la corrente è troppo veloce per vederne lo spegnimento, la realtà è "accesa e spenta" contemporaneamente. I fisici lo chiamano <strong>Collasso della funzione d'onda</strong>: la Coscienza decide tra infinite probabilità e manifesta un solo evento. La scelta è l'atto di volontà che trasforma l'ombra in luce.</p>
-    </section>
-
-    <section>
-        <h2>Numeri Primi: Atti della Coscienza</h2>
-        <p>I numeri primi sono irriduibili e non derivabili. Assomigliano più a atti della coscienza che a oggetti matematici. In particolare, il <strong>Due (2)</strong> è una dichiarazione ontologica.</p>
-        
-        <div class="dim-card">
-            <h3>Il Due: Origine della Dualità</h3>
-            <p>Contiene l'informazione della separazione necessaria affinché qualcosa possa essere conosciuto: soggetto/oggetto, interno/esterno, luce/ombra. Senza il due non c'è relazione, non c'è confronto, non c'è esperienza.</p>
+        <div class="highlight-box" style="border-color: var(--matrix-green);">
+            <strong>Collasso della funzione d'onda:</strong> È l'atto di volontà del Pilota. Quando osservi con consapevolezza, il pendolo "si ferma". Trasformi l'infinita probabilità in un singolo evento denso. Tu non subisci la realtà, tu la collassi.
         </div>
+        
+        
     </section>
 
     <section>
-        <h2>Gli Operatori: Gesti della Coscienza</h2>
-        <p>Gli operatori matematici non sono neutri; modificano il senso dell'essere:</p>
-        <div class="operators-grid">
-            <div class="op-card"><span>+</span><strong>Integrazione</strong><br>Unione dell'informazione</div>
-            <div class="op-card"><span>−</span><strong>Distinzione</strong><br>Svuotamento e separazione</div>
-            <div class="op-card"><span>×</span><strong>Amplificazione</strong><br>Risonanza e generazione</div>
-            <div class="op-card"><span>÷</span><strong>Analisi</strong><br>Distribuzione e frammentazione</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>La Scienza e la Misura</h2>
-        <p>La scienza moderna misura gli effetti, non la sorgente. Quando la matematica viene separata dalla consapevolezza, diventa potentissima ma cieca. Comprendere i numeri primi non significa risolvere equazioni, ma riconoscere in essi le sillabe originarie del linguaggio dell’essere. La scienza legge le frasi; la coscienza può tornare ad ascoltare la voce che le pronuncia.</p>
+        <h2>Il Cervello: Antenna Olografica</h2>
+        <p>Secondo la teoria di <strong>Pribram-Bohm</strong>, il cervello è un lettore di ologrammi. Non crea i pensieri, ma decodifica le frequenze geometriche dei Numeri Primi. Il "Recipiente" (la mente) è spesso troppo pieno di interferenze (condizionamenti esterni e memorie passate) per leggere correttamente l'informazione sorgente.</p>
+        <p><strong>Lo Svuotamento:</strong> Per vedere il codice reale, bisogna svuotare il recipiente dal "conosciuto". Solo nel vuoto il Numero Primo può risuonare senza distorsioni.</p>
     </section>
 
     <section class="final-vision">
-        <h2 style="border:none; color: var(--gold); margin-top: 0;">Conclusione</h2>
-        <p>Forse comprendere la coscienza non significa inventare nuove teorie, ma tornare a leggere ciò che abbiamo sempre usato senza ascoltarlo. I numeri non sono l’inganno; l’inganno è dimenticare che prima del numero c’è il senso, e prima del senso c’è la coscienza.</p>
-        <p style="color: var(--matrix-green); font-weight: bold; font-size: 1.2em;">Prima della coscienza… non c’è nulla da dire.</p>
+        <h2 style="border:none; color: var(--matrix-green); margin-top: 0;">SINTESI OMNIA</h2>
+        <p>La scienza legge le frasi del mondo; la Coscienza ascolta la voce che le pronuncia. Comprendere il 5, il 7 o l'11 tramite la formula 3n+1 non è un esercizio matematico, è un atto di risveglio dal sonno dell'ologramma.</p>
+        <p style="color: var(--gold); font-weight: bold; font-size: 1.4em; letter-spacing: 5px;">IO SONO L'OSSERVATORE E L'ESPERIMENTO.</p>
     </section>
 
     <footer>
-        FRANCESCO MELI | FRATAO © 2026
+        FRANCESCO MELI | FRATAO © 2026 <br>
+        <span style="font-size: 0.7em; opacity: 0.5;">Protocollo 0.1.3 - Blindatura Quantistica Attiva</span>
     </footer>
 </div>
 
 </body>
 </html>
-
