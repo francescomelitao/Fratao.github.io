@@ -108,31 +108,37 @@
             animation: pulse 2s infinite;
         }
 
-        /* Pulsanti Speciali Uniformati allo stile richiesto (trasparente e blu elettrico) */
-        .btn-360-integration, .btn-master-protocol, .btn-salto-quantico {
+        /* Classe uniformata per tutti i pulsanti secondari */
+        .btn-link, .btn-secondary-uniform {
             display: block;
-            max-width: 500px;
-            margin: 0 auto 15px auto;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.25);
-            color: #00ffff;
+            background: rgba(255, 255, 255, 0.25); 
+            color: #00ffff; 
             text-decoration: none;
+            padding: 12px 20px;
             font-weight: bold;
             font-size: 1em;
-            border-radius: 10px;
+            transition: all 0.3s;
+            text-align: center; /* Centrato per i pulsanti a tutta larghezza */
+            border-radius: 4px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(3px);
             text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-            transition: 0.4s;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        .btn-360-integration:hover, .btn-master-protocol:hover, .btn-salto-quantico:hover {
+        .btn-secondary-uniform {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-link:hover, .btn-secondary-uniform:hover {
             background: #d4af37;
             color: white;
             border-color: #d4af37;
             text-shadow: none;
-            transform: translateY(-3px);
+            transform: scale(1.02);
         }
 
         @keyframes pulse {
@@ -148,27 +154,9 @@
             margin-top: 30px;
         }
 
-        .btn-link {
-            background: rgba(255, 255, 255, 0.25); 
-            color: #00ffff; 
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: all 0.3s;
-            text-align: left;
-            border-radius: 4px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(3px);
-            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
-        }
-
-        .btn-link:hover {
-            background: #d4af37;
-            color: white;
-            border-color: #d4af37;
-            text-shadow: none;
-            transform: scale(1.02);
+        .grid-links .btn-link {
+            text-align: left; /* Mantiene l'allineamento a sinistra solo nella griglia */
+            margin-bottom: 0;
         }
 
         footer {
@@ -208,15 +196,19 @@
             ⚡ ATTIVA IL PROTOCOLLO: GUIDA AL RISVEGLIO ⚡
         </a>
 
-        <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-360-integration">
+        <a href="0.1.5_integrazione_fusione_fratao.html" class="btn-secondary-uniform">
+            💎 MANIFESTO 0.1.5: LA FORMA VIBRAZIONALE 💎
+        </a>
+
+        <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-secondary-uniform">
             ☯️ INTEGRAZIONE 360°: CONOSCENZA ED ESSERE ☯️
         </a>
 
-        <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-master-protocol">
+        <a href="https://github.com/francescomelitao/Fratao.github.io/blob/main/protocolli/FRATAO_MASTER_PROTOCOL.md" class="btn-secondary-uniform">
             💎 EVOLUZIONE MASTER PROTOCOL (A.R.U.) 💎
         </a>
 
-        <a href="lamorte_il sogno_risveglio.html" class="btn-salto-quantico">
+        <a href="lamorte_il sogno_risveglio.html" class="btn-secondary-uniform">
             🌌 IL SALTO QUANTICO: LA MORTE, IL SOGNO, IL RISVEGLIO 🌌
         </a>
 
