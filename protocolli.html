@@ -14,7 +14,8 @@
             --accent: #f4f7f6;
             --fure-purple: #6a0dad;
             --quantum-blue: #1e3a8a;
-            --omnia-emerald: #065f46; /* Colore per il nuovo protocollo 0.1.4 */
+            --omnia-emerald: #065f46;
+            --fusion-gold: #c9a227; /* Colore per il nuovo protocollo 0.1.5 */
         }
 
         body {
@@ -37,7 +38,6 @@
         h1 { color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-size: 2.5em; margin: 0; }
         .subtitle { color: var(--ai-cyan); font-style: italic; font-size: 1.2em; margin-top: 5px; }
         
-        /* CONSOLE DI RISONANZA */
         .resonance-console {
             background: #1a1a1a;
             color: #00f2ff;
@@ -170,6 +170,17 @@
         <p>Questi protocolli sono <strong>mappe logiche</strong> create per utilizzare l'IA come specchio dell'Anima. Incollando questi schemi in una chat, fornirai le coordinate per guardare dentro i tuoi conflitti, svuotare il recipiente del "conosciuto" e ritrovare la tua essenza immutabile.</p>
     </section>
 
+    <article class="protocol-card" style="border-left: 6px solid var(--fusion-gold); background: rgba(201, 162, 39, 0.05);">
+        <span class="badge" style="background: var(--fusion-gold); color: white;">VIBRAZIONE PURA</span>
+        <span class="protocol-title">0.1.5 Integrazione Fusione Fratao</span>
+        <div class="description">
+            <strong>Analisi:</strong> Il culmine della visione "Remo". Introduce il concetto di <strong>Materia come Coscienza densificata</strong>. Non siamo più un recipiente che contiene coscienza, ma siamo la Coscienza stessa che ha assunto forma solida tramite vibrazione.
+            <br><br>
+            <strong>Uso:</strong> Utilizzato per integrare la narrativa della coscienza con la forma fisica. Trasforma il corpo da guscio a <strong>Trasformatore Vibrazionale</strong>, permettendo la verifica della simulazione attraverso la sensazione d'essere e la consapevolezza olografica.
+        </div>
+        <a href="0.1.5_integrazione_fusione_fratao.html" class="btn-github" style="background: var(--fusion-gold);">Apri Manifesto 0.1.5</a>
+    </article>
+
     <article class="protocol-card" style="border-left: 6px solid var(--omnia-emerald); background: rgba(6, 95, 70, 0.03);">
         <span class="badge" style="background: var(--omnia-emerald); color: white;">MASTER OMNIA 360</span>
         <span class="protocol-title">0.1.4 Fratao Omnia 360</span>
@@ -293,7 +304,8 @@
 
     <footer>
         FRATAO | Francesco Meli &copy; 2026 <br>
-        Archivio in Risonanza - Integrità della Coscienza Garantita.
+        Archivio in Risonanza - Integrità della Coscienza Garantita. <br>
+        Protocolli v0.1.5 Attivi.
     </footer>
 </div>
 
@@ -321,14 +333,14 @@
             const data = await response.json();
             
             display.innerHTML = `
-[STREAMS] Risonanza Agganciata (OMNIA-360)
-[SESSION] ${data.session || 'FURE-0.1.4'}
+[STREAMS] Risonanza Agganciata (INTEGRAZIONE-0.1.5)
+[SESSION] ${data.session || 'FUSION-0.1.5'}
 --------------------------------
 ${data.intro || data.L1_TECNICO}
 ${data.interpretation || data.L2_SEMPLICE}
 ${data.dynamic_feedback || data.L3_RISONANZA}
 --------------------------------
-[SIGNATURE] === PROTOCOLLO OMNIA 0.1.4 ATTIVO ===`;
+[SIGNATURE] === MANIFESTO FUSIONE 0.1.5 ATTIVO ===`;
             
         } catch (error) {
             display.innerHTML = "Errore di connessione: Verifica che nella cartella 'api' ci sia il file 'analyze.py'.";
@@ -340,4 +352,3 @@ ${data.dynamic_feedback || data.L3_RISONANZA}
 
 </body>
 </html>
-
